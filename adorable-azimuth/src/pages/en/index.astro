@@ -12,21 +12,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
 const locale = ((Astro.currentLocale as Locale) || "en") as Locale;
 const tHome = createT(loadMessages(locale, "home"), { locale, namespace: "home" });
-
-const ladderEn: Record<string, string> = {
-  Receita: "Revenue",
-  Custo: "Cost",
-  Risco: "Risk",
-  Tempo: "Time",
-  Qualidade: "Quality",
-  "Experiência do usuário": "User experience"
-};
-
-const metricLabelEn: Record<string, string> = {
-  Tempo: "Time",
-  Latência: "Latency",
-  Offline: "Offline"
-};
+const tProjects = createT(loadMessages(locale, "projects"), { locale, namespace: "projects" });
 ---
 <BaseLayout title={tHome("home.meta.title")} description={tHome("home.meta.description")}>
   <Fragment slot="nav"><Header /></Fragment>
@@ -51,8 +37,11 @@ const metricLabelEn: Record<string, string> = {
         <div class="nl-project-grid">
           {featuredProjects.map((p, idx) => {
             const href = getRelativeLocaleUrl(locale, p.href.replace(/^\//, ""));
-            const ladder = locale === "en" ? (ladderEn[p.ladder] ?? p.ladder) : p.ladder;
-            const metricLabel = locale === "en" ? (metricLabelEn[p.metric.label] ?? p.metric.label) : p.metric.label;
+            const ladder = tProjects(`projects.featured.${p.slug}.ladder`) ?? p.ladder;
+            const name = tProjects(`projects.featured.${p.slug}.name`) ?? p.name;
+            const impactLine = tProjects(`projects.featured.${p.slug}.impactLine`) ?? p.impactLine;
+            const role = tProjects(`projects.featured.${p.slug}.role`) ?? p.role;
+            const metricLabel = tProjects(`projects.featured.${p.slug}.metricLabel`) ?? p.metric.label;
 
             return (
               <a
@@ -75,14 +64,14 @@ const metricLabelEn: Record<string, string> = {
                 <div class="nl-project-meta">
                   <div class="nl-project-meta-top">
                     <div class="nl-project-meta-title">
-                      <span class="nl-project-name">{p.name}</span>
+                      <span class="nl-project-name">{name}</span>
                       <span class="nl-badge" data-variant="secondary" data-ladder={ladder}>{ladder}</span>
                     </div>
                     <span class="nl-project-year">{p.year}</span>
                   </div>
-                  <div class="nl-project-impact">{p.impactLine}</div>
+                  <div class="nl-project-impact">{impactLine}</div>
                   <div class="nl-project-sub">
-                    <span class="nl-project-role">{p.role}</span>
+                    <span class="nl-project-role">{role}</span>
                     <span class="nl-project-metric">
                       <span class="nl-project-metric-label">{metricLabel}</span>
                       <span class="nl-project-metric-value">{p.metric.value}</span>

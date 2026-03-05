@@ -52,5 +52,8 @@
 
   "project_p5.conversion.p": "Se você precisa reduzir passos no dia a dia do app sem quebrar acessibilidade, eu redesenho fluxos e implemento atalhos reutilizáveis com navegação consistente.",
   "project_p5.conversion.whatsapp": "Falar no WhatsApp",
-  "project_p5.conversion.availability": "Disponível para projetos em 2026."
+  "project_p5.conversion.availability": "Disponível para projetos em 2026.",
+  "project_p5.private.note_title": "Código privado",
+  "project_p5.private.note": "Este software está em produção e sob propriedade de uma empresa. O código é privado (NDA). Acesso pode ser solicitado para material sanitizado.",
+  "project_p5.evidence.anchor_label": "Evidências (arquitetura, screenshots, snippets)"
 }

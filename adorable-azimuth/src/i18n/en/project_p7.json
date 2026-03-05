@@ -53,5 +53,8 @@
 
   "project_p7.conversion.p": "If you need low-friction sales and to operate in the field without relying on internet (gates, events, POS), I design an offline-first flow with idempotency, batch sync, and an audit trail.",
   "project_p7.conversion.whatsapp": "Chat on WhatsApp",
-  "project_p7.conversion.availability": "Available for projects in 2026."
+  "project_p7.conversion.availability": "Available for projects in 2026.",
+  "project_p7.private.note_title": "Private code",
+  "project_p7.private.note": "This software is in production and owned by a company. The code is private (NDA). Access can be requested for a sanitized evidence pack.",
+  "project_p7.evidence.anchor_label": "Evidence (architecture, screenshots, snippets)"
 }

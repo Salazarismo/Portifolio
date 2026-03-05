@@ -23,7 +23,8 @@ const tP7 = createT(loadMessages(locale, "project_p7"), { locale, namespace: "pr
       <p data-text="ui-label">{tP7("project_p7.hero.kpi")}</p>
       <p style="margin-top: var(--space-1)"><span class="nl-badge" data-variant="secondary" data-ladder={tP7("project_p7.hero.ladder")}>{tP7("project_p7.hero.ladder")}</span></p>
       <div class="nl-hero-actions" style="margin-top: var(--space-2)">
-        <a class="nl-btn" href="mailto:victor.de.alcantara.bueno@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20repo%20%2F%20README%20(Plataforma%20Ingressos%20WhatsApp)" rel="noopener noreferrer">{tCommon("common.cta.repo")}</a>
+        <a class="nl-btn" href="#private-code" rel="noopener noreferrer">{tProjects("projects.cta.code_private")}</a>
+        <a class="nl-btn" href="#evidence" rel="noopener noreferrer">{tProjects("projects.cta.evidence")}</a>
         <a class="nl-btn" href="https://wa.me/5548984586949" target="_blank" rel="noopener noreferrer">{tCommon("common.cta.contact")}</a>
       </div>
       <div style="margin-top: var(--space-3)">
@@ -49,6 +50,10 @@ const tP7 = createT(loadMessages(locale, "project_p7"), { locale, namespace: "pr
       </div>
       <div style="margin-top: var(--space-2)">
         <span data-text="body-muted">{tP7("project_p7.tldr.note")}</span>
+      </div>
+      <div id="private-code" style="margin-top: var(--space-2)">
+        <h3 data-text="ui-label">{tP7("project_p7.private.note_title")}</h3>
+        <p data-text="body-muted">{tP7("project_p7.private.note")}</p>
       </div>
     </section>
     <Divider />
@@ -98,7 +103,7 @@ const tP7 = createT(loadMessages(locale, "project_p7"), { locale, namespace: "pr
       </div>
     </section>
     <Divider />
-    <section aria-labelledby="reliability-p7">
+    <section aria-labelledby="reliability-p7" id="evidence">
       <h2 id="reliability-p7" data-text="heading-xl">{tProjects("projects.sections.reliability")}</h2>
       <div style="display:grid; gap: var(--space-2); margin-top: var(--space-2)">
         <p data-text="body-normal"><strong>{tP7("project_p7.reliability.risks_label")}</strong> {tP7("project_p7.reliability.risks")}</p>
@@ -132,7 +137,8 @@ await fetch(syncUrl, &#123; method: 'POST', body: JSON.stringify(&#123; orders &
       <p data-text="body-normal">{tP7("project_p7.conversion.p")}</p>
       <div class="case-conversion">
         <a class="case-cta" href="https://wa.me/5548984586949" target="_blank" rel="noopener noreferrer">{tP7("project_p7.conversion.whatsapp")}</a>
-        <a class="case-cta-secondary" href="mailto:victor.de.alcantara.bueno@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20repo%20%2F%20README%20(Plataforma%20Ingressos%20WhatsApp)" rel="noopener noreferrer">{tCommon("common.cta.repo")}</a>
+        <a class="case-cta-secondary" href="#private-code" rel="noopener noreferrer">{tProjects("projects.cta.code_private")}</a>
+        <a class="case-cta-secondary" href="#evidence" rel="noopener noreferrer">{tProjects("projects.cta.evidence")}</a>
         <a class="case-cta-secondary" href={`${getRelativeLocaleUrl(locale, "")}#projects`}>{tProjects("projects.buttons.back")}</a>
         <a class="case-cta-secondary" href={getRelativeLocaleUrl(locale, "projects/p3")}>{tProjects("projects.buttons.next")}</a>
         <span data-text="ui-helper">{tP7("project_p7.conversion.availability")}</span>

@@ -22,21 +22,25 @@ const {
   docHref = ""
 } = Astro.props as Props;
 import Button from "../components/ui/Button.astro";
+import { createT, loadMessages, type Locale } from "@/i18n";
+const pathname2 = Astro.url.pathname;
+const locale2 = (Astro.currentLocale || (pathname2.startsWith("/en") ? "en" : "pt-br")) as Locale;
+const tCards = createT(loadMessages(locale2, "cards"), { locale: locale2, namespace: "cards" });
 ---
 <article aria-labelledby="project-title" data-project-card data-cell data-z="1" data-metric={metricValue} class="rounded-md p-4 border" style="border-color: var(--color-border); box-shadow: var(--elevation-1)">
   <header>
     <h3 id="project-title" data-text="heading-lg" style="font-family: var(--font-family-sans)">{title}</h3>
   </header>
   <section class="mt-3">
-    <h3 data-text="ui-label">Problema</h3>
+    <h3 data-text="ui-label">{tCards("cards.problem")}</h3>
     <p class="mt-1" data-text="body-muted">{problem}</p>
   </section>
   <section class="mt-3">
-    <h3 data-text="ui-label">Decisão técnica</h3>
+    <h3 data-text="ui-label">{tCards("cards.decision")}</h3>
     <p class="mt-1" data-text="body-muted">{decision}</p>
   </section>
   <section class="mt-3" aria-live="polite">
-    <h3 data-text="ui-label">Resultado mensurável</h3>
+    <h3 data-text="ui-label">{tCards("cards.measurable_result")}</h3>
     <p class="mt-1" data-text="ui-label">{metricLabel}</p>
     <div class="mt-1" aria-label="métrica" style="display:flex; align-items:center; gap: var(--space-2)">
       <strong data-text="heading-2xl" style="color: var(--success)">{metricValue}</strong>
@@ -46,13 +50,13 @@ import Button from "../components/ui/Button.astro";
   </section>
   {codeSnippet && (
     <details class="mt-3">
-      <summary data-text="ui-label" style="cursor:pointer">Ver snippet</summary>
+      <summary data-text="ui-label" style="cursor:pointer">{tCards("cards.view_snippet")}</summary>
       <pre class="mt-1 p-3 rounded-sm" style="background: var(--color-muted); overflow:auto"><code>{codeSnippet}</code></pre>
     </details>
   )}
   {docHref && (
     <div class="mt-3">
-      <Button as="a" href={docHref} variant="secondary">Ver Documentação</Button>
+      <Button as="a" href={docHref} variant="secondary">{tCards("cards.view_docs")}</Button>
     </div>
   )}
 </article>

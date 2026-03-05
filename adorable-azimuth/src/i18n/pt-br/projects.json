@@ -10,5 +10,22 @@
   "projects.labels.scale_min": "Escala (o mínimo)",
   "projects.labels.constraints_min": "Restrições (o mínimo)",
   "projects.buttons.back": "Voltar",
-  "projects.buttons.next": "Próximo case"
+  "projects.buttons.next": "Próximo case",
+  "projects.cta.code_private": "Código: Privado (NDA). Disponível sob solicitação.",
+  "projects.cta.evidence": "Evidências: Arquitetura + screenshots + trechos redigidos.",
+  "projects.featured.p7.name": "Plataforma‑Ingressos‑WhatsApp",
+  "projects.featured.p7.impactLine": "100% check‑in offline na portaria (PWA + fila local).",
+  "projects.featured.p7.role": "Full‑stack",
+  "projects.featured.p7.metricLabel": "Offline",
+  "projects.featured.p7.ladder": "Risco",
+  "projects.featured.p3.name": "Habit Analyzer",
+  "projects.featured.p3.impactLine": "−40% custo de leitura de analytics em janelas grandes.",
+  "projects.featured.p3.role": "Arquitetura + Full‑stack",
+  "projects.featured.p3.metricLabel": "Latência",
+  "projects.featured.p3.ladder": "Custo",
+  "projects.featured.p5.name": "Relatório Rural — Quick Activity Button",
+  "projects.featured.p5.impactLine": "45s → 20–25s no registro (−40–55% cliques).",
+  "projects.featured.p5.role": "Mobile + UX",
+  "projects.featured.p5.metricLabel": "Tempo",
+  "projects.featured.p5.ladder": "Tempo"
 }

@@ -52,5 +52,8 @@
 
   "project_p5.conversion.p": "If you need to reduce daily in-app steps without breaking accessibility, I redesign flows and implement reusable shortcuts with consistent navigation.",
   "project_p5.conversion.whatsapp": "Chat on WhatsApp",
-  "project_p5.conversion.availability": "Available for projects in 2026."
+  "project_p5.conversion.availability": "Available for projects in 2026.",
+  "project_p5.private.note_title": "Private code",
+  "project_p5.private.note": "This software is in production and owned by a company. The code is private (NDA). Access can be requested for a sanitized evidence pack.",
+  "project_p5.evidence.anchor_label": "Evidence (architecture, screenshots, snippets)"
 }

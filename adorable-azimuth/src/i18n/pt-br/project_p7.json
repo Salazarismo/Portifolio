@@ -53,5 +53,8 @@
 
   "project_p7.conversion.p": "Se você precisa vender com baixa fricção e operar em campo sem depender de internet (portaria, eventos, PDV), eu desenho um fluxo offline-first com idempotência, sync em lote e trilha de auditoria.",
   "project_p7.conversion.whatsapp": "Falar no WhatsApp",
-  "project_p7.conversion.availability": "Disponível para projetos em 2026."
+  "project_p7.conversion.availability": "Disponível para projetos em 2026.",
+  "project_p7.private.note_title": "Código privado",
+  "project_p7.private.note": "Este software está em produção e sob propriedade de uma empresa. O código é privado (NDA). Acesso pode ser solicitado para material sanitizado.",
+  "project_p7.evidence.anchor_label": "Evidências (arquitetura, screenshots, snippets)"
 }
