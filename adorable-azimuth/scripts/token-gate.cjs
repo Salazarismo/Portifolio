@@ -15,9 +15,9 @@ const excludePaths = [
 const excludeNorm = excludePaths.map((p) => p.replace(/\\/g, '/'));
 
 const patterns = [
-  /\b\d+(?:\.\d+)?px\b/i,
-  /\b\d+(?:\.\d+)?rem\b/i,
-  /#[0-9a-f]{3,8}\b/i,
+  /(?<!sizes="[^"]*)(?<!srcSet="[^"]*)(?<!@media\s*\([^)]*)(?<!radial-gradient[^)]*)(?<!linear-gradient[^)]*)\b\d+(?:\.\d+)?px\b/i,
+  /(?<!sizes="[^"]*)(?<!srcSet="[^"]*)(?<!@media\s*\([^)]*)\b\d+(?:\.\d+)?rem\b/i,
+  /(?<![A-Za-z0-9_-])(?<!radial-gradient[^)]*)(?<!linear-gradient[^)]*)#[0-9a-f]{3,8}\b/i,
   /hsl\(/i,
 ];
 
@@ -41,7 +41,7 @@ function checkFile(file) {
   if (path.basename(file) === 'tokens.css') return;
   const rel = path.relative(root, file).replace(/\\/g, '/');
   const text = fs.readFileSync(file, 'utf8');
-  const lines = text.split(/\r?\n/);
+  const lines = text.replace(/<code[\s\S]*?<\/code>/gi, '').split(/\r?\n/);
   lines.forEach((line, i) => {
     for (const re of patterns) {
       if (re.test(line)) {

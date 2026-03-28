@@ -23,17 +23,17 @@
     z-index: -1;
     pointer-events: none;
     overflow: hidden;
-    background: #0f2027;
+    background: var(--surface-1);
   }
 
   .mesh-layer {
     position: absolute;
     inset: -20%;
     background:
-      radial-gradient(900px 700px at 18% 25%, rgba(32, 58, 67, 0.85) 0%, rgba(32, 58, 67, 0) 60%),
-      radial-gradient(900px 700px at 82% 18%, rgba(44, 83, 100, 0.85) 0%, rgba(44, 83, 100, 0) 60%),
-      radial-gradient(900px 700px at 45% 85%, rgba(214, 90, 82, 0.42) 0%, rgba(214, 90, 82, 0) 62%),
-      linear-gradient(15deg, #0f2027 0%, #203a43 45%, #2c5364 70%, #f05f57 100%);
+      radial-gradient(calc(var(--space-9) * 9.375) calc(var(--space-9) * 7.29) at 18% 25%, rgba(32, 58, 67, 0.85) 0%, rgba(32, 58, 67, 0) 60%),
+      radial-gradient(calc(var(--space-9) * 9.375) calc(var(--space-9) * 7.29) at 82% 18%, rgba(44, 83, 100, 0.85) 0%, rgba(44, 83, 100, 0) 60%),
+      radial-gradient(calc(var(--space-9) * 9.375) calc(var(--space-9) * 7.29) at 45% 85%, rgba(214, 90, 82, 0.42) 0%, rgba(214, 90, 82, 0) 62%),
+      linear-gradient(15deg, var(--surface-1) 0%, var(--surface-1) 45%, var(--surface-1) 70%, var(--accent-1) 100%);
     filter: saturate(1.12) contrast(1.10);
     transform: translate3d(0, 0, 0);
     will-change: transform, filter;
@@ -62,17 +62,17 @@
     background-image:
       repeating-linear-gradient(
         0deg,
-        rgba(255, 255, 255, 0.06) 0px,
-        rgba(255, 255, 255, 0.06) 1px,
-        rgba(0, 0, 0, 0.00) 2px,
-        rgba(0, 0, 0, 0.00) 4px
+        var(--surface-2) 0,
+        var(--surface-2) var(--border-width-1),
+        rgba(0, 0, 0, 0.00) var(--space-1),
+        rgba(0, 0, 0, 0.00) var(--space-1)
       ),
       repeating-linear-gradient(
         90deg,
-        rgba(0, 0, 0, 0.04) 0px,
-        rgba(0, 0, 0, 0.04) 1px,
-        rgba(0, 0, 0, 0.00) 2px,
-        rgba(0, 0, 0, 0.00) 6px
+        rgba(0, 0, 0, 0.04) 0,
+        rgba(0, 0, 0, 0.04) var(--border-width-1),
+        rgba(0, 0, 0, 0.00) var(--space-1),
+        rgba(0, 0, 0, 0.00) var(--space-2)
       );
     transform: translate3d(0, 0, 0);
     will-change: opacity, transform;
@@ -101,7 +101,7 @@
     position: absolute;
     inset: 0;
     background: radial-gradient(
-      1200px 900px at 50% 20%,
+      calc(var(--space-9) * 12.5) calc(var(--space-9) * 9.375) at 50% 20%,
       rgba(0, 0, 0, 0.00) 0%,
       rgba(0, 0, 0, 0.18) 55%,
       rgba(0, 0, 0, 0.45) 100%

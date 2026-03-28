@@ -1,149 +1,135 @@
 ---
-import BaseLayout from "@/components/BaseLayout.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import Divider from "@/components/ui/Divider.astro";
-import { AspectRatioImage } from "@/components/ui/AspectRatioImage";
-import { createT, loadMessages, type Locale } from "@/i18n";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import BaseLayout from "../../../components/BaseLayout.astro";
+import ProjectCaseRedesign from "../../../components/ProjectCaseRedesign.astro";
+
 export const prerender = false;
 
-const pathname = Astro.url.pathname;
-const locale = (Astro.currentLocale || (pathname.startsWith("/en") ? "en" : "pt-br")) as Locale;
-const tCommon = createT(loadMessages(locale, "common"), { locale, namespace: "common" });
-const tProjects = createT(loadMessages(locale, "projects"), { locale, namespace: "projects" });
-const tP7 = createT(loadMessages(locale, "project_p7"), { locale, namespace: "project_p7" });
+const data = {
+  heroEyebrow: "Product Case",
+  heroTitleTop: "Nexus",
+  heroTitleEm: "Platform",
+  heroSubtitle: "Ticketing platform with WhatsApp sales, integrated payments, and resilient event check-in operations.",
+  heroImage: "https://victor-alcantara.vercel.app/images/98f5ae2c-0f91-4fda-9e44-1fd81a607417.png",
+  heroFilter: "grayscale(.6) brightness(.3)",
+  heroStats: [
+    { key: "Scope", value: "Full-stack · Architecture" },
+    { key: "Stack", value: "NestJS · PostgreSQL · WhatsApp · Mercado Pago" },
+    { key: "Code", value: "Private code (NDA)" },
+    { key: "KPI", value: "100% offline check-in" }
+  ],
+  heroActions: [
+    { label: "Message on WhatsApp ↗", href: "https://wa.me/5548984586949", primary: true },
+    { label: "View Evidence", href: "#evidence" },
+    { label: "Private code (NDA)", href: "#code" }
+  ],
+  tldrTitle: "TL;DR — 1 minute",
+  tldrCards: [
+    { key: "Problem", value: "Sales and check-in depended on <strong>fragmented channels</strong> and stable internet at the gate during a critical operation." },
+    { key: "Solution", value: "<strong>WhatsApp flow + multi-tenant backend</strong> + offline-first check-in with a local queue and batch sync." },
+    { key: "Result", value: "The gate operates <strong>without internet</strong> with safe sync and fewer incidents on event day." }
+  ],
+  noticeTitle: "Private code (NDA).",
+  noticeBody: "This software is in production and owned by a company. Access to sanitized material can be requested directly.",
+  snapshotTitle: "Snapshot",
+  snapshotRows: [
+    { key: "Role", value: "Full-stack, NestJS + React/Next." },
+    { key: "Scale", value: "Multi-tenant, multiple organizations running operations simultaneously." },
+    { key: "Constraints", value: "Offline gate operations; idempotency and traceability are mandatory across integrations." }
+  ],
+  problemTitle: "Problem & Impact",
+  problemItems: [
+    { key: "Symptom", value: "The gate <strong>freezes without connectivity</strong>, and operations lose fluency exactly when pressure is highest." },
+    { key: "Cause", value: "Lack of an <strong>offline-first mechanism with queue and controlled retry</strong> for the critical operation." },
+    { key: "Impact", value: "<strong>High operational risk</strong>, reprocessing inconsistencies, and increased support on event day." }
+  ],
+  approachTitle: "Approach",
+  approachSteps: [
+    { title: "Sales", text: "WhatsApp Cloud API with multi-tenant orchestration to reduce purchase steps and preserve context per organization." },
+    { title: "Payments", text: "Mercado Pago with admin routes for operations, reconciliation, and support without spreading critical rules across the front end." },
+    { title: "Offline-first", text: "IndexedDB + batch sync to reduce reconnect spikes and keep the gate usable even without internet." }
+  ],
+  reliabilityTitle: "Reliability",
+  reliabilityCards: [
+    { key: "Risks", value: "Duplicate retries, reconnect spikes, and operational inconsistency across devices." },
+    { key: "Guarantees", value: "Idempotency through externalId and a local queue with controlled retry and batch synchronization." },
+    { key: "Evidence", value: "A real snippet of the queue/sync mechanism used in offline operations." }
+  ],
+  codeBlock: {
+    lang: "JS · Node.js",
+    html: `<span class="kw">await</span> db<span class="pu">.</span><span class="fn">add</span><span class="pu">(</span><span class="str">'syncQueue'</span><span class="pu">,</span> <span class="pu">{</span>
+  url<span class="pu">,</span>
+  method<span class="pu">,</span>
+  body<span class="pu">,</span>
+  timestamp<span class="pu">:</span> Date<span class="pu">.</span><span class="fn">now</span><span class="pu">(),</span>
+  retryCount<span class="pu">:</span> <span class="kw">0</span>
+<span class="pu">});</span>
+<span class="kw">await</span> <span class="fn">fetch</span><span class="pu">(</span>syncUrl<span class="pu">,</span> <span class="pu">{</span> method<span class="pu">:</span> <span class="str">'POST'</span><span class="pu">,</span> body<span class="pu">:</span> JSON<span class="pu">.</span><span class="fn">stringify</span><span class="pu">(</span><span class="pu">{</span> orders <span class="pu">}</span><span class="pu">)</span> <span class="pu">});</span>`
+  },
+  stackTags: ["NestJS", "PostgreSQL", "WhatsApp Cloud API", "Mercado Pago", "PWA", "IndexedDB"],
+  extensionsTitle: "Extensions & Next steps",
+  extensionsItems: [
+    "Queue observability: pending items, average age, and synchronization rate.",
+    "Consolidated operational reports for check-in, POS, and reconciliation.",
+    "WhatsApp → payment → issuance funnel metrics to identify bottlenecks."
+  ],
+  ctaEyebrow: "Do you have this problem?",
+  ctaTitle: "Need low-friction sales and field operations that do not depend on internet?",
+  ctaBody: "I design offline-first flows with idempotency, batch sync, and audit trails.",
+  ctaActions: [
+    { label: "Message on WhatsApp ↗", href: "https://wa.me/5548984586949", primary: true },
+    { label: "Private code (NDA)", href: "#code" },
+    { label: "Evidence", href: "#evidence" }
+  ],
+  bottomNavBackLabel: "Back",
+  bottomNavBackHref: "https://victor-alcantara.vercel.app/#projects",
+  bottomNavTopLabel: "Top",
+  bottomNavNextLabel: "Next case",
+  bottomNavNextHref: "https://victor-alcantara.vercel.app/projects/p3/"
+};
 ---
-<BaseLayout title={tP7("project_p7.meta.title")} description={tP7("project_p7.meta.description")}>
-  <Fragment slot="nav"><Header /></Fragment>
-  <div class="container">
-    <section aria-labelledby="hero-p7">
-      <h1 id="hero-p7" data-text="heading-2xl">{tP7("project_p7.hero.title")}</h1>
-      <p data-text="body-muted">{tP7("project_p7.hero.subtitle")}</p>
-      <p data-text="ui-label">{tP7("project_p7.hero.kpi")}</p>
-      <p style="margin-top: var(--space-1)"><span class="nl-badge" data-variant="secondary" data-ladder={tP7("project_p7.hero.ladder")}>{tP7("project_p7.hero.ladder")}</span></p>
-      <div class="nl-hero-actions" style="margin-top: var(--space-2)">
-        <a class="nl-btn" href="#private-code" rel="noopener noreferrer">{tProjects("projects.cta.code_private")}</a>
-        <a class="nl-btn" href="#evidence" rel="noopener noreferrer">{tProjects("projects.cta.evidence")}</a>
-        <a class="nl-btn" href="https://wa.me/5548984586949" target="_blank" rel="noopener noreferrer">{tCommon("common.cta.contact")}</a>
+<BaseLayout title="Nexus Platform — Victor de Alcântara" description="Ticketing platform with WhatsApp sales, integrated payments, and resilient event check-in operations.">
+  <Fragment slot="nav">
+    <a href="https://victor-alcantara.vercel.app/" class="nav-logo">Victor<sup>®</sup></a>
+    <div class="nav-center">
+      <a href="https://victor-alcantara.vercel.app/#projects">Projects</a>
+      <a href="#">About</a>
+      <a href="https://wa.me/5548984586949">Contact</a>
+    </div>
+    <div class="nav-right">
+      <span class="avail-dot">Available for projects in 2026</span>
+      <a href="/projects/p7/">PT</a>
+      <a href="/en/projects/p7/" class="lang-active">EN</a>
+      <a href="mailto:victor.de.alcantara.bueno@gmail.com">↗ Email</a>
+    </div>
+  </Fragment>
+  <ProjectCaseRedesign {...data} />
+  <Fragment slot="footer">
+    <div class="footer-cta">
+      <p class="footer-cta-text">
+        Want to turn your idea into reality with
+        <strong>solid engineering?</strong>
+        Share context, constraints, and goals with me.
+      </p>
+      <div class="footer-contact">
+        <a href="mailto:victor.de.alcantara.bueno@gmail.com" class="footer-email">
+          victor.de.alcantara.bueno@gmail.com
+        </a>
+        <a href="https://wa.me/5548984586949" class="btn btn-primary" style="margin-top:8px">
+          WhatsApp ↗
+        </a>
       </div>
-      <div style="margin-top: var(--space-3)">
-        <figure>
-          <AspectRatioImage
-            src="/images/98f5ae2c-0f91-4fda-9e44-1fd81a607417.png"
-            alt={tP7("project_p7.hero.image_alt")}
-            ratio={16 / 3}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption data-text="ui-helper" style="margin-top: var(--space-1)">{tP7("project_p7.hero.figure_caption")}</figcaption>
-        </figure>
+    </div>
+    <div class="footer-bar">
+      <div class="footer-id">
+        <span class="footer-name">Victor de Alcântara Bueno</span>
+        <span class="footer-role">Software Engineer</span>
       </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="tldr-p7">
-      <h2 id="tldr-p7" data-text="heading-xl">{tProjects("projects.sections.tldr")}</h2>
-      <div style="display:grid; gap: var(--space-1); margin-top: var(--space-2)">
-        <p data-text="body-normal"><strong>{tP7("project_p7.tldr.problem_label")}</strong> {tP7("project_p7.tldr.problem")}</p>
-        <p data-text="body-normal"><strong>{tP7("project_p7.tldr.solution_label")}</strong> {tP7("project_p7.tldr.solution")}</p>
-        <p data-text="body-normal"><strong>{tP7("project_p7.tldr.result_label")}</strong> {tP7("project_p7.tldr.result")}</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/victor-de-alcantara/">LinkedIn</a>
+        <a href="https://github.com/Salazarismo">GitHub</a>
+        <a href="https://wa.me/5548984586949">WhatsApp</a>
       </div>
-      <div style="margin-top: var(--space-2)">
-        <span data-text="body-muted">{tP7("project_p7.tldr.note")}</span>
-      </div>
-      <div id="private-code" style="margin-top: var(--space-2)">
-        <h3 data-text="ui-label">{tP7("project_p7.private.note_title")}</h3>
-        <p data-text="body-muted">{tP7("project_p7.private.note")}</p>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="snapshot-p7">
-      <h2 id="snapshot-p7" data-text="heading-xl">{tProjects("projects.sections.snapshot")}</h2>
-      <div class="grid-12 gap-token-4" style="margin-top: var(--space-2)">
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.role_scope_time")}</div>
-          <p data-text="body-normal">{tP7("project_p7.snapshot.col1")}</p>
-        </div>
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.scale_min")}</div>
-          <p data-text="body-normal">{tP7("project_p7.snapshot.col2")}</p>
-        </div>
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.constraints_min")}</div>
-          <p data-text="body-normal">{tP7("project_p7.snapshot.col3")}</p>
-        </div>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="problem-impact-p7">
-      <h2 id="problem-impact-p7" data-text="heading-xl">{tProjects("projects.sections.problem_impact")}</h2>
-      <ul class="case-psr">
-        <li data-text="body-normal"><strong>{tP7("project_p7.problem_impact.symptoms_label")}</strong> {tP7("project_p7.problem_impact.symptoms")}</li>
-        <li data-text="body-normal"><strong>{tP7("project_p7.problem_impact.cause_label")}</strong> {tP7("project_p7.problem_impact.cause")}</li>
-        <li data-text="body-normal"><strong>{tP7("project_p7.problem_impact.impact_label")}</strong> {tP7("project_p7.problem_impact.impact")}</li>
-      </ul>
-    </section>
-    <Divider />
-    <section aria-labelledby="approach-p7">
-      <h2 id="approach-p7" data-text="heading-xl">{tProjects("projects.sections.approach")}</h2>
-      <p data-text="body-normal">{tP7("project_p7.approach.intro")}</p>
-      <ol class="case-psr">
-        <li data-text="body-normal"><strong>{tP7("project_p7.approach.step1_label")}</strong> {tP7("project_p7.approach.step1")}</li>
-        <li data-text="body-normal"><strong>{tP7("project_p7.approach.step2_label")}</strong> {tP7("project_p7.approach.step2")}</li>
-        <li data-text="body-normal"><strong>{tP7("project_p7.approach.step3_label")}</strong> {tP7("project_p7.approach.step3")}</li>
-      </ol>
-      <div class="case-stack" style="margin-top: var(--space-2)">
-        <div data-text="ui-label">{tP7("project_p7.stack.title")}</div>
-        <div class="case-chips">
-          <span class="case-chip">{tP7("project_p7.stack.chip1")}</span>
-          <span class="case-chip">{tP7("project_p7.stack.chip2")}</span>
-          <span class="case-chip">{tP7("project_p7.stack.chip3")}</span>
-          <span class="case-chip">{tP7("project_p7.stack.chip4")}</span>
-        </div>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="reliability-p7" id="evidence">
-      <h2 id="reliability-p7" data-text="heading-xl">{tProjects("projects.sections.reliability")}</h2>
-      <div style="display:grid; gap: var(--space-2); margin-top: var(--space-2)">
-        <p data-text="body-normal"><strong>{tP7("project_p7.reliability.risks_label")}</strong> {tP7("project_p7.reliability.risks")}</p>
-        <p data-text="body-normal"><strong>{tP7("project_p7.reliability.guarantees_label")}</strong> {tP7("project_p7.reliability.guarantees")}</p>
-        <p data-text="body-normal"><strong>{tP7("project_p7.reliability.evidence_label")}</strong> {tP7("project_p7.reliability.evidence")}</p>
-      </div>
-      <pre style="margin-top: var(--space-2)">
-<code data-text="body-normal">await db.add('syncQueue', &#123;
-  url,
-  method,
-  body,
-  timestamp: Date.now(),
-  retryCount: 0
-&#125;);
-// offline POS: /admin/pos/orders -&gt; /admin/pos/sync (batch)
-await fetch(syncUrl, &#123; method: 'POST', body: JSON.stringify(&#123; orders &#125;) &#125;);</code>
-      </pre>
-    </section>
-    <Divider />
-    <section aria-labelledby="next-p7">
-      <h2 id="next-p7" data-text="heading-xl">{tProjects("projects.sections.next")}</h2>
-      <ul class="case-psr">
-        <li data-text="body-normal">{tP7("project_p7.next.item1")}</li>
-        <li data-text="body-normal">{tP7("project_p7.next.item2")}</li>
-        <li data-text="body-normal">{tP7("project_p7.next.item3")}</li>
-      </ul>
-    </section>
-    <Divider />
-    <section aria-labelledby="conversion-p7">
-      <h2 id="conversion-p7" data-text="heading-xl">{tProjects("projects.sections.conversion")}</h2>
-      <p data-text="body-normal">{tP7("project_p7.conversion.p")}</p>
-      <div class="case-conversion">
-        <a class="case-cta" href="https://wa.me/5548984586949" target="_blank" rel="noopener noreferrer">{tP7("project_p7.conversion.whatsapp")}</a>
-        <a class="case-cta-secondary" href="#private-code" rel="noopener noreferrer">{tProjects("projects.cta.code_private")}</a>
-        <a class="case-cta-secondary" href="#evidence" rel="noopener noreferrer">{tProjects("projects.cta.evidence")}</a>
-        <a class="case-cta-secondary" href={`${getRelativeLocaleUrl(locale, "")}#projects`}>{tProjects("projects.buttons.back")}</a>
-        <a class="case-cta-secondary" href={getRelativeLocaleUrl(locale, "projects/p3")}>{tProjects("projects.buttons.next")}</a>
-        <span data-text="ui-helper">{tP7("project_p7.conversion.availability")}</span>
-      </div>
-    </section>
-  </div>
-  <Fragment slot="footer"><Footer /></Fragment>
+      <span class="footer-copy">© 2026 Victor</span>
+    </div>
+  </Fragment>
 </BaseLayout>

@@ -1,150 +1,140 @@
 ---
-import BaseLayout from "@/components/BaseLayout.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import Divider from "@/components/ui/Divider.astro";
-import { AspectRatioImage } from "@/components/ui/AspectRatioImage";
-import { createT, loadMessages, type Locale } from "@/i18n";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import BaseLayout from "../../../components/BaseLayout.astro";
+import ProjectCaseRedesign from "../../../components/ProjectCaseRedesign.astro";
+
 export const prerender = false;
 
-const pathname = Astro.url.pathname;
-const locale = (Astro.currentLocale || (pathname.startsWith("/en") ? "en" : "pt-br")) as Locale;
-const tCommon = createT(loadMessages(locale, "common"), { locale, namespace: "common" });
-const tProjects = createT(loadMessages(locale, "projects"), { locale, namespace: "projects" });
-const tP5 = createT(loadMessages(locale, "project_p5"), { locale, namespace: "project_p5" });
+const data = {
+  heroEyebrow: "Product Case",
+  heroTitleTop: "Relatorium",
+  heroTitleEm: "UI Quick Activity Button",
+  heroSubtitle: "Flutter app for rural management with a dashboard and quick shortcuts to start flows — activities, soil, budgeting, and more.",
+  heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fm=jpg&w=1600&q=80",
+  heroFilter: "grayscale(.8) brightness(.25)",
+  heroStats: [
+    { key: "Scope", value: "UI Component + Dashboard" },
+    { key: "Stack", value: "Flutter · go_router" },
+    { key: "Code", value: "Private code (NDA)" },
+    { key: "Critical shortcuts", value: "6 actions in 1 click" }
+  ],
+  heroActions: [
+    { label: "Message on WhatsApp ↗", href: "https://wa.me/5548984586949", primary: true },
+    { label: "View Evidence", href: "#evidence" },
+    { label: "Private code (NDA)", href: "#code" }
+  ],
+  tldrTitle: "TL;DR — 1 minute",
+  tldrCards: [
+    { key: "Problem", value: "Starting frequent flows — activity, soil, budgeting — required <strong>extra navigation</strong> before reaching the action." },
+    { key: "Solution", value: "Standardized shortcuts with <strong>QuickActionButton</strong> + Semantics + Tooltip and named-route navigation (go_router)." },
+    { key: "Result", value: "A dashboard with <strong>consistent and accessible quick entry points</strong> for creating records and reaching key screens." }
+  ],
+  noticeTitle: "Private code (NDA).",
+  noticeBody: "This software is in production and owned by a company. Access to sanitized material can be requested directly.",
+  snapshotTitle: "Snapshot",
+  snapshotRows: [
+    { key: "Role / scope", value: "Cross-platform Flutter. Scope: UI component + dashboard integration." },
+    { key: "Scale", value: "Dashboard shortcuts across multiple modules — Activities, Soil, Finance, Pests & Diseases." },
+    { key: "Constraints", value: "Accessibility (Semantics), feedback (Tooltip), and consistent navigation through named routes." }
+  ],
+  problemTitle: "Problem & Impact",
+  problemItems: [
+    { key: "Symptom", value: "Quick create and access actions were <strong>scattered across screens and menus</strong>, delaying the start of the flow." },
+    { key: "Cause", value: "Lack of a <strong>reusable shortcuts pattern</strong> with consistent dashboard navigation." },
+    { key: "Impact", value: "More steps to start frequent records and a <strong>higher chance of navigation drift</strong>." }
+  ],
+  approachTitle: "Approach",
+  approachSteps: [
+    { title: "Identify", text: "Map actions that start frequent flows in the dashboard — create activity, soil analysis, budgeting — and prioritize them by usage frequency." },
+    { title: "Encapsulate", text: "Consolidate them into a <code style='font-family:var(--mono);font-size:.85em;color:var(--amber-soft)'>QuickActionButton</code> with Semantics and Tooltip — a single UI + accessibility standard, reusable across modules." },
+    { title: "Navigate", text: "Integrate named routes via go_router to keep navigation predictable and eliminate ambiguity between screens." }
+  ],
+  reliabilityTitle: "Reliability",
+  reliabilityCards: [
+    { key: "Risks", value: "Invisible shortcuts for accessibility, inconsistent navigation, and flow regressions." },
+    { key: "Guarantees", value: "Semantics defines role and label; Tooltip provides context; named routes reduce drift." },
+    { key: "Evidence", value: "Component implementation and usage in DashboardPage with pushNamed for named routes." }
+  ],
+  codeBlock: {
+    lang: "Dart · Flutter",
+    html: `<span class="kw">Semantics</span><span class="pu">(</span>
+  button<span class="pu">:</span> <span class="kw">true</span><span class="pu">,</span>
+  label<span class="pu">:</span> <span class="str">'Nova atividade'</span><span class="pu">,</span>
+  child<span class="pu">:</span> <span class="kw">Tooltip</span><span class="pu">(</span>
+    message<span class="pu">:</span> <span class="str">'Nova atividade'</span><span class="pu">,</span>
+    child<span class="pu">:</span> <span class="fn">QuickActionButton</span><span class="pu">(</span>
+      label<span class="pu">:</span>          <span class="str">'Nova atividade'</span><span class="pu">,</span>
+      icon<span class="pu">:</span>           Icons<span class="pu">.</span>event_available<span class="pu">,</span>
+      semanticsLabel<span class="pu">:</span> <span class="str">'Nova atividade'</span><span class="pu">,</span>
+      onPressed<span class="pu">:</span> <span class="pu">()</span> <span class="pu">=></span> context<span class="pu">.</span><span class="fn">pushNamed</span><span class="pu">(</span>AppRoutes<span class="pu">.</span>newActivity<span class="pu">),</span>
+    <span class="pu">),</span>
+  <span class="pu">),</span>
+<span class="pu">);</span>`
+  },
+  stackTags: ["Flutter", "Semantics", "Tooltip", "go_router", "Named routes"],
+  extensionsTitle: "Extensions & Next steps",
+  extensionsItems: [
+    "Allow dashboard shortcut configuration — which actions appear and in what order.",
+    "Add keyboard and focus shortcuts for desktop without losing mobile consistency.",
+    "Expand widget tests covering Semantics, Tooltip, and named-route navigation."
+  ],
+  ctaEyebrow: "Do you have this problem?",
+  ctaTitle: "Need to reduce daily steps without breaking accessibility?",
+  ctaBody: "I redesign flows and implement reusable shortcuts with consistent navigation — and deliver evidence for each decision.",
+  ctaActions: [
+    { label: "Message on WhatsApp ↗", href: "https://wa.me/5548984586949", primary: true },
+    { label: "Private code (NDA)", href: "#code" },
+    { label: "Evidence", href: "#evidence" }
+  ],
+  bottomNavBackLabel: "Back",
+  bottomNavBackHref: "https://victor-alcantara.vercel.app/#projects",
+  bottomNavTopLabel: "Top",
+  bottomNavNextLabel: "Next case",
+  bottomNavNextHref: "https://victor-alcantara.vercel.app/projects/p7/"
+};
 ---
-<BaseLayout title={tP5("project_p5.meta.title")} description={tP5("project_p5.meta.description")}>
-  <Fragment slot="nav"><Header /></Fragment>
-  <div class="container">
-    <section aria-labelledby="hero-p5">
-      <h1 id="hero-p5" data-text="heading-2xl">{tP5("project_p5.hero.title")}</h1>
-      <p data-text="body-muted">{tP5("project_p5.hero.subtitle")}</p>
-      <p data-text="ui-label">{tP5("project_p5.hero.kpi")}</p>
-      <p style="margin-top: var(--space-1)"><span class="nl-badge" data-variant="secondary" data-ladder={tP5("project_p5.hero.ladder")}>{tP5("project_p5.hero.ladder")}</span></p>
-      <div class="nl-hero-actions" style="margin-top: var(--space-2)">
-        <a class="nl-btn" href="#private-code" rel="noopener noreferrer">{tProjects("projects.cta.code_private")}</a>
-        <a class="nl-btn" href="#evidence" rel="noopener noreferrer">{tProjects("projects.cta.evidence")}</a>
-        <a class="nl-btn" href="https://wa.me/5548984586949" target="_blank" rel="noopener noreferrer">{tCommon("common.cta.contact")}</a>
+<BaseLayout title="Relatorium — UI Quick Activity Button — Victor de Alcântara" description="Flutter app for rural management with a dashboard and quick shortcuts to start flows.">
+  <Fragment slot="nav">
+    <a href="https://victor-alcantara.vercel.app/" class="nav-logo">Victor<sup>®</sup></a>
+    <div class="nav-center">
+      <a href="https://victor-alcantara.vercel.app/#projects">Projects</a>
+      <a href="#">About</a>
+      <a href="https://wa.me/5548984586949">Contact</a>
+    </div>
+    <div class="nav-right">
+      <span class="avail-dot">Available for projects in 2026</span>
+      <a href="/projects/p5/">PT</a>
+      <a href="/en/projects/p5/" class="lang-active">EN</a>
+      <a href="mailto:victor.de.alcantara.bueno@gmail.com">↗ Email</a>
+    </div>
+  </Fragment>
+  <ProjectCaseRedesign {...data} />
+  <Fragment slot="footer">
+    <div class="footer-cta">
+      <p class="footer-cta-text">
+        Want to turn your idea into reality with
+        <strong>solid engineering?</strong>
+        Share context, constraints, and goals with me.
+      </p>
+      <div class="footer-contact">
+        <a href="mailto:victor.de.alcantara.bueno@gmail.com" class="footer-email">
+          victor.de.alcantara.bueno@gmail.com
+        </a>
+        <a href="https://wa.me/5548984586949" class="btn btn-primary" style="margin-top:8px">
+          WhatsApp ↗
+        </a>
       </div>
-      <div style="margin-top: var(--space-3)">
-        <AspectRatioImage
-          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fm=jpg&w=1200&q=80"
-          alt={tP5("project_p5.hero.image_alt")}
-          ratio={16 / 9}
-          loading="lazy"
-          decoding="async"
-        />
+    </div>
+    <div class="footer-bar">
+      <div class="footer-id">
+        <span class="footer-name">Victor de Alcântara Bueno</span>
+        <span class="footer-role">Software Engineer</span>
       </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="tldr-p5">
-      <h2 id="tldr-p5" data-text="heading-xl">{tProjects("projects.sections.tldr")}</h2>
-      <div style="display:grid; gap: var(--space-1); margin-top: var(--space-2)">
-        <p data-text="body-normal"><strong>{tP5("project_p5.tldr.problem_label")}</strong> {tP5("project_p5.tldr.problem")}</p>
-        <p data-text="body-normal"><strong>{tP5("project_p5.tldr.solution_label")}</strong> {tP5("project_p5.tldr.solution")}</p>
-        <p data-text="body-normal"><strong>{tP5("project_p5.tldr.result_label")}</strong> {tP5("project_p5.tldr.result")}</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/victor-de-alcantara/">LinkedIn</a>
+        <a href="https://github.com/Salazarismo">GitHub</a>
+        <a href="https://wa.me/5548984586949">WhatsApp</a>
       </div>
-      <div style="margin-top: var(--space-2)">
-        <span data-text="body-muted">{tP5("project_p5.tldr.note")}</span>
-      </div>
-      <div id="private-code" style="margin-top: var(--space-2)">
-        <h3 data-text="ui-label">{tP5("project_p5.private.note_title")}</h3>
-        <p data-text="body-muted">{tP5("project_p5.private.note")}</p>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="snapshot-p5">
-      <h2 id="snapshot-p5" data-text="heading-xl">{tProjects("projects.sections.snapshot")}</h2>
-      <div class="grid-12 gap-token-4" style="margin-top: var(--space-2)">
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.role_scope_time")}</div>
-          <p data-text="body-normal">{tP5("project_p5.snapshot.col1")}</p>
-        </div>
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.scale_min")}</div>
-          <p data-text="body-normal">{tP5("project_p5.snapshot.col2")}</p>
-        </div>
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.constraints_min")}</div>
-          <p data-text="body-normal">{tP5("project_p5.snapshot.col3")}</p>
-        </div>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="problem-impact-p5">
-      <h2 id="problem-impact-p5" data-text="heading-xl">{tProjects("projects.sections.problem_impact")}</h2>
-      <ul class="case-psr">
-        <li data-text="body-normal"><strong>{tP5("project_p5.problem_impact.symptoms_label")}</strong> {tP5("project_p5.problem_impact.symptoms")}</li>
-        <li data-text="body-normal"><strong>{tP5("project_p5.problem_impact.cause_label")}</strong> {tP5("project_p5.problem_impact.cause")}</li>
-        <li data-text="body-normal"><strong>{tP5("project_p5.problem_impact.impact_label")}</strong> {tP5("project_p5.problem_impact.impact")}</li>
-      </ul>
-    </section>
-    <Divider />
-    <section aria-labelledby="approach-p5">
-      <h2 id="approach-p5" data-text="heading-xl">{tProjects("projects.sections.approach")}</h2>
-      <p data-text="body-normal">{tP5("project_p5.approach.intro")}</p>
-      <ol class="case-psr">
-        <li data-text="body-normal"><strong>{tP5("project_p5.approach.step1_label")}</strong> {tP5("project_p5.approach.step1")}</li>
-        <li data-text="body-normal"><strong>{tP5("project_p5.approach.step2_label")}</strong> {tP5("project_p5.approach.step2")}</li>
-        <li data-text="body-normal"><strong>{tP5("project_p5.approach.step3_label")}</strong> {tP5("project_p5.approach.step3")}</li>
-      </ol>
-    </section>
-    <Divider />
-    <section aria-labelledby="reliability-p5" id="evidence">
-      <h2 id="reliability-p5" data-text="heading-xl">{tProjects("projects.sections.reliability")}</h2>
-      <div style="display:grid; gap: var(--space-2); margin-top: var(--space-2)">
-        <p data-text="body-normal"><strong>{tP5("project_p5.reliability.risks_label")}</strong> {tP5("project_p5.reliability.risks")}</p>
-        <p data-text="body-normal"><strong>{tP5("project_p5.reliability.guarantees_label")}</strong> {tP5("project_p5.reliability.guarantees")}</p>
-        <p data-text="body-normal"><strong>{tP5("project_p5.reliability.evidence_label")}</strong> {tP5("project_p5.reliability.evidence")}</p>
-      </div>
-      <pre style="margin-top: var(--space-2)">
-<code data-text="body-normal">Semantics(
-  button: true,
-  label: 'Nova atividade',
-  child: Tooltip(
-    message: 'Nova atividade',
-    child: QuickActionButton(
-      label: 'Nova atividade',
-      icon: Icons.event_available,
-      semanticsLabel: 'Nova atividade',
-      onPressed: () =&gt; context.pushNamed(AppRoutes.newActivity),
-    )
-  ),
-)</code>
-      </pre>
-      <div class="case-stack" style="margin-top: var(--space-2)">
-        <div data-text="ui-label">{tP5("project_p5.stack.title")}</div>
-        <div class="case-chips">
-          <span class="case-chip">{tP5("project_p5.stack.chip1")}</span>
-          <span class="case-chip">{tP5("project_p5.stack.chip2")}</span>
-          <span class="case-chip">{tP5("project_p5.stack.chip3")}</span>
-          <span class="case-chip">{tP5("project_p5.stack.chip4")}</span>
-        </div>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="next-p5">
-      <h2 id="next-p5" data-text="heading-xl">{tProjects("projects.sections.next")}</h2>
-      <ul class="case-psr">
-        <li data-text="body-normal">{tP5("project_p5.next.item1")}</li>
-        <li data-text="body-normal">{tP5("project_p5.next.item2")}</li>
-        <li data-text="body-normal">{tP5("project_p5.next.item3")}</li>
-      </ul>
-    </section>
-    <Divider />
-    <section aria-labelledby="conversion-p5">
-      <h2 id="conversion-p5" data-text="heading-xl">{tProjects("projects.sections.conversion")}</h2>
-      <p data-text="body-normal">{tP5("project_p5.conversion.p")}</p>
-      <div class="case-conversion">
-        <a class="case-cta" href="https://wa.me/5548984586949" target="_blank" rel="noopener noreferrer">{tP5("project_p5.conversion.whatsapp")}</a>
-        <a class="case-cta-secondary" href="#private-code" rel="noopener noreferrer">{tProjects("projects.cta.code_private")}</a>
-        <a class="case-cta-secondary" href="#evidence" rel="noopener noreferrer">{tProjects("projects.cta.evidence")}</a>
-        <a class="case-cta-secondary" href={`${getRelativeLocaleUrl(locale, "")}#projects`}>{tProjects("projects.buttons.back")}</a>
-        <a class="case-cta-secondary" href={getRelativeLocaleUrl(locale, "projects/p7")}>{tProjects("projects.buttons.next")}</a>
-        <span data-text="ui-helper">{tP5("project_p5.conversion.availability")}</span>
-      </div>
-    </section>
-  </div>
-  <Fragment slot="footer"><Footer /></Fragment>
+      <span class="footer-copy">© 2026 Victor</span>
+    </div>
+  </Fragment>
 </BaseLayout>

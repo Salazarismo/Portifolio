@@ -1,150 +1,140 @@
 ---
 import BaseLayout from "../../components/BaseLayout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import Divider from "../../components/ui/Divider.astro";
-import { AspectRatioImage } from "@/components/ui/AspectRatioImage";
-import { createT, loadMessages, type Locale } from "@/i18n";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import ProjectCaseRedesign from "../../components/ProjectCaseRedesign.astro";
+
 export const prerender = false;
 
-const pathname = Astro.url.pathname;
-const locale = (Astro.currentLocale || (pathname.startsWith("/en") ? "en" : "pt-br")) as Locale;
-const tCommon = createT(loadMessages(locale, "common"), { locale, namespace: "common" });
-const tProjects = createT(loadMessages(locale, "projects"), { locale, namespace: "projects" });
-const tP5 = createT(loadMessages(locale, "project_p5"), { locale, namespace: "project_p5" });
+const data = {
+  heroEyebrow: "Case de Produto",
+  heroTitleTop: "Relatorium",
+  heroTitleEm: "UI Quick Activity Button",
+  heroSubtitle: "Aplicativo Flutter para gestão rural com dashboard e atalhos rápidos para iniciar fluxos — atividades, solo, orçamento e mais.",
+  heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fm=jpg&w=1600&q=80",
+  heroFilter: "grayscale(.8) brightness(.25)",
+  heroStats: [
+    { key: "Escopo", value: "UI Component + Dashboard" },
+    { key: "Stack", value: "Flutter · go_router" },
+    { key: "Código", value: "Privado (NDA)" },
+    { key: "Atalhos críticos", value: "6 ações em 1 clique" }
+  ],
+  heroActions: [
+    { label: "Falar no WhatsApp ↗", href: "https://wa.me/5548984586949", primary: true },
+    { label: "Ver Evidências", href: "#evidence" },
+    { label: "Código Privado (NDA)", href: "#code" }
+  ],
+  tldrTitle: "TL;DR — 1 minuto",
+  tldrCards: [
+    { key: "Problema", value: "Iniciar fluxos frequentes — atividade, solo, orçamento — exigia <strong>navegação adicional</strong> antes de chegar na ação." },
+    { key: "Solução", value: "Atalhos padronizados com <strong>QuickActionButton</strong> + Semantics + Tooltip e navegação por rotas nomeadas (go_router)." },
+    { key: "Resultado", value: "Dashboard com <strong>entradas rápidas consistentes e acessíveis</strong> para criar registros e acessar telas-chave." }
+  ],
+  noticeTitle: "Código privado (NDA).",
+  noticeBody: "Este software está em produção e sob propriedade de uma empresa. Acesso a material sanitizado pode ser solicitado diretamente.",
+  snapshotTitle: "Snapshot",
+  snapshotRows: [
+    { key: "Papel / escopo", value: "Flutter multiplataforma. Escopo: componente UI + integração no dashboard." },
+    { key: "Escala", value: "Dashboard com atalhos para múltiplos módulos — Atividades, Solo, Financeiro, Pragas & Doenças." },
+    { key: "Restrições", value: "Acessibilidade (Semantics), feedback (Tooltip) e navegação consistente via rotas nomeadas." }
+  ],
+  problemTitle: "Problema & Impacto",
+  problemItems: [
+    { key: "Sintoma", value: "Ações de criação e acesso rápido ficavam <strong>distribuídas entre telas e menus</strong>, atrasando o início do fluxo." },
+    { key: "Causa", value: "Ausência de um <strong>padrão de atalhos reutilizáveis</strong> com navegação consistente no dashboard." },
+    { key: "Impacto", value: "Mais passos para iniciar registros frequentes e <strong>maior chance de desvio de navegação</strong>." }
+  ],
+  approachTitle: "Abordagem",
+  approachSteps: [
+    { title: "Identificar", text: "Mapear as ações que iniciam fluxos frequentes no dashboard — criar atividade, análise de solo, orçamento — e priorizá-las por frequência de uso." },
+    { title: "Encapsular", text: "Consolidar em um <code style='font-family:var(--mono);font-size:.85em;color:var(--amber-soft)'>QuickActionButton</code> com Semantics e Tooltip — padrão único de UI + acessibilidade, reutilizável em qualquer módulo." },
+    { title: "Navegar", text: "Integrar rotas nomeadas via go_router para manter previsibilidade e eliminar ambiguidade na navegação entre telas." }
+  ],
+  reliabilityTitle: "Confiabilidade",
+  reliabilityCards: [
+    { key: "Riscos", value: "Atalhos invisíveis para acessibilidade, navegação inconsistente, regressão no fluxo." },
+    { key: "Garantias", value: "Semantics define papel e rótulo; Tooltip dá contexto; rotas nomeadas reduzem desvios." },
+    { key: "Evidência", value: "Implementação do componente e uso no DashboardPage com pushNamed para rotas nomeadas." }
+  ],
+  codeBlock: {
+    lang: "Dart · Flutter",
+    html: `<span class="kw">Semantics</span><span class="pu">(</span>
+  button<span class="pu">:</span> <span class="kw">true</span><span class="pu">,</span>
+  label<span class="pu">:</span> <span class="str">'Nova atividade'</span><span class="pu">,</span>
+  child<span class="pu">:</span> <span class="kw">Tooltip</span><span class="pu">(</span>
+    message<span class="pu">:</span> <span class="str">'Nova atividade'</span><span class="pu">,</span>
+    child<span class="pu">:</span> <span class="fn">QuickActionButton</span><span class="pu">(</span>
+      label<span class="pu">:</span>          <span class="str">'Nova atividade'</span><span class="pu">,</span>
+      icon<span class="pu">:</span>           Icons<span class="pu">.</span>event_available<span class="pu">,</span>
+      semanticsLabel<span class="pu">:</span> <span class="str">'Nova atividade'</span><span class="pu">,</span>
+      onPressed<span class="pu">:</span> <span class="pu">()</span> <span class="pu">=></span> context<span class="pu">.</span><span class="fn">pushNamed</span><span class="pu">(</span>AppRoutes<span class="pu">.</span>newActivity<span class="pu">),</span>
+    <span class="pu">),</span>
+  <span class="pu">),</span>
+<span class="pu">);</span>`
+  },
+  stackTags: ["Flutter", "Semantics", "Tooltip", "go_router", "Rotas nomeadas"],
+  extensionsTitle: "Extensões & Próximos passos",
+  extensionsItems: [
+    "Permitir configuração dos atalhos do dashboard — quais ações aparecem e em que ordem.",
+    "Adicionar atalhos de teclado/foco para desktop sem perder consistência com mobile.",
+    "Expandir testes de widget cobrindo Semantics, Tooltip e navegação por rotas nomeadas."
+  ],
+  ctaEyebrow: "Você tem esse problema?",
+  ctaTitle: "Precisa reduzir passos no dia a dia sem quebrar acessibilidade?",
+  ctaBody: "Eu redesenho fluxos e implemento atalhos reutilizáveis com navegação consistente — e entrego evidências de cada decisão.",
+  ctaActions: [
+    { label: "Falar no WhatsApp ↗", href: "https://wa.me/5548984586949", primary: true },
+    { label: "Código (NDA)", href: "#code" },
+    { label: "Evidências", href: "#evidence" }
+  ],
+  bottomNavBackLabel: "Voltar",
+  bottomNavBackHref: "https://victor-alcantara.vercel.app/#projects",
+  bottomNavTopLabel: "Topo",
+  bottomNavNextLabel: "Próximo case",
+  bottomNavNextHref: "https://victor-alcantara.vercel.app/projects/p7/"
+};
 ---
-<BaseLayout title={tP5("project_p5.meta.title")} description={tP5("project_p5.meta.description")}>
-  <Fragment slot="nav"><Header /></Fragment>
-  <div class="container">
-    <section aria-labelledby="hero-p5">
-      <h1 id="hero-p5" data-text="heading-2xl">{tP5("project_p5.hero.title")}</h1>
-      <p data-text="body-muted">{tP5("project_p5.hero.subtitle")}</p>
-      <p data-text="ui-label">{tP5("project_p5.hero.kpi")}</p>
-      <p style="margin-top: var(--space-1)"><span class="nl-badge" data-variant="secondary" data-ladder={tP5("project_p5.hero.ladder")}>{tP5("project_p5.hero.ladder")}</span></p>
-      <div class="nl-hero-actions" style="margin-top: var(--space-2)">
-        <a class="nl-btn" href="#private-code" rel="noopener noreferrer">{tProjects("projects.cta.code_private")}</a>
-        <a class="nl-btn" href="#evidence" rel="noopener noreferrer">{tProjects("projects.cta.evidence")}</a>
-        <a class="nl-btn" href="https://wa.me/5548984586949" target="_blank" rel="noopener noreferrer">{tCommon("common.cta.contact")}</a>
+<BaseLayout title="Relatorium — UI Quick Activity Button — Victor de Alcântara" description="Aplicativo Flutter para gestão rural com dashboard e atalhos rápidos para iniciar fluxos.">
+  <Fragment slot="nav">
+    <a href="https://victor-alcantara.vercel.app/" class="nav-logo">Victor<sup>®</sup></a>
+    <div class="nav-center">
+      <a href="https://victor-alcantara.vercel.app/#projects">Projetos</a>
+      <a href="#">Sobre</a>
+      <a href="https://wa.me/5548984586949">Contato</a>
+    </div>
+    <div class="nav-right">
+      <span class="avail-dot">Disponível para projetos em 2026</span>
+      <a href="/projects/p5/" class="lang-active">PT</a>
+      <a href="/en/projects/p5/">EN</a>
+      <a href="mailto:victor.de.alcantara.bueno@gmail.com">↗ Email</a>
+    </div>
+  </Fragment>
+  <ProjectCaseRedesign {...data} />
+  <Fragment slot="footer">
+    <div class="footer-cta">
+      <p class="footer-cta-text">
+        Quer tirar sua ideia do papel com
+        <strong>engenharia bem feita?</strong>
+        Me conte contexto, restrições e objetivo.
+      </p>
+      <div class="footer-contact">
+        <a href="mailto:victor.de.alcantara.bueno@gmail.com" class="footer-email">
+          victor.de.alcantara.bueno@gmail.com
+        </a>
+        <a href="https://wa.me/5548984586949" class="btn btn-primary" style="margin-top:8px">
+          WhatsApp ↗
+        </a>
       </div>
-      <div style="margin-top: var(--space-3)">
-        <AspectRatioImage
-          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fm=jpg&w=1200&q=80"
-          alt={tP5("project_p5.hero.image_alt")}
-          ratio={16 / 9}
-          loading="lazy"
-          decoding="async"
-        />
+    </div>
+    <div class="footer-bar">
+      <div class="footer-id">
+        <span class="footer-name">Victor de Alcântara Bueno</span>
+        <span class="footer-role">Engenheiro de Software</span>
       </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="tldr-p5">
-      <h2 id="tldr-p5" data-text="heading-xl">{tProjects("projects.sections.tldr")}</h2>
-      <div style="display:grid; gap: var(--space-1); margin-top: var(--space-2)">
-        <p data-text="body-normal"><strong>{tP5("project_p5.tldr.problem_label")}</strong> {tP5("project_p5.tldr.problem")}</p>
-        <p data-text="body-normal"><strong>{tP5("project_p5.tldr.solution_label")}</strong> {tP5("project_p5.tldr.solution")}</p>
-        <p data-text="body-normal"><strong>{tP5("project_p5.tldr.result_label")}</strong> {tP5("project_p5.tldr.result")}</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/victor-de-alcantara/">LinkedIn</a>
+        <a href="https://github.com/Salazarismo">GitHub</a>
+        <a href="https://wa.me/5548984586949">WhatsApp</a>
       </div>
-      <div style="margin-top: var(--space-2)">
-        <span data-text="body-muted">{tP5("project_p5.tldr.note")}</span>
-      </div>
-      <div id="private-code" style="margin-top: var(--space-2)">
-        <h3 data-text="ui-label">{tP5("project_p5.private.note_title")}</h3>
-        <p data-text="body-muted">{tP5("project_p5.private.note")}</p>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="snapshot-p5">
-      <h2 id="snapshot-p5" data-text="heading-xl">{tProjects("projects.sections.snapshot")}</h2>
-      <div class="grid-12 gap-token-4" style="margin-top: var(--space-2)">
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.role_scope_time")}</div>
-          <p data-text="body-normal">{tP5("project_p5.snapshot.col1")}</p>
-        </div>
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.scale_min")}</div>
-          <p data-text="body-normal">{tP5("project_p5.snapshot.col2")}</p>
-        </div>
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.constraints_min")}</div>
-          <p data-text="body-normal">{tP5("project_p5.snapshot.col3")}</p>
-        </div>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="problem-impact-p5">
-      <h2 id="problem-impact-p5" data-text="heading-xl">{tProjects("projects.sections.problem_impact")}</h2>
-      <ul class="case-psr">
-        <li data-text="body-normal"><strong>{tP5("project_p5.problem_impact.symptoms_label")}</strong> {tP5("project_p5.problem_impact.symptoms")}</li>
-        <li data-text="body-normal"><strong>{tP5("project_p5.problem_impact.cause_label")}</strong> {tP5("project_p5.problem_impact.cause")}</li>
-        <li data-text="body-normal"><strong>{tP5("project_p5.problem_impact.impact_label")}</strong> {tP5("project_p5.problem_impact.impact")}</li>
-      </ul>
-    </section>
-    <Divider />
-    <section aria-labelledby="approach-p5">
-      <h2 id="approach-p5" data-text="heading-xl">{tProjects("projects.sections.approach")}</h2>
-      <p data-text="body-normal">{tP5("project_p5.approach.intro")}</p>
-      <ol class="case-psr">
-        <li data-text="body-normal"><strong>{tP5("project_p5.approach.step1_label")}</strong> {tP5("project_p5.approach.step1")}</li>
-        <li data-text="body-normal"><strong>{tP5("project_p5.approach.step2_label")}</strong> {tP5("project_p5.approach.step2")}</li>
-        <li data-text="body-normal"><strong>{tP5("project_p5.approach.step3_label")}</strong> {tP5("project_p5.approach.step3")}</li>
-      </ol>
-    </section>
-    <Divider />
-    <section aria-labelledby="reliability-p5" id="evidence">
-      <h2 id="reliability-p5" data-text="heading-xl">{tProjects("projects.sections.reliability")}</h2>
-      <div style="display:grid; gap: var(--space-2); margin-top: var(--space-2)">
-        <p data-text="body-normal"><strong>{tP5("project_p5.reliability.risks_label")}</strong> {tP5("project_p5.reliability.risks")}</p>
-        <p data-text="body-normal"><strong>{tP5("project_p5.reliability.guarantees_label")}</strong> {tP5("project_p5.reliability.guarantees")}</p>
-        <p data-text="body-normal"><strong>{tP5("project_p5.reliability.evidence_label")}</strong> {tP5("project_p5.reliability.evidence")}</p>
-      </div>
-      <pre style="margin-top: var(--space-2)">
-<code data-text="body-normal">Semantics(
-  button: true,
-  label: 'Nova atividade',
-  child: Tooltip(
-    message: 'Nova atividade',
-    child: QuickActionButton(
-      label: 'Nova atividade',
-      icon: Icons.event_available,
-      semanticsLabel: 'Nova atividade',
-      onPressed: () =&gt; context.pushNamed(AppRoutes.newActivity),
-    )
-  ),
-)</code>
-      </pre>
-      <div class="case-stack" style="margin-top: var(--space-2)">
-        <div data-text="ui-label">{tP5("project_p5.stack.title")}</div>
-        <div class="case-chips">
-          <span class="case-chip">{tP5("project_p5.stack.chip1")}</span>
-          <span class="case-chip">{tP5("project_p5.stack.chip2")}</span>
-          <span class="case-chip">{tP5("project_p5.stack.chip3")}</span>
-          <span class="case-chip">{tP5("project_p5.stack.chip4")}</span>
-        </div>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="next-p5">
-      <h2 id="next-p5" data-text="heading-xl">{tProjects("projects.sections.next")}</h2>
-      <ul class="case-psr">
-        <li data-text="body-normal">{tP5("project_p5.next.item1")}</li>
-        <li data-text="body-normal">{tP5("project_p5.next.item2")}</li>
-        <li data-text="body-normal">{tP5("project_p5.next.item3")}</li>
-      </ul>
-    </section>
-    <Divider />
-    <section aria-labelledby="conversion-p5">
-      <h2 id="conversion-p5" data-text="heading-xl">{tProjects("projects.sections.conversion")}</h2>
-      <p data-text="body-normal">{tP5("project_p5.conversion.p")}</p>
-      <div class="case-conversion">
-        <a class="case-cta" href="https://wa.me/5548984586949" target="_blank" rel="noopener noreferrer">{tP5("project_p5.conversion.whatsapp")}</a>
-        <a class="case-cta-secondary" href="#private-code" rel="noopener noreferrer">{tProjects("projects.cta.code_private")}</a>
-        <a class="case-cta-secondary" href="#evidence" rel="noopener noreferrer">{tProjects("projects.cta.evidence")}</a>
-        <a class="case-cta-secondary" href={`${getRelativeLocaleUrl(locale, "")}#projects`}>{tProjects("projects.buttons.back")}</a>
-        <a class="case-cta-secondary" href={getRelativeLocaleUrl(locale, "projects/p7")}>{tProjects("projects.buttons.next")}</a>
-        <span data-text="ui-helper">{tP5("project_p5.conversion.availability")}</span>
-      </div>
-    </section>
-  </div>
-  <Fragment slot="footer"><Footer /></Fragment>
+      <span class="footer-copy">© 2026 Victor</span>
+    </div>
+  </Fragment>
 </BaseLayout>

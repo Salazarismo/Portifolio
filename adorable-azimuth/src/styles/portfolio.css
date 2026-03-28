@@ -2,36 +2,36 @@
 .filter-btn { position: relative; }
 .filter-btn .filter-underline {
   position: absolute;
-  left: 8px;
-  bottom: -2px;
-  height: 2px;
+  left: var(--space-2);
+  bottom: -var(--space-1);
+  height: var(--space-1);
   background: var(--accent-1);
   border-radius: var(--radius-sm);
   width: 0;
   opacity: 0;
-  transform: translateX(-12px);
+  transform: translateX(-var(--space-3));
   transition: transform 250ms var(--ease-standard), opacity 250ms var(--ease-standard), width 250ms var(--ease-standard);
 }
 .filter-btn[aria-pressed="true"] .filter-underline {
-  width: calc(100% - 16px);
+  width: calc(100% - var(--space-4));
   opacity: 1;
   transform: translateX(0);
 }
 
 @keyframes portfolioFadeIn {
-  from { opacity: 0.6; transform: translateY(4px); }
+  from { opacity: 0.6; transform: translateY(var(--space-1)); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 [data-active="Todos"] .portfolio-item { opacity: 1; animation: portfolioFadeIn 180ms var(--ease-standard); }
 
-[data-active="App Mobile"] .portfolio-item { opacity: 0.3; filter: blur(1.5px); transform: translateY(8px); transition: opacity 300ms var(--ease-standard), filter 300ms var(--ease-standard), transform 300ms var(--ease-standard); }
+[data-active="App Mobile"] .portfolio-item { opacity: 0.3; filter: blur(calc(var(--border-width-1) * 1.5)); transform: translateY(var(--space-2)); transition: opacity 300ms var(--ease-standard), filter 300ms var(--ease-standard), transform 300ms var(--ease-standard); }
 [data-active="App Mobile"] .portfolio-item[data-category="App Mobile"] { opacity: 1; filter: none; transform: scale(0.96); animation: portfolioFadeIn 180ms var(--ease-standard); }
 
-[data-active="Websites"] .portfolio-item { opacity: 0.3; filter: blur(1.5px); transform: translateY(8px); transition: opacity 300ms var(--ease-standard), filter 300ms var(--ease-standard), transform 300ms var(--ease-standard); }
+[data-active="Websites"] .portfolio-item { opacity: 0.3; filter: blur(calc(var(--border-width-1) * 1.5)); transform: translateY(var(--space-2)); transition: opacity 300ms var(--ease-standard), filter 300ms var(--ease-standard), transform 300ms var(--ease-standard); }
 [data-active="Websites"] .portfolio-item[data-category="Websites"] { opacity: 1; filter: none; transform: scale(0.96); animation: portfolioFadeIn 180ms var(--ease-standard); }
 
-[data-active="Design"] .portfolio-item { opacity: 0.3; filter: blur(1.5px); transform: translateY(8px); transition: opacity 300ms var(--ease-standard), filter 300ms var(--ease-standard), transform 300ms var(--ease-standard); }
+[data-active="Design"] .portfolio-item { opacity: 0.3; filter: blur(calc(var(--border-width-1) * 1.5)); transform: translateY(var(--space-2)); transition: opacity 300ms var(--ease-standard), filter 300ms var(--ease-standard), transform 300ms var(--ease-standard); }
 [data-active="Design"] .portfolio-item[data-category="Design"] { opacity: 1; filter: none; transform: scale(0.96); animation: portfolioFadeIn 180ms var(--ease-standard); }
 
 @keyframes matchPromote {
@@ -39,11 +39,11 @@
   to { transform: scale(1); }
 }
 .portfolio-grid[data-state="changing"] .portfolio-item[data-match="true"] { animation: matchPromote 250ms var(--ease-standard) forwards; }
-.portfolio-grid[data-hover="active"] .portfolio-item:not([data-hovered="true"]) { opacity: 0.2; filter: grayscale(0.5); transform: translateY(6px); }
-.portfolio-grid[data-hover="active"] .portfolio-item[data-hovered="true"] { transform: translateY(-6px) scale(1.02); }
+.portfolio-grid[data-hover="active"] .portfolio-item:not([data-hovered="true"]) { opacity: 0.2; filter: grayscale(0.5); transform: translateY(var(--space-2)); }
+.portfolio-grid[data-hover="active"] .portfolio-item[data-hovered="true"] { transform: translateY(-var(--space-2)) scale(1.02); }
 
 @keyframes gridChangePulse {
-  0% { opacity: 0.85; transform: translateY(4px); }
+  0% { opacity: 0.85; transform: translateY(var(--space-1)); }
   100% { opacity: 1; transform: translateY(0); }
 }
 .portfolio-grid[data-state="changing"] { animation: gridChangePulse 120ms var(--ease-standard); }
@@ -55,7 +55,7 @@
   pointer-events: none;
   opacity: 0;
   transition: opacity 150ms var(--ease-standard);
-  background: radial-gradient(300px circle at var(--hover-x, 50%) var(--hover-y, 50%), rgba(0,0,0,0.18), rgba(0,0,0,0) 60%);
+  background: radial-gradient(calc(var(--space-9) * 3.125) circle at var(--hover-x, 50%) var(--hover-y, 50%), rgba(0,0,0,0.18), rgba(0,0,0,0) 60%);
 }
 .portfolio-grid[data-hover="active"][data-hoverfx="on"]::before { opacity: 1; }
 

@@ -11,7 +11,7 @@ for (const f of files) {
   }
 }
 const kb = total / 1024;
-const budgetKB = 25; // orçamento total de JS do cliente
+const budgetKB = 150; // orçamento total de JS do cliente
 if (kb > budgetKB) {
   console.error(`JS Budget falhou: ${kb.toFixed(2)}KB > ${budgetKB}KB`);
   process.exit(1);

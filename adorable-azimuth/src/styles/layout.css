@@ -6,4 +6,4 @@
 .gap-token-3 { gap: var(--spacing-3); }
 .gap-token-6 { gap: var(--spacing-6); }
 
-.page-project #main { padding-top: calc(var(--header-h) + 24px); }
+.page-project #main { padding-top: calc(var(--header-h) + var(--space-5)); }

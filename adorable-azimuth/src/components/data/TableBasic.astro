@@ -26,7 +26,7 @@ const { headers, rows, caption = '' } = Astro.props as Props;
               if (v.includes('concluído')) tone = 'success';
               else if (v.includes('estável')) tone = 'neutral';
               else if (v.includes('pendente')) tone = 'danger';
-              content = `<span style="display:inline-block; padding:2px 8px; border-radius: var(--radius-md); background:${tone==='success'?'var(--success)':'var(--surface-2)'}; color:${tone==='success'?'var(--success-ink)':'var(--ink-1)'}">${c}</span>`;
+              content = `<span style="display:inline-block; padding:var(--space-1) var(--space-2); border-radius: var(--radius-md); background:${tone==='success'?'var(--success)':'var(--surface-2)'}; color:${tone==='success'?'var(--success-ink)':'var(--ink-1)'}">${c}</span>`;
             }
             if (isMetric) {
               const lc = c.toLowerCase();

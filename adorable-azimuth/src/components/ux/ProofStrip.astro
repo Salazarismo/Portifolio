@@ -5,7 +5,7 @@ const { items } = Astro.props as Props;
 ---
 <div role="list" data-intent="proof-strip" data-z="1" style="display:flex; gap: var(--space-3); flex-wrap: wrap; padding: var(--space-2); border-style: solid; border-width: var(--border-width-1); border-color: var(--color-border); border-radius: var(--radius-md); box-shadow: var(--elevation-1)">
   {items.map((it) => (
-    <div role="listitem" style="display:flex; flex-direction:column; gap: 2px">
+    <div role="listitem" style="display:flex; flex-direction:column; gap: var(--space-1)">
       <strong data-text="heading-lg">{it.value}</strong>
       <span data-text="ui-helper">{it.label}</span>
     </div>

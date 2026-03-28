@@ -64,8 +64,9 @@ const titleLines = title.split("\n").map((s) => s.trim()).filter(Boolean);
         <a class="nl-btn" href={ctaSecondaryHref}>{ctaSecondaryLabel}</a>
       )}
     </div>
-    {microcopy && <p data-text="ui-helper" style="margin-top: 12px">{microcopy}</p>}
+    {microcopy && <p data-text="ui-helper" style="margin-top: var(--space-3)">{microcopy}</p>}
     <div class="nl-hero-scroll">
+      <div data-text="ui-helper">{scrollLeft}</div>
       <IconTooltips />
       <a class="nl-nav-link" href={scrollHref}>{scrollRight}</a>
     </div>

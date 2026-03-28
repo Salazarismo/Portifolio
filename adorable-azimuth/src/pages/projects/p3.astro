@@ -1,140 +1,135 @@
 ---
 import BaseLayout from "../../components/BaseLayout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import Divider from "../../components/ui/Divider.astro";
-import { AspectRatioImage } from "@/components/ui/AspectRatioImage";
-import { createT, loadMessages, type Locale } from "@/i18n";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import ProjectCaseRedesign from "../../components/ProjectCaseRedesign.astro";
+
 export const prerender = false;
 
-const pathname = Astro.url.pathname;
-const locale = (Astro.currentLocale || (pathname.startsWith("/en") ? "en" : "pt-br")) as Locale;
-const tCommon = createT(loadMessages(locale, "common"), { locale, namespace: "common" });
-const tProjects = createT(loadMessages(locale, "projects"), { locale, namespace: "projects" });
-const tP3 = createT(loadMessages(locale, "project_p3"), { locale, namespace: "project_p3" });
+const data = {
+  heroEyebrow: "Case de Produto",
+  heroTitleTop: "Habit",
+  heroTitleEm: "Analyzer",
+  heroSubtitle: "Aplicativo web de acompanhamento de hábitos com API REST e dashboard de visualização de progresso.",
+  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fm=jpg&w=1600&q=80",
+  heroFilter: "grayscale(.8) brightness(.25)",
+  heroStats: [
+    { key: "Escopo", value: "Arquitetura + Full-stack" },
+    { key: "Stack", value: "FastAPI · Next.js · PostgreSQL" },
+    { key: "Código", value: "Público (GitHub)" },
+    { key: "KPI", value: "−40% custo de leitura" }
+  ],
+  heroActions: [
+    { label: "Falar no WhatsApp ↗", href: "https://wa.me/5548984586949", primary: true },
+    { label: "Ver Evidências", href: "#evidence" },
+    { label: "Código Público ↗", href: "https://github.com/Salazarismo/habit_analyzer", target: "_blank", rel: "noopener noreferrer" }
+  ],
+  tldrTitle: "TL;DR — 1 minuto",
+  tldrCards: [
+    { key: "Problema", value: "Registrar hábitos e acompanhar evolução tende a virar <strong>planilha ou nota solta</strong>, com pouco insight e baixa consistência." },
+    { key: "Solução", value: "Backend em <strong>FastAPI + JWT</strong> e frontend Next.js com fluxo de registro e gráficos por hábito." },
+    { key: "Resultado", value: "MVP funcional com <strong>Docker Compose, OpenAPI e testes</strong>, além de otimização de leitura em janelas grandes." }
+  ],
+  noticeTitle: "Código público disponível no GitHub.",
+  noticeBody: "Repositório com README, OpenAPI e evidências do fluxo principal.",
+  snapshotTitle: "Snapshot",
+  snapshotRows: [
+    { key: "Papel", value: "Arquitetura + Full-stack. API, autenticação, persistência e dashboard web." },
+    { key: "Escala", value: "Múltiplos hábitos por usuário, registros diários e histórico suficiente para gráficos e tendências." },
+    { key: "Restrições", value: "Consistência de datas e valores, autenticação segura e evolução do schema com migrações." }
+  ],
+  problemTitle: "Problema & Impacto",
+  problemItems: [
+    { key: "Sintoma", value: "Registro manual disperso e <strong>pouca visibilidade do progresso</strong> ao longo do tempo." },
+    { key: "Causa", value: "Dados sem modelo único e sem uma <strong>visualização agregada</strong> do histórico por hábito." },
+    { key: "Impacto", value: "Baixa aderência ao acompanhamento e <strong>decisões piores sobre rotina</strong> por falta de sinal." }
+  ],
+  approachTitle: "Abordagem",
+  approachSteps: [
+    { title: "Modelar", text: "Estruturar hábitos, registros e resumos analíticos em Postgres com contratos claros para persistência e evolução via migrações." },
+    { title: "Expor", text: "Disponibilizar uma API REST com FastAPI, autenticação JWT e documentação Swagger/OpenAPI para reduzir atrito de integração." },
+    { title: "Visualizar", text: "Entregar dashboard web em Next.js com registro rápido, gráficos por hábito e leitura eficiente de janelas temporais maiores." }
+  ],
+  reliabilityTitle: "Confiabilidade",
+  reliabilityCards: [
+    { key: "Riscos", value: "Dados inconsistentes, regressão de autenticação e divergência entre resumo e série temporal." },
+    { key: "Garantias", value: "Pydantic para validação, Alembic para migrações e testes unitários + E2E no fluxo crítico." },
+    { key: "Evidência", value: "Trecho da estratégia de resumo com cache versionado e fallback entre leitura direta e pré-agregada." }
+  ],
+  codeBlock: {
+    lang: "Python · FastAPI",
+    html: `<span class="kw">def</span> <span class="fn">get_habit_summary</span><span class="pu">(</span>self<span class="pu">,</span> user_id<span class="pu">,</span> habit_id<span class="pu">,</span> days<span class="pu">=</span><span class="kw">30</span><span class="pu">):</span>
+    cache_key <span class="pu">=</span> <span class="pu">(</span><span class="fn">str</span><span class="pu">(</span>user_id<span class="pu">),</span> <span class="fn">str</span><span class="pu">(</span>habit_id<span class="pu">),</span> days<span class="pu">,</span> <span class="fn">int</span><span class="pu">(</span>habit<span class="pu">.</span>summary_version <span class="kw">or</span> <span class="kw">0</span><span class="pu">))</span>
+    use_daily <span class="pu">=</span> settings<span class="pu">.</span>USE_SUMMARY_DAILY <span class="kw">and</span> days <span class="pu">&lt;=</span> settings<span class="pu">.</span>SUMMARY_WINDOW_DAYS
+    <span class="kw">if</span> use_daily<span class="pu">:</span>
+        rows <span class="pu">=</span> self<span class="pu">.</span>record_repo<span class="pu">.</span><span class="fn">get_summary_daily</span><span class="pu">(</span>habit_id<span class="pu">,</span> start_date<span class="pu">,</span> end_date<span class="pu">)</span>
+    <span class="kw">else</span><span class="pu">:</span>
+        records <span class="pu">=</span> self<span class="pu">.</span>record_repo<span class="pu">.</span><span class="fn">get_by_date_range</span><span class="pu">(</span>habit_id<span class="pu">,</span> start_date<span class="pu">,</span> end_date<span class="pu">)</span>
+    <span class="kw">return</span> result`
+  },
+  stackTags: ["FastAPI", "Next.js", "PostgreSQL", "JWT", "Alembic", "Playwright"],
+  extensionsTitle: "Extensões & Próximos passos",
+  extensionsItems: [
+    "Adicionar metas, streaks e lembretes para reforçar aderência.",
+    "Expandir relatórios semanais e mensais com filtros por hábito.",
+    "Incluir observabilidade de API e erros para evolução segura do produto."
+  ],
+  ctaEyebrow: "Você tem esse problema?",
+  ctaTitle: "Precisa de um MVP com API, autenticação e dashboard de visualização?",
+  ctaBody: "Desenho a arquitetura, implemento o fluxo crítico e valido a entrega com documentação e testes.",
+  ctaActions: [
+    { label: "Falar no WhatsApp ↗", href: "https://wa.me/5548984586949", primary: true },
+    { label: "Código Público ↗", href: "https://github.com/Salazarismo/habit_analyzer", target: "_blank", rel: "noopener noreferrer" },
+    { label: "Evidências", href: "#evidence" }
+  ],
+  bottomNavBackLabel: "Voltar",
+  bottomNavBackHref: "https://victor-alcantara.vercel.app/#projects",
+  bottomNavTopLabel: "Topo",
+  bottomNavNextLabel: "Próximo case",
+  bottomNavNextHref: "https://victor-alcantara.vercel.app/projects/p5/"
+};
 ---
-<BaseLayout title={tP3("project_p3.meta.title")} description={tP3("project_p3.meta.description")}>
-  <Fragment slot="nav"><Header /></Fragment>
-  <div class="container">
-    <section aria-labelledby="hero-p3">
-      <h1 id="hero-p3" data-text="heading-2xl">{tP3("project_p3.hero.title")}</h1>
-      <p data-text="body-muted">{tP3("project_p3.hero.subtitle")}</p>
-      <p data-text="ui-label">{tP3("project_p3.hero.delivery")}</p>
-      <p style="margin-top: var(--space-1)"><span class="nl-badge" data-variant="secondary" data-ladder={tP3("project_p3.hero.ladder")}>{tP3("project_p3.hero.ladder")}</span></p>
-      <div class="nl-hero-actions" style="margin-top: var(--space-2)">
-        <a class="nl-btn" href="https://github.com/Salazarismo/habit_analyzer" target="_blank" rel="noopener noreferrer">{tCommon("common.cta.repo")}</a>
-        <a class="nl-btn" href="https://wa.me/5548984586949" target="_blank" rel="noopener noreferrer">{tCommon("common.cta.contact")}</a>
+<BaseLayout title="Habit Analyzer — Victor de Alcântara" description="Aplicativo web de acompanhamento de hábitos com API REST e dashboard de visualização de progresso.">
+  <Fragment slot="nav">
+    <a href="https://victor-alcantara.vercel.app/" class="nav-logo">Victor<sup>®</sup></a>
+    <div class="nav-center">
+      <a href="https://victor-alcantara.vercel.app/#projects">Projetos</a>
+      <a href="#">Sobre</a>
+      <a href="https://wa.me/5548984586949">Contato</a>
+    </div>
+    <div class="nav-right">
+      <span class="avail-dot">Disponível para projetos em 2026</span>
+      <a href="/projects/p3/" class="lang-active">PT</a>
+      <a href="/en/projects/p3/">EN</a>
+      <a href="mailto:victor.de.alcantara.bueno@gmail.com">↗ Email</a>
+    </div>
+  </Fragment>
+  <ProjectCaseRedesign {...data} />
+  <Fragment slot="footer">
+    <div class="footer-cta">
+      <p class="footer-cta-text">
+        Quer tirar sua ideia do papel com
+        <strong>engenharia bem feita?</strong>
+        Me conte contexto, restrições e objetivo.
+      </p>
+      <div class="footer-contact">
+        <a href="mailto:victor.de.alcantara.bueno@gmail.com" class="footer-email">
+          victor.de.alcantara.bueno@gmail.com
+        </a>
+        <a href="https://wa.me/5548984586949" class="btn btn-primary" style="margin-top:8px">
+          WhatsApp ↗
+        </a>
       </div>
-      <div style="margin-top: var(--space-3)">
-        <AspectRatioImage
-          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fm=jpg&w=1200&q=80"
-          alt={tP3("project_p3.hero.image_alt")}
-          ratio={16 / 9}
-          loading="lazy"
-          decoding="async"
-        />
+    </div>
+    <div class="footer-bar">
+      <div class="footer-id">
+        <span class="footer-name">Victor de Alcântara Bueno</span>
+        <span class="footer-role">Engenheiro de Software</span>
       </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="tldr-p3">
-      <h2 id="tldr-p3" data-text="heading-xl">{tProjects("projects.sections.tldr")}</h2>
-      <div style="display:grid; gap: var(--space-1); margin-top: var(--space-2)">
-        <p data-text="body-normal"><strong>{tP3("project_p3.tldr.problem_label")}</strong> {tP3("project_p3.tldr.problem")}</p>
-        <p data-text="body-normal"><strong>{tP3("project_p3.tldr.solution_label")}</strong> {tP3("project_p3.tldr.solution")}</p>
-        <p data-text="body-normal"><strong>{tP3("project_p3.tldr.result_label")}</strong> {tP3("project_p3.tldr.result")}</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/victor-de-alcantara/">LinkedIn</a>
+        <a href="https://github.com/Salazarismo">GitHub</a>
+        <a href="https://wa.me/5548984586949">WhatsApp</a>
       </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="snapshot-p3">
-      <h2 id="snapshot-p3" data-text="heading-xl">{tProjects("projects.sections.snapshot")}</h2>
-      <div class="grid-12 gap-token-4" style="margin-top: var(--space-2)">
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.role_scope_time")}</div>
-          <p data-text="body-normal">{tP3("project_p3.snapshot.col1")}</p>
-        </div>
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.scale_min")}</div>
-          <p data-text="body-normal">{tP3("project_p3.snapshot.col2")}</p>
-        </div>
-        <div style="grid-column: span 4">
-          <div data-text="ui-label">{tProjects("projects.labels.constraints_min")}</div>
-          <p data-text="body-normal">{tP3("project_p3.snapshot.col3")}</p>
-        </div>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="problem-impact-p3">
-      <h2 id="problem-impact-p3" data-text="heading-xl">{tProjects("projects.sections.problem_impact")}</h2>
-      <ul class="case-psr">
-        <li data-text="body-normal"><strong>{tP3("project_p3.problem_impact.symptoms_label")}</strong> {tP3("project_p3.problem_impact.symptoms")}</li>
-        <li data-text="body-normal"><strong>{tP3("project_p3.problem_impact.cause_label")}</strong> {tP3("project_p3.problem_impact.cause")}</li>
-        <li data-text="body-normal"><strong>{tP3("project_p3.problem_impact.impact_label")}</strong> {tP3("project_p3.problem_impact.impact")}</li>
-      </ul>
-    </section>
-    <Divider />
-    <section aria-labelledby="approach-p3">
-      <h2 id="approach-p3" data-text="heading-xl">{tProjects("projects.sections.approach")}</h2>
-      <p data-text="body-normal">{tP3("project_p3.approach.intro")}</p>
-      <ol class="case-psr">
-        <li data-text="body-normal"><strong>{tP3("project_p3.approach.step1_label")}</strong> {tP3("project_p3.approach.step1")}</li>
-        <li data-text="body-normal"><strong>{tP3("project_p3.approach.step2_label")}</strong> {tP3("project_p3.approach.step2")}</li>
-        <li data-text="body-normal"><strong>{tP3("project_p3.approach.step3_label")}</strong> {tP3("project_p3.approach.step3")}</li>
-      </ol>
-      <div style="display:grid; gap: var(--space-3); margin-top: var(--space-3)">
-        <figure>
-          <AspectRatioImage
-            src="/images/analytics-code.svg"
-            alt={tP3("project_p3.approach.figure1_alt")}
-            ratio={2 / 1}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption data-text="ui-helper" style="margin-top: var(--space-1)">{tP3("project_p3.approach.figure1_caption")}</figcaption>
-        </figure>
-        <figure>
-          <pre class="case-diagram" data-text="body-normal">{tP3("project_p3.approach.diagram")}</pre>
-          <figcaption data-text="ui-helper" style="margin-top: var(--space-1)">{tP3("project_p3.approach.figure2_caption")}</figcaption>
-        </figure>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="reliability-p3">
-      <h2 id="reliability-p3" data-text="heading-xl">{tProjects("projects.sections.reliability")}</h2>
-      <div style="display:grid; gap: var(--space-2); margin-top: var(--space-2)">
-        <p data-text="body-normal"><strong>{tP3("project_p3.reliability.risks_label")}</strong> {tP3("project_p3.reliability.risks")}</p>
-        <p data-text="body-normal"><strong>{tP3("project_p3.reliability.guarantees_label")}</strong> {tP3("project_p3.reliability.guarantees")}</p>
-        <p data-text="body-normal"><strong>{tP3("project_p3.reliability.evidence_label")}</strong> {tP3("project_p3.reliability.evidence")}</p>
-      </div>
-      <pre style="margin-top: var(--space-2)">
-<code data-text="body-normal">encoded_jwt = jwt.encode(&#123;**data, "exp": expire&#125;, settings.JWT_SECRET, algorithm=settings.JWT_ALGORITHM)
-payload = jwt.decode(token, settings.JWT_SECRET, algorithms=[settings.JWT_ALGORITHM])</code>
-      </pre>
-      <div style="margin-top: var(--space-2)">
-        <a href="https://github.com/Salazarismo/habit_analyzer" target="_blank" rel="noopener noreferrer" data-text="ui-label">{tP3("project_p3.reliability.repo_link")}</a>
-      </div>
-    </section>
-    <Divider />
-    <section aria-labelledby="next-p3">
-      <h2 id="next-p3" data-text="heading-xl">{tProjects("projects.sections.next")}</h2>
-      <ul class="case-psr">
-        <li data-text="body-normal">{tP3("project_p3.next.item1")}</li>
-        <li data-text="body-normal">{tP3("project_p3.next.item2")}</li>
-        <li data-text="body-normal">{tP3("project_p3.next.item3")}</li>
-      </ul>
-    </section>
-    <Divider />
-    <section aria-labelledby="conversion-p3">
-      <h2 id="conversion-p3" data-text="heading-xl">{tProjects("projects.sections.conversion")}</h2>
-      <p data-text="body-normal">{tP3("project_p3.conversion.p")}</p>
-      <div class="case-conversion">
-        <a class="case-cta" href="https://wa.me/5548984586949" target="_blank" rel="noopener noreferrer">{tP3("project_p3.conversion.whatsapp")}</a>
-        <a class="case-cta-secondary" href="https://github.com/Salazarismo/habit_analyzer" target="_blank" rel="noopener noreferrer">{tCommon("common.cta.repo")}</a>
-        <a class="case-cta-secondary" href={`${getRelativeLocaleUrl(locale, "")}#projects`}>{tProjects("projects.buttons.back")}</a>
-        <a class="case-cta-secondary" href={getRelativeLocaleUrl(locale, "projects/p5")}>{tProjects("projects.buttons.next")}</a>
-        <span data-text="ui-helper">{tP3("project_p3.conversion.availability")}</span>
-      </div>
-    </section>
-  </div>
-  <Fragment slot="footer"><Footer /></Fragment>
+      <span class="footer-copy">© 2026 Victor</span>
+    </div>
+  </Fragment>
 </BaseLayout>

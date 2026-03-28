@@ -6,7 +6,7 @@ export const prerender = false;
 
 const Schema = z.object({
   name: z.string().min(2),
-  email: z.string().email(),
+  email: z.string().email({ message: 'Invalid email address' }),
   message: z.string().min(10),
   hp: z.string().optional().default(''),
 });

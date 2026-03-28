@@ -19,8 +19,8 @@ function usePrefersReducedMotion() {
       mql.addEventListener("change", onChange);
       return () => mql.removeEventListener("change", onChange);
     }
-    mql.addListener(onChange);
-    return () => mql.removeListener(onChange);
+    (mql as any).addListener(onChange);
+    return () => (mql as any).removeListener(onChange);
   }, []);
   return reduced;
 }

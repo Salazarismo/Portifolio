@@ -164,7 +164,7 @@ export default function PortfolioGrid({ items }: Props) {
               <div class="card-body">
                 <h3 id={`${item.id}-title`} data-text="heading-lg">{item.title}</h3>
                 {item.caseLabel && item.caseTarget && (
-                  <a href={item.caseTarget} data-text="ui-label" style="display:inline-block; padding: 2px 8px; border-radius: var(--radius-sm); background: var(--surface-2); border: var(--border-width-1) solid var(--color-border)">
+                  <a href={item.caseTarget} data-text="ui-label" style="display:inline-block; padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm); background: var(--surface-2); border: var(--border-width-1) solid var(--color-border)">
                     {item.caseLabel}
                   </a>
                 )}
@@ -174,7 +174,7 @@ export default function PortfolioGrid({ items }: Props) {
                     <span
                       key={t}
                       data-text="ui-label"
-                      style="border: var(--border-width-1) solid var(--color-border); border-radius: var(--radius-md); padding: 2px 8px; background: var(--surface-2)"
+                      style="border: var(--border-width-1) solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-1) var(--space-2); background: var(--surface-2)"
                     >
                       {t}
                     </span>

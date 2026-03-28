@@ -5,7 +5,7 @@ export default async function initGsapReveal() {
   gsap.registerPlugin(ScrollTrigger);
   const mm = gsap.matchMedia();
   mm.add({ reduce: '(prefers-reduced-motion: reduce)' }, (ctx) => {
-    if (ctx.conditions.reduce) {
+    if (ctx.conditions?.reduce) {
       const targets = Array.from(document.querySelectorAll('[data-cell]'));
       for (const el of targets) {
         if (el instanceof HTMLElement) el.setAttribute('data-sr', 'show');

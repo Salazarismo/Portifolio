@@ -92,7 +92,7 @@ const tProjects = createT(loadMessages(locale, "projects"), { locale, namespace:
         <p class="nl-body" data-cell>
           {tHome("home.about.p1")} {tHome("home.about.p2")}
         </p>
-        <p class="nl-body" data-cell style="margin-top: 16px">
+        <p class="nl-body" data-cell style="margin-top: var(--space-4)">
           {tHome("home.about.p3")}
         </p>
       </div>
@@ -102,7 +102,7 @@ const tProjects = createT(loadMessages(locale, "projects"), { locale, namespace:
       <div class="nl-section-inner">
         <h2 id="contact-title" class="nl-section-title" data-cell>{tHome("home.section.contact")}</h2>
         <p class="nl-body" data-cell>{tHome("home.contact.p")}</p>
-        <div class="nl-hero-actions" style="margin-top: 32px" data-cell>
+        <div class="nl-hero-actions" style="margin-top: var(--space-6)" data-cell>
           <a class="nl-btn" href={`mailto:${profile.email}`}>Email</a>
           <a class="nl-btn" href={profile.links.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
           <a class="nl-btn" href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>

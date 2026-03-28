@@ -1,5 +1,5 @@
 import type { JSX } from "preact/jsx-runtime";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { AspectRatio } from "@/islands/aspect-ratio";
 
 type Props = {
   src: string;
@@ -11,7 +11,7 @@ type Props = {
   className?: string;
   imgClass?: string;
   imgClassName?: string;
-} & Omit<JSX.HTMLAttributes<HTMLDivElement>, "children">;
+} & Omit<JSX.IntrinsicElements["div"], "children">;
 
 export function AspectRatioImage({
   src,
@@ -35,9 +35,9 @@ export function AspectRatioImage({
       class={containerClass}
       style={{
         borderRadius: "var(--radius-sm)",
-        background: "rgba(255, 255, 255, 0.06)",
+        background: "var(--surface-2)",
         overflow: "hidden",
-        ...style
+        ...(typeof style === "object" ? style : {})
       }}
       {...props}
     >

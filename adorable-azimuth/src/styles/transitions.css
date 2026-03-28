@@ -1,19 +1,19 @@
 /* Page transitions using View Transitions API with CSS fallback */
 @keyframes fadeSlideInLeft {
-  from { opacity: 0; transform: translateX(8px); }
+  from { opacity: 0; transform: translateX(var(--space-2)); }
   to { opacity: 1; transform: translateX(0); }
 }
 @keyframes fadeSlideOutRight {
   from { opacity: 1; transform: translateX(0); }
-  to { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 0; transform: translateX(-var(--space-2)); }
 }
 @keyframes fadeSlideInRight {
-  from { opacity: 0; transform: translateX(-8px); }
+  from { opacity: 0; transform: translateX(-var(--space-2)); }
   to { opacity: 1; transform: translateX(0); }
 }
 @keyframes fadeSlideOutLeft {
   from { opacity: 1; transform: translateX(0); }
-  to { opacity: 0; transform: translateX(8px); }
+  to { opacity: 0; transform: translateX(var(--space-2)); }
 }
 
 /* Default fade */
@@ -32,12 +32,12 @@ html.nav-back::view-transition-new(root) { animation-name: fadeSlideInLeft; }
 
 /* Hash scroll vertical slide hint */
 @keyframes fadeSlideInUp {
-  from { opacity: 0; transform: translateY(8px); }
+  from { opacity: 0; transform: translateY(var(--space-2)); }
   to { opacity: 1; transform: translateY(0); }
 }
 @keyframes fadeSlideOutDown {
   from { opacity: 1; transform: translateY(0); }
-  to { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 0; transform: translateY(-var(--space-2)); }
 }
 html.hash-scroll::view-transition-old(root) { animation-name: fadeSlideOutDown; }
 html.hash-scroll::view-transition-new(root) { animation-name: fadeSlideInUp; }
@@ -46,10 +46,10 @@ html.hash-scroll::view-transition-new(root) { animation-name: fadeSlideInUp; }
 .page-transition-enter, .page-transition-leave {
   transition: opacity 300ms var(--ease-standard), transform 300ms var(--ease-standard);
 }
-.page-transition-enter { opacity: 0; transform: translateY(8px); }
+.page-transition-enter { opacity: 0; transform: translateY(var(--space-2)); }
 .page-transition-enter-active { opacity: 1; transform: translateY(0); }
 .page-transition-leave { opacity: 1; transform: translateY(0); }
-.page-transition-leave-active { opacity: 0; transform: translateY(-8px); }
+.page-transition-leave-active { opacity: 0; transform: translateY(-var(--space-2)); }
 
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-old(root),
