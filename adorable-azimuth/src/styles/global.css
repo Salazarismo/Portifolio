@@ -10,26 +10,26 @@
 @import "./transitions.css";
 
 html { min-height: 100%; }
-body:not(.page-project) { min-height: 100%; background: transparent; color: var(--ink-1); --header-h: var(--space-9); --anchor-offset: calc(var(--header-h) + var(--space-4)); }
+body:not(.page-project):not(.page-home) { min-height: 100%; background: transparent; color: var(--ink-1); --header-h: var(--space-9); --anchor-offset: calc(var(--header-h) + var(--space-4)); }
 
-body:not(.page-project) :where(a, button, [role="button"], input, textarea, select):focus-visible {
+body:not(.page-project):not(.page-home) :where(a, button, [role="button"], input, textarea, select):focus-visible {
   outline: var(--border-width-1) solid var(--accent-1);
   outline-offset: var(--space-1);
   transition: outline-offset var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
   box-shadow: var(--elevation-1);
 }
 
-body:not(.page-project) [data-sr="init"] { opacity: 0; transform: translateY(var(--space-3)); }
-body:not(.page-project) [data-sr="show"] { opacity: 1; transform: translateY(0); transition: opacity var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard); }
+body:not(.page-project):not(.page-home) [data-sr="init"] { opacity: 0; transform: translateY(var(--space-3)); }
+body:not(.page-project):not(.page-home) [data-sr="show"] { opacity: 1; transform: translateY(0); transition: opacity var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard); }
 @media (prefers-reduced-motion: reduce) {
-  body:not(.page-project) [data-sr="init"], body:not(.page-project) [data-sr="show"] { opacity: 1; transform: none; transition: none; }
+  body:not(.page-project):not(.page-home) [data-sr="init"], body:not(.page-project):not(.page-home) [data-sr="show"] { opacity: 1; transform: none; transition: none; }
 }
 @import "./typography.css";
 
-body:not(.page-project) :is(a, button, summary, input, select, textarea) {
+body:not(.page-project):not(.page-home) :is(a, button, summary, input, select, textarea) {
   transition: box-shadow var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard);
 }
-body:not(.page-project) :is(a, button, summary, input, select, textarea):focus-visible {
+body:not(.page-project):not(.page-home) :is(a, button, summary, input, select, textarea):focus-visible {
   outline: none;
   box-shadow: var(--elevation-1);
   transform: translateY(-var(--border-width-1));
