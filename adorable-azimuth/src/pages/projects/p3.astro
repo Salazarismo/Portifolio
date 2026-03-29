@@ -11,6 +11,10 @@ const data = {
   heroSubtitle: "Aplicativo web de acompanhamento de hábitos com API REST e dashboard de visualização de progresso.",
   heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fm=jpg&w=1600&q=80",
   heroFilter: "grayscale(.8) brightness(.25)",
+  langPT: "/projects/p3/",
+  langEN: "/en/projects/p3/",
+  availLabel: "Disponível 2026",
+  isEN: false,
   heroStats: [
     { key: "Escopo", value: "Arquitetura + Full-stack" },
     { key: "Stack", value: "FastAPI · Next.js · PostgreSQL" },
@@ -91,14 +95,14 @@ const data = {
   <Fragment slot="nav">
     <a href="https://victor-alcantara.vercel.app/" class="nav-logo">Victor<sup>®</sup></a>
     <div class="nav-center">
-      <a href="https://victor-alcantara.vercel.app/#projects">Projetos</a>
-      <a href="#">Sobre</a>
+      <a href="/#projects">Projetos</a>
+      <a href="/#sobre">Sobre</a>
       <a href="https://wa.me/5548984586949">Contato</a>
     </div>
     <div class="nav-right">
-      <span class="avail-dot">Disponível para projetos em 2026</span>
-      <a href="/projects/p3/" class="lang-active">PT</a>
-      <a href="/en/projects/p3/">EN</a>
+      <span class="avail-dot">{data.availLabel}</span>
+      <a href={data.langPT} class:list={[!data.isEN && "lang-active"]}>PT</a>
+      <a href={data.langEN} class:list={[data.isEN && "lang-active"]}>EN</a>
       <a href="mailto:victor.de.alcantara.bueno@gmail.com">↗ Email</a>
     </div>
   </Fragment>

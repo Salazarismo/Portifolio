@@ -11,6 +11,10 @@ const data = {
   heroSubtitle: "Plataforma de ingressos com vendas via WhatsApp, pagamentos integrados e operação de check‑in resiliente em eventos.",
   heroImage: "https://victor-alcantara.vercel.app/images/98f5ae2c-0f91-4fda-9e44-1fd81a607417.png",
   heroFilter: "grayscale(.6) brightness(.3)",
+  langPT: "/projects/p7/",
+  langEN: "/en/projects/p7/",
+  availLabel: "Disponível 2026",
+  isEN: false,
   heroStats: [
     { key: "Escopo", value: "Full-stack · Arquitetura" },
     { key: "Stack", value: "NestJS · PostgreSQL · WhatsApp · Mercado Pago" },
@@ -91,14 +95,14 @@ const data = {
   <Fragment slot="nav">
     <a href="https://victor-alcantara.vercel.app/" class="nav-logo">Victor<sup>®</sup></a>
     <div class="nav-center">
-      <a href="https://victor-alcantara.vercel.app/#projects">Projetos</a>
-      <a href="#">Sobre</a>
+      <a href="/#projects">Projetos</a>
+      <a href="/#sobre">Sobre</a>
       <a href="https://wa.me/5548984586949">Contato</a>
     </div>
     <div class="nav-right">
-      <span class="avail-dot">Disponível para projetos em 2026</span>
-      <a href="/projects/p7/" class="lang-active">PT</a>
-      <a href="/en/projects/p7/">EN</a>
+      <span class="avail-dot">{data.availLabel}</span>
+      <a href={data.langPT} class:list={[!data.isEN && "lang-active"]}>PT</a>
+      <a href={data.langEN} class:list={[data.isEN && "lang-active"]}>EN</a>
       <a href="mailto:victor.de.alcantara.bueno@gmail.com">↗ Email</a>
     </div>
   </Fragment>

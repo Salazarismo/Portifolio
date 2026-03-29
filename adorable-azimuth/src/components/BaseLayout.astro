@@ -44,7 +44,7 @@ import AnimatedMeshBackground from "@/components/AnimatedMeshBackground.astro";
     
   </head>
   <body class={bodyClass}>
-    <AnimatedMeshBackground />
+    {!bodyClass && <AnimatedMeshBackground />}
     <nav aria-label="Principal"><slot name="nav" /></nav>
     <main id="main">
       <slot />
