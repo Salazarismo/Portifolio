@@ -20,7 +20,8 @@ const alternates = locales.map((l, idx) => ({
 }));
 const isProjectPage = pathname.startsWith("/projects/") || pathname.startsWith("/en/projects/");
 const isHomePage = pathname === "/" || pathname === "/en" || pathname === "/en/";
-const bodyClass = isProjectPage ? "page-project" : isHomePage ? "page-home" : undefined;
+const isRecruiterPage = pathname === "/recruiter" || pathname === "/recruiter/";
+const bodyClass = isProjectPage ? "page-project" : isHomePage ? "page-home" : isRecruiterPage ? "page-recruiter" : undefined;
 
 import "../styles/global.css";
 import GsapInit from "../islands/GsapInit.island";
@@ -41,7 +42,7 @@ import AnimatedMeshBackground from "@/components/AnimatedMeshBackground.astro";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    {(isHomePage || isProjectPage) && (
+    {(isHomePage || isProjectPage || isRecruiterPage) && (
       <>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -47,6 +47,22 @@ const props = Astro.props as Props;
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
   body.page-home {
+    --bg:         #080807;
+    --bg-card:    #111110;
+    --bg-card2:   #161614;
+    --border:     #222220;
+    --border-dim: #1a1a18;
+    --text:       #EDE9E1;
+    --text-dim:   #7A7871;
+    --text-muted: #3F3E3A;
+    --amber:      #C8923A;
+    --amber-soft: #D4A85A;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans:  'Syne', system-ui, sans-serif;
+    --mono:  'JetBrains Mono', monospace;
+  }
+
+  body.page-home {
     background: var(--bg);
     color: var(--text);
     font-family: var(--sans);
