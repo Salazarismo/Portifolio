@@ -18,7 +18,9 @@ const alternates = locales.map((l, idx) => ({
   href: alternateHrefs[idx] ?? getAbsoluteLocaleUrl(l, restPath),
   hreflang: l === "pt-br" ? "pt-BR" : "en"
 }));
-const bodyClass = (pathname.startsWith("/projects/") || pathname.startsWith("/en/projects/")) ? "page-project" : undefined;
+const isProjectPage = pathname.startsWith("/projects/") || pathname.startsWith("/en/projects/");
+const isHomePage = pathname === "/" || pathname === "/en" || pathname === "/en/";
+const bodyClass = isProjectPage ? "page-project" : isHomePage ? "page-home" : undefined;
 
 import "../styles/global.css";
 import GsapInit from "../islands/GsapInit.island";

@@ -1,114 +1,106 @@
 ---
-import "../../styles/global.css";
-
 import BaseLayout from "../../components/BaseLayout.astro";
-import Hero from "../../components/Hero.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import { profile } from "../../data/profile";
-import { featuredProjects } from "../../data/projects";
-import { createT, loadMessages, type Locale } from "@/i18n";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import HomeLandingRedesign from "../../components/HomeLandingRedesign.astro";
 
-const locale = ((Astro.currentLocale as Locale) || "en") as Locale;
-const tHome = createT(loadMessages(locale, "home"), { locale, namespace: "home" });
-const tProjects = createT(loadMessages(locale, "projects"), { locale, namespace: "projects" });
+const data = {
+  projectsId: "projects",
+  aboutId: "about",
+  contactId: "contact",
+  heroEyebrow: "Software Engineer",
+  heroNameTop: "Victor de<br/>Alcântara",
+  heroNameEm: "Bueno",
+  heroRole: "Available for projects in 2026",
+  heroTagline: "I build web and mobile products focused on performance, architectural clarity, and predictable delivery.",
+  heroPrimaryCta: "View projects ↓",
+  heroSecondaryCta: "↗ Email",
+  heroTertiaryCta: "WhatsApp",
+  heroBar: [
+    { label: "Focus", value: "Performance + UX" },
+    { label: "Platforms", value: "Web · Mobile · API" },
+    { label: "Projects", value: "Private + Open-source" },
+    { label: "Availability", value: "Open to proposals" }
+  ],
+  scrollCue: "Selected projects",
+  stackItems: ["Astro", "React", "Next.js", "TypeScript", "Flutter", "NestJS", "FastAPI", "PostgreSQL", "Redis", "Mercado Pago", "Prometheus", "Docker", "go_router", "IndexedDB", "Playwright"],
+  projectsTitle: "Selected projects",
+  projects: [
+    {
+      href: "/en/projects/p7/",
+      image: "https://victor-alcantara.vercel.app/images/3f015622-01e5-46c9-a13c-c655373c819a.png",
+      alt: "Nexus Platform — admin panel",
+      year: "2024",
+      badge: "Risk",
+      titleHtml: "Nexus Platform",
+      kpi: "100% offline check-in at the gate — PWA + local queue + batch sync.",
+      tags: ["Full-stack", "Offline 100%"],
+      cta: "View case"
+    },
+    {
+      href: "/en/projects/p3/",
+      image: "https://victor-alcantara.vercel.app/images/analytics-code.svg",
+      alt: "Habit Analyzer — analytics",
+      year: "2023",
+      badge: "Cost",
+      titleHtml: "Habit Analyzer",
+      kpi: "−40% analytics read cost on large time windows.",
+      tags: ["Architecture", "Full-stack", "Latency −40%"],
+      cta: "View case"
+    },
+    {
+      href: "/en/projects/p5/",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fm=jpg&w=800&q=80",
+      alt: "Relatorium — Quick Activity Button",
+      year: "2023",
+      badge: "Time",
+      titleHtml: "Relatorium<br/><em style='font-style:italic;color:var(--text-dim);font-family:var(--serif);font-weight:300'>Quick Activity Button</em>",
+      kpi: "45s → 20–25s per record — −40–55% fewer clicks in the flow.",
+      tags: ["Mobile + UX", "Time 45–60%"],
+      cta: "View case"
+    }
+  ],
+  aboutTitle: "About",
+  aboutTextHtml: "I work across <strong>front-end, back-end, and mobile</strong>, prioritizing architectural clarity, accessibility, and product metrics. I have worked on private production systems and open-source initiatives, always aiming to <strong>reduce friction</strong> and increase <strong>delivery predictability</strong>.",
+  aboutTechLabel: "Frequent technologies",
+  aboutFindMeLabel: "Find me on",
+  aboutLinks: [
+    { label: "LinkedIn ↗", href: "https://www.linkedin.com/in/victor-de-alcantara/" },
+    { label: "GitHub ↗", href: "https://github.com/Salazarismo" }
+  ],
+  contactTitle: "Contact",
+  contactHeadlineHtml: "Want to bring your idea to life with <em>solid engineering?</em>",
+  contactBody: "Tell me the context, constraints, and goal. I will come back with technical questions and an execution path.",
+  contactPrimaryCta: "WhatsApp ↗",
+  contactSecondaryCta: "LinkedIn ↗",
+  backTop: "Back to top ↑"
+};
 ---
-<BaseLayout title={tHome("home.meta.title")} description={tHome("home.meta.description")}>
-  <Fragment slot="nav"><Header /></Fragment>
-  <div class="nl-page">
-    <div id="top"></div>
-    <Hero
-      title={`${profile.fullName}\n${tHome("home.hero.role_line")}`}
-      subtitlePrefix={tHome("home.hero.tagline_prefix")}
-      subtitleMorphWords={[tHome("home.hero.tagline_morph_1"), tHome("home.hero.tagline_morph_2"), tHome("home.hero.tagline_morph_3")]}
-      ctaLabel={profile.email}
-      ctaHref={`mailto:${profile.email}`}
-      ctaSecondaryLabel={tHome("home.hero.cta_secondary")}
-      ctaSecondaryHref="#projects"
-      microcopy={tHome("home.hero.microcopy")}
-      scrollRight={tHome("home.hero.scroll_right")}
-      scrollHref="#projects"
-    />
-    <div class="nl-divider"></div>
-    <section id="projects" class="nl-section" aria-labelledby="projects-title">
-      <div class="nl-section-inner">
-        <h2 id="projects-title" class="nl-section-title" data-cell>{tHome("home.section.projects")}</h2>
-        <div class="nl-project-grid">
-          {featuredProjects.map((p, idx) => {
-            const href = getRelativeLocaleUrl(locale, p.href.replace(/^\//, ""));
-            const ladder = tProjects(`projects.featured.${p.slug}.ladder`) ?? p.ladder;
-            const name = tProjects(`projects.featured.${p.slug}.name`) ?? p.name;
-            const impactLine = tProjects(`projects.featured.${p.slug}.impactLine`) ?? p.impactLine;
-            const role = tProjects(`projects.featured.${p.slug}.role`) ?? p.role;
-            const metricLabel = tProjects(`projects.featured.${p.slug}.metricLabel`) ?? p.metric.label;
-
-            return (
-              <a
-                class={`nl-project-card${idx === 0 ? ' nl-project-card--featured' : ''}`}
-                href={href}
-                aria-label={`${p.name} (${p.year})`}
-                data-cell
-              >
-                <div class="nl-project-image-wrap">
-                  <img
-                    class="nl-project-image"
-                    src={p.image.src}
-                    alt={p.image.alt}
-                    width={p.image.width}
-                    height={p.image.height}
-                    loading={idx === 0 ? 'eager' : 'lazy'}
-                    decoding="async"
-                  />
-                </div>
-                <div class="nl-project-meta">
-                  <div class="nl-project-meta-top">
-                    <div class="nl-project-meta-title">
-                      <span class="nl-project-name">{name}</span>
-                      <span class="nl-badge" data-variant="secondary" data-ladder={ladder}>{ladder}</span>
-                    </div>
-                    <span class="nl-project-year">{p.year}</span>
-                  </div>
-                  <div class="nl-project-impact">{impactLine}</div>
-                  <div class="nl-project-sub">
-                    <span class="nl-project-role">{role}</span>
-                    <span class="nl-project-metric">
-                      <span class="nl-project-metric-label">{metricLabel}</span>
-                      <span class="nl-project-metric-value">{p.metric.value}</span>
-                    </span>
-                  </div>
-                  <span class="nl-project-cta">{tHome("home.projects.cta")}</span>
-                </div>
-              </a>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-    <div class="nl-divider"></div>
-    <section id="about" class="nl-section" aria-labelledby="about-title">
-      <div class="nl-section-inner">
-        <h2 id="about-title" class="nl-section-title" data-cell>{tHome("home.section.about")}</h2>
-        <p class="nl-body" data-cell>
-          {tHome("home.about.p1")} {tHome("home.about.p2")}
-        </p>
-        <p class="nl-body" data-cell style="margin-top: var(--space-4)">
-          {tHome("home.about.p3")}
-        </p>
-      </div>
-    </section>
-    <div class="nl-divider"></div>
-    <section id="contact" class="nl-section" aria-labelledby="contact-title">
-      <div class="nl-section-inner">
-        <h2 id="contact-title" class="nl-section-title" data-cell>{tHome("home.section.contact")}</h2>
-        <p class="nl-body" data-cell>{tHome("home.contact.p")}</p>
-        <div class="nl-hero-actions" style="margin-top: var(--space-6)" data-cell>
-          <a class="nl-btn" href={`mailto:${profile.email}`}>Email</a>
-          <a class="nl-btn" href={profile.links.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a class="nl-btn" href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-  </div>
-  <Fragment slot="footer"><Footer /></Fragment>
+<BaseLayout title="Victor de Alcântara Bueno — Software Engineer" description="I build web and mobile products focused on performance, architectural clarity, and predictable delivery.">
+  <Fragment slot="nav">
+    <a href="/en/" class="nav-logo">Victor<sup>®</sup></a>
+    <div class="nav-center">
+      <a href={`#${data.projectsId}`}>Projects</a>
+      <a href={`#${data.aboutId}`}>About</a>
+      <a href={`#${data.contactId}`}>Contact</a>
+    </div>
+    <div class="nav-right">
+      <span class="avail-dot">Available 2026</span>
+      <a href="/">PT</a>
+      <a href="/en/" class="lang-active">EN</a>
+      <a href="mailto:victor.de.alcantara.bueno@gmail.com">↗ Email</a>
+    </div>
+  </Fragment>
+  <div id="top"></div>
+  <HomeLandingRedesign {...data} />
+  <Fragment slot="footer">
+    <div class="footer-id">
+      <span class="footer-name">Victor de Alcântara Bueno</span>
+      <span class="footer-role">Software Engineer</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/victor-de-alcantara/">LinkedIn</a>
+      <a href="https://github.com/Salazarismo">GitHub</a>
+      <a href="https://wa.me/5548984586949">WhatsApp</a>
+    </div>
+    <span class="footer-copy">© 2026 Victor</span>
+  </Fragment>
 </BaseLayout>

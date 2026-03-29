@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Victor de Alcântara Bueno — Engenheiro de Software</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+  /* ─── Tokens ─────────────────────────────────────────────── */
+  :root {
+    --bg:         #080807;
+    --bg-card:    #111110;
+    --bg-card2:   #161614;
+    --border:     #222220;
+    --border-dim: #1a1a18;
+    --text:       #EDE9E1;
+    --text-dim:   #7A7871;
+    --text-muted: #3F3E3A;
+    --amber:      #C8923A;
+    --amber-soft: #D4A85A;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans:  'Syne', system-ui, sans-serif;
+    --mono:  'JetBrains Mono', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* ─── Grain ──────────────────────────────────────────────── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 9999;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    opacity: .6;
+  }
+
+  /* ─── Scroll reveal ──────────────────────────────────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: .1s; }
+  .reveal-delay-2 { transition-delay: .2s; }
+  .reveal-delay-3 { transition-delay: .3s; }
+
+  /* ─── Nav ────────────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px;
+    height: 60px;
+    background: rgba(8,8,7,.7);
+    backdrop-filter: blur(18px) saturate(1.4);
+    border-bottom: 1px solid var(--border-dim);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: var(--text);
+  }
+  .nav-logo sup { font-size: .55em; opacity: .6; }
+  .nav-center {
+    display: flex; gap: 28px;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .nav-center a:hover { color: var(--text); }
+  .nav-right {
+    display: flex; align-items: center; gap: 20px;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .nav-right a { transition: color .2s; }
+  .nav-right a:hover { color: var(--amber); }
+  .lang-active { color: var(--text) !important; }
+  .avail-dot {
+    display: flex; align-items: center; gap: 7px;
+    font-size: .65rem;
+    color: var(--text-dim);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+  }
+  .avail-dot::before {
+    content: '';
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #5DC275;
+    box-shadow: 0 0 8px #5DC275;
+    flex-shrink: 0;
+  }
+
+  /* ─── Hero ───────────────────────────────────────────────── */
+  .hero {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Gradient atmosphere — replaces AnimatedMeshBackground */
+  .hero::after {
+    content: '';
+    position: absolute; inset: 0; z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 70% 50% at 80% 20%, rgba(200,146,58,.07) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 60% at 10% 80%, rgba(200,146,58,.04) 0%, transparent 55%),
+      radial-gradient(ellipse 100% 80% at 50% 100%, rgba(8,8,7,1) 0%, transparent 60%);
+  }
+
+  .hero-inner {
+    position: relative; z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 1100px;
+  }
+
+  .hero-eyebrow {
+    display: flex; align-items: center; gap: 14px;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 28px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: var(--amber);
+    flex-shrink: 0;
+  }
+
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(3.2rem, 8vw, 7.5rem);
+    font-weight: 300;
+    line-height: .98;
+    letter-spacing: -.02em;
+    color: var(--text);
+  }
+  .hero-name em {
+    font-style: italic;
+    color: var(--amber-soft);
+    display: block;
+  }
+
+  .hero-role {
+    margin-top: 28px;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .hero-tagline {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--text-dim);
+    max-width: 440px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    margin-top: 36px;
+  }
+
+  .hero-bar {
+    position: relative; z-index: 1;
+    display: flex; align-items: center;
+    gap: 0;
+    margin-top: 72px;
+    padding: 28px 0;
+    border-top: 1px solid var(--border-dim);
+  }
+  .hero-bar-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 36px;
+    border-right: 1px solid var(--border-dim);
+  }
+  .hero-bar-item:first-child { padding-left: 0; }
+  .hero-bar-item:last-child { border-right: none; }
+  .hero-bar-label {
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .hero-bar-value {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--text-dim);
+  }
+
+  /* scroll cue */
+  .scroll-cue {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; gap: 10px;
+    padding: 24px 0 48px;
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, var(--amber), transparent);
+    animation: scrollpulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollpulse {
+    0%, 100% { opacity: .4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+
+  /* ─── Buttons ────────────────────────────────────────────── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 11px 22px;
+    font-family: var(--sans);
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: all .22s ease;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary { background: var(--amber); color: #0A0908; }
+  .btn-primary:hover { background: var(--amber-soft); transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--text-dim); border: 1px solid var(--border); }
+  .btn-ghost:hover { border-color: var(--text-muted); color: var(--text); }
+
+  /* ─── Stack marquee ──────────────────────────────────────── */
+  .stack-strip {
+    border-top: 1px solid var(--border-dim);
+    border-bottom: 1px solid var(--border-dim);
+    overflow: hidden;
+    padding: 0;
+    background: var(--bg-card);
+    position: relative;
+  }
+  .stack-strip::before,
+  .stack-strip::after {
+    content: '';
+    position: absolute; top: 0; bottom: 0; width: 80px;
+    z-index: 2; pointer-events: none;
+  }
+  .stack-strip::before { left: 0; background: linear-gradient(to right, var(--bg-card), transparent); }
+  .stack-strip::after  { right: 0; background: linear-gradient(to left, var(--bg-card), transparent); }
+  .stack-track {
+    display: flex;
+    gap: 0;
+    animation: marquee 28s linear infinite;
+    width: max-content;
+  }
+  .stack-strip:hover .stack-track { animation-play-state: paused; }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .stack-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 32px;
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .08em;
+    color: var(--text-muted);
+    border-right: 1px solid var(--border-dim);
+    white-space: nowrap;
+    transition: color .2s;
+  }
+  .stack-item:hover { color: var(--amber); }
+  .stack-item::before {
+    content: '';
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--text-muted);
+    flex-shrink: 0;
+    transition: background .2s;
+  }
+  .stack-item:hover::before { background: var(--amber); }
+
+  /* ─── Section wrapper ────────────────────────────────────── */
+  .section-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 80px;
+  }
+
+  .s-head {
+    display: flex; align-items: baseline; gap: 20px;
+    margin-bottom: 48px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-dim);
+  }
+  .s-num {
+    font-family: var(--mono);
+    font-size: .65rem;
+    color: var(--text-muted);
+    letter-spacing: .1em;
+    flex-shrink: 0;
+    padding-top: 4px;
+  }
+  .s-title {
+    font-family: var(--serif);
+    font-size: 2.4rem;
+    font-weight: 300;
+    letter-spacing: -.01em;
+    color: var(--text);
+  }
+
+  /* ─── Projects grid ──────────────────────────────────────── */
+  #projects { padding: 100px 0 0; }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border-dim);
+    border: 1px solid var(--border-dim);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .project-card {
+    position: relative;
+    background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background .3s;
+  }
+  .project-card:hover { background: var(--bg-card2); }
+
+  .project-card-img {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+  }
+  .project-card-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(.7) brightness(.6);
+    transition: filter .5s ease, transform .6s ease;
+  }
+  .project-card:hover .project-card-img img {
+    filter: grayscale(.3) brightness(.8);
+    transform: scale(1.04);
+  }
+  .project-card-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, var(--bg-card) 100%);
+    transition: background .3s;
+  }
+  .project-card:hover .project-card-img-overlay {
+    background: linear-gradient(to bottom, transparent 40%, var(--bg-card2) 100%);
+  }
+
+  .project-card-body {
+    padding: 24px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+
+  .project-card-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .project-badge {
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    border-color: rgba(200,146,58,.3);
+  }
+
+  .project-card-title {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--text);
+  }
+
+  .project-card-kpi {
+    font-size: .82rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  .project-card-tags {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 4px;
+  }
+  .project-tag {
+    font-family: var(--mono);
+    font-size: .6rem;
+    letter-spacing: .06em;
+    color: var(--text-muted);
+    padding: 3px 8px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+
+  .project-card-link {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-dim);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color .2s, gap .2s;
+  }
+  .project-card:hover .project-card-link {
+    color: var(--amber);
+    gap: 12px;
+  }
+  .project-card-link svg {
+    width: 12px; height: 12px;
+    flex-shrink: 0;
+    transition: transform .2s;
+  }
+  .project-card:hover .project-card-link svg { transform: translateX(3px); }
+
+  /* ─── Sobre ──────────────────────────────────────────────── */
+  #sobre { padding: 100px 0; }
+
+  .sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .sobre-text {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-dim);
+  }
+  .sobre-text strong { color: var(--text); font-weight: 400; }
+
+  .sobre-right {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .sobre-detail-label {
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .sobre-techs {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .sobre-tech {
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .06em;
+    color: var(--text-dim);
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    transition: all .2s;
+  }
+  .sobre-tech:hover { border-color: var(--amber); color: var(--amber); }
+
+  .sobre-divider {
+    width: 100%; height: 1px;
+    background: var(--border-dim);
+  }
+
+  .sobre-links {
+    display: flex; gap: 16px; flex-wrap: wrap;
+  }
+
+  /* ─── Contato ────────────────────────────────────────────── */
+  #contato {
+    border-top: 1px solid var(--border-dim);
+    padding: 100px 0 0;
+  }
+
+  .contato-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 80px;
+    align-items: start;
+    padding-bottom: 80px;
+    border-bottom: 1px solid var(--border-dim);
+  }
+
+  .contato-headline {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--text);
+    max-width: 540px;
+  }
+  .contato-headline em { font-style: italic; color: var(--amber-soft); }
+
+  .contato-body {
+    font-size: .9rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+    max-width: 440px;
+    margin-top: 20px;
+  }
+
+  .contato-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+    padding-top: 8px;
+  }
+
+  .contato-email {
+    font-family: var(--mono);
+    font-size: .78rem;
+    color: var(--amber);
+    letter-spacing: .04em;
+    transition: opacity .2s;
+  }
+  .contato-email:hover { opacity: .75; }
+
+  /* ─── Footer ─────────────────────────────────────────────── */
+  footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 80px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-id {
+    display: flex; flex-direction: column; gap: 3px;
+  }
+  .footer-name {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-dim);
+  }
+  .footer-role {
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .footer-links {
+    display: flex; gap: 20px;
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .footer-links a:hover { color: var(--text); }
+  .footer-copy {
+    font-family: var(--mono);
+    font-size: .65rem;
+    color: var(--text-muted);
+  }
+
+  /* ─── Back to top ────────────────────────────────────────── */
+  .back-top {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-dim);
+    transition: color .2s;
+  }
+  .back-top:hover { color: var(--text); }
+
+  /* ─── Responsive ─────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    nav { padding: 0 20px; }
+    .nav-center { display: none; }
+    .hero { padding: 60px 24px 0; }
+    .section-wrap { padding: 0 24px; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .sobre-grid { grid-template-columns: 1fr; gap: 48px; }
+    .contato-inner { grid-template-columns: 1fr; gap: 40px; }
+    .contato-right { align-items: flex-start; }
+    .hero-bar { flex-direction: column; gap: 0; }
+    .hero-bar-item { border-right: none; border-bottom: 1px solid var(--border-dim); padding: 14px 0; }
+    footer { flex-direction: column; gap: 20px; align-items: flex-start; padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Nav ──────────────────────────────────────────────────── -->
+<nav id="top">
+  <a href="/" class="nav-logo">Victor<sup>®</sup></a>
+  <div class="nav-center">
+    <a href="#projects">Projetos</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </div>
+  <div class="nav-right">
+    <span class="avail-dot">Disponível 2026</span>
+    <a href="/" class="lang-active">PT</a>
+    <a href="/en/">EN</a>
+    <a href="mailto:victor.de.alcantara.bueno@gmail.com">↗ Email</a>
+  </div>
+</nav>
+
+<!-- ── Hero ─────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal">Engenheiro de Software</div>
+    <h1 class="hero-name reveal reveal-delay-1">
+      Victor de<br/>Alcântara
+      <em>Bueno</em>
+    </h1>
+    <p class="hero-role reveal reveal-delay-2">Disponível para projetos em 2026</p>
+    <p class="hero-tagline reveal reveal-delay-2">
+      Construo produtos web e mobile com foco em performance,
+      clareza de arquitetura e entrega previsível.
+    </p>
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="#projects" class="btn btn-primary">Ver projetos ↓</a>
+      <a href="mailto:victor.de.alcantara.bueno@gmail.com" class="btn btn-ghost">↗ Email</a>
+      <a href="https://wa.me/5548984586949" class="btn btn-ghost">WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="hero-bar reveal">
+    <div class="hero-bar-item">
+      <span class="hero-bar-label">Foco</span>
+      <span class="hero-bar-value">Performance + UX</span>
+    </div>
+    <div class="hero-bar-item">
+      <span class="hero-bar-label">Plataformas</span>
+      <span class="hero-bar-value">Web · Mobile · API</span>
+    </div>
+    <div class="hero-bar-item">
+      <span class="hero-bar-label">Projetos</span>
+      <span class="hero-bar-value">Privados + Open-source</span>
+    </div>
+    <div class="hero-bar-item">
+      <span class="hero-bar-label">Disponibilidade</span>
+      <span class="hero-bar-value">Aberto a propostas</span>
+    </div>
+  </div>
+
+  <div class="scroll-cue reveal">
+    <div class="scroll-line"></div>
+    Projetos selecionados
+  </div>
+</section>
+
+<!-- ── Stack marquee ─────────────────────────────────────────── -->
+<div class="stack-strip">
+  <div class="stack-track">
+    <!-- duplicado para loop contínuo -->
+    <span class="stack-item">Astro</span>
+    <span class="stack-item">React</span>
+    <span class="stack-item">Next.js</span>
+    <span class="stack-item">TypeScript</span>
+    <span class="stack-item">Flutter</span>
+    <span class="stack-item">NestJS</span>
+    <span class="stack-item">FastAPI</span>
+    <span class="stack-item">PostgreSQL</span>
+    <span class="stack-item">Redis</span>
+    <span class="stack-item">Mercado Pago</span>
+    <span class="stack-item">Prometheus</span>
+    <span class="stack-item">Docker</span>
+    <span class="stack-item">go_router</span>
+    <span class="stack-item">IndexedDB</span>
+    <span class="stack-item">Playwright</span>
+    <span class="stack-item">Astro</span>
+    <span class="stack-item">React</span>
+    <span class="stack-item">Next.js</span>
+    <span class="stack-item">TypeScript</span>
+    <span class="stack-item">Flutter</span>
+    <span class="stack-item">NestJS</span>
+    <span class="stack-item">FastAPI</span>
+    <span class="stack-item">PostgreSQL</span>
+    <span class="stack-item">Redis</span>
+    <span class="stack-item">Mercado Pago</span>
+    <span class="stack-item">Prometheus</span>
+    <span class="stack-item">Docker</span>
+    <span class="stack-item">go_router</span>
+    <span class="stack-item">IndexedDB</span>
+    <span class="stack-item">Playwright</span>
+  </div>
+</div>
+
+<!-- ── Projects ──────────────────────────────────────────────── -->
+<section id="projects">
+  <div class="section-wrap">
+    <div class="s-head reveal">
+      <span class="s-num">01</span>
+      <h2 class="s-title">Projetos selecionados</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- p7 — Plataforma Nexus -->
+      <a href="/projects/p7/" class="project-card reveal">
+        <div class="project-card-img">
+          <img src="https://victor-alcantara.vercel.app/images/3f015622-01e5-46c9-a13c-c655373c819a.png" alt="Plataforma Nexus — painel admin" loading="lazy" />
+          <div class="project-card-img-overlay"></div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-eyebrow">
+            2024
+            <span class="project-badge">Risco</span>
+          </div>
+          <h3 class="project-card-title">Plataforma Nexus</h3>
+          <p class="project-card-kpi">100% check‑in offline na portaria — PWA + fila local + sync em lote.</p>
+          <div class="project-card-tags">
+            <span class="project-tag">Full-stack</span>
+            <span class="project-tag">Offline 100%</span>
+          </div>
+          <div class="project-card-link">
+            Ver case
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 6h8M6 2l4 4-4 4"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- p3 — Habit Analyzer -->
+      <a href="/projects/p3/" class="project-card reveal reveal-delay-1">
+        <div class="project-card-img">
+          <img src="https://victor-alcantara.vercel.app/images/analytics-code.svg" alt="Habit Analyzer — analytics" loading="lazy" />
+          <div class="project-card-img-overlay"></div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-eyebrow">
+            2023
+            <span class="project-badge">Custo</span>
+          </div>
+          <h3 class="project-card-title">Habit Analyzer</h3>
+          <p class="project-card-kpi">−40% custo de leitura de analytics em janelas grandes.</p>
+          <div class="project-card-tags">
+            <span class="project-tag">Arquitetura</span>
+            <span class="project-tag">Full-stack</span>
+            <span class="project-tag">Latência −40%</span>
+          </div>
+          <div class="project-card-link">
+            Ver case
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 6h8M6 2l4 4-4 4"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- p5 — Relatorium -->
+      <a href="/projects/p5/" class="project-card reveal reveal-delay-2">
+        <div class="project-card-img">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fm=jpg&w=800&q=80" alt="Relatorium — Quick Activity Button" loading="lazy" />
+          <div class="project-card-img-overlay"></div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-eyebrow">
+            2023
+            <span class="project-badge">Tempo</span>
+          </div>
+          <h3 class="project-card-title">Relatorium<br/><em style="font-style:italic;color:var(--text-dim);font-family:var(--serif);font-weight:300">Quick Activity Button</em></h3>
+          <p class="project-card-kpi">45s → 20–25s no registro — −40–55% de cliques no fluxo.</p>
+          <div class="project-card-tags">
+            <span class="project-tag">Mobile + UX</span>
+            <span class="project-tag">Tempo 45–60%</span>
+          </div>
+          <div class="project-card-link">
+            Ver case
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 6h8M6 2l4 4-4 4"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Sobre ──────────────────────────────────────────────────── -->
+<section id="sobre">
+  <div class="section-wrap">
+    <div class="s-head reveal">
+      <span class="s-num">02</span>
+      <h2 class="s-title">Sobre</h2>
+    </div>
+
+    <div class="sobre-grid">
+      <p class="sobre-text reveal">
+        Trabalho com <strong>front-end, back-end e mobile</strong>, com prioridade
+        em clareza de arquitetura, acessibilidade e métricas de produto.
+        Já atuei em projetos privados em produção e em iniciativas open-source,
+        sempre buscando <strong>reduzir fricção</strong> e aumentar
+        <strong>previsibilidade de entrega</strong>.
+      </p>
+
+      <div class="sobre-right reveal reveal-delay-1">
+        <div>
+          <div class="sobre-detail-label">Tecnologias frequentes</div>
+          <div class="sobre-techs">
+            <span class="sobre-tech">Astro</span>
+            <span class="sobre-tech">React</span>
+            <span class="sobre-tech">TypeScript</span>
+            <span class="sobre-tech">Flutter</span>
+            <span class="sobre-tech">NestJS</span>
+            <span class="sobre-tech">FastAPI</span>
+            <span class="sobre-tech">PostgreSQL</span>
+            <span class="sobre-tech">Docker</span>
+          </div>
+        </div>
+        <div class="sobre-divider"></div>
+        <div>
+          <div class="sobre-detail-label">Encontre-me em</div>
+          <div class="sobre-links">
+            <a href="https://www.linkedin.com/in/victor-de-alcantara/" class="btn btn-ghost">LinkedIn ↗</a>
+            <a href="https://github.com/Salazarismo" class="btn btn-ghost">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contato ────────────────────────────────────────────────── -->
+<section id="contato">
+  <div class="section-wrap">
+    <div class="s-head reveal">
+      <span class="s-num">03</span>
+      <h2 class="s-title">Contato</h2>
+    </div>
+
+    <div class="contato-inner">
+      <div class="reveal">
+        <h2 class="contato-headline">
+          Quer tirar sua ideia do papel com
+          <em>engenharia bem feita?</em>
+        </h2>
+        <p class="contato-body">
+          Me conte contexto, restrições e objetivo.
+          Eu retorno com perguntas técnicas e um caminho de execução.
+        </p>
+      </div>
+
+      <div class="contato-right reveal reveal-delay-1">
+        <a href="mailto:victor.de.alcantara.bueno@gmail.com" class="contato-email">
+          victor.de.alcantara.bueno@gmail.com
+        </a>
+        <a href="https://wa.me/5548984586949" class="btn btn-primary">
+          WhatsApp ↗
+        </a>
+        <a href="https://www.linkedin.com/in/victor-de-alcantara/" class="btn btn-ghost">
+          LinkedIn ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-id">
+    <span class="footer-name">Victor de Alcântara Bueno</span>
+    <span class="footer-role">Engenheiro de Software</span>
+  </div>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/victor-de-alcantara/">LinkedIn</a>
+    <a href="https://github.com/Salazarismo">GitHub</a>
+    <a href="https://wa.me/5548984586949">WhatsApp</a>
+  </div>
+  <span class="footer-copy">© 2026 Victor</span>
+</footer>
+
+<a href="#top" class="back-top">Voltar ao topo ↑</a>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    }),
+    { threshold: 0.07, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Nav active state on scroll
+  const sections = document.querySelectorAll('section[id], nav');
+  const navLinks = document.querySelectorAll('.nav-center a');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.style.color = '');
+        const active = document.querySelector(`.nav-center a[href="#${e.target.id}"]`);
+        if (active) active.style.color = 'var(--text)';
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  document.querySelectorAll('section[id]').forEach(s => io.observe(s));
+</script>
+</body>
+</html>
