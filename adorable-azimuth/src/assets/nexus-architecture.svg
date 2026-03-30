@@ -1,0 +1,186 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0L10 5L0 10" fill="none" stroke="#c8922a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .bg { fill:#1a1a1a; }
+      .lane { fill:rgba(255,255,255,0.025); stroke:rgba(200,146,42,0.18); stroke-width:1; rx:4; }
+      .box { fill:#222222; stroke:rgba(200,146,42,0.18); stroke-width:1; rx:4; }
+      .note { fill:#1f1f1f; stroke:rgba(200,146,42,0.18); stroke-width:1; rx:4; stroke-dasharray:4 4; }
+      .title { fill:#f0ece4; font-family:'Syne', Arial, sans-serif; font-size:13px; font-weight:600; }
+      .label { fill:#f0ece4; font-family:'Syne', Arial, sans-serif; font-size:12px; font-weight:600; }
+      .mono { fill:#7a7570; font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; }
+      .small { fill:#7a7570; font-family:'JetBrains Mono', monospace; font-size:10px; }
+      .body { fill:#f0ece4; font-family:'Syne', Arial, sans-serif; font-size:10.5px; }
+      .accent { fill:#c8922a; font-family:'JetBrains Mono', monospace; font-size:10.5px; font-weight:500; letter-spacing:.05em; }
+      .flow { stroke:#c8922a; stroke-opacity:.78; stroke-width:1.6; fill:none; marker-end:url(#arrow); }
+      .flow2 { stroke:#d4a843; stroke-opacity:.78; stroke-width:1.5; fill:none; marker-end:url(#arrow); }
+      .flow3 { stroke:#c8922a; stroke-opacity:.6; stroke-width:1.4; fill:none; marker-end:url(#arrow); stroke-dasharray:5 4; }
+      .divider { stroke:rgba(200,146,42,0.18); stroke-width:1; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="860"/>
+
+  <rect class="lane" x="26" y="26" width="180" height="808"/>
+  <rect class="lane" x="218" y="26" width="260" height="808"/>
+  <rect class="lane" x="490" y="26" width="430" height="808"/>
+  <rect class="lane" x="932" y="26" width="242" height="808"/>
+
+  <text class="mono" x="42" y="50">CLIENTES / ATORES</text>
+  <text class="mono" x="234" y="50">PWA / FRONTEND</text>
+  <text class="mono" x="506" y="50">BACKEND NESTJS</text>
+  <text class="mono" x="948" y="50">INFRA &amp; EXTERNOS</text>
+
+  <rect class="box" x="42" y="82" width="148" height="74"/>
+  <text class="label" x="58" y="108">Usuário final</text>
+  <text class="body" x="58" y="128">Comprador via WhatsApp</text>
+
+  <rect class="box" x="42" y="176" width="148" height="74"/>
+  <text class="label" x="58" y="202">Operador de portaria</text>
+  <text class="body" x="58" y="222">Usa PWA offline</text>
+
+  <rect class="box" x="42" y="270" width="148" height="74"/>
+  <text class="label" x="58" y="296">Admin / Organização</text>
+  <text class="body" x="58" y="316">Dashboard administrativo</text>
+
+  <rect class="box" x="234" y="82" width="228" height="220"/>
+  <text class="title" x="250" y="108">App Landing (PWA)</text>
+  <text class="body" x="250" y="134">SyncManager.tsx — listener online + retry interval</text>
+  <text class="body" x="250" y="156">db.ts — IndexedDB (syncQueue)</text>
+  <text class="body" x="250" y="178">CheckinClient.tsx — enfileira check-ins offline</text>
+  <text class="body" x="250" y="200">POS module — enfileira pedidos offline</text>
+  <rect class="note" x="250" y="224" width="196" height="56"/>
+  <text class="accent" x="264" y="246">Fluxo 3 — Sync offline (POS / Check-in)</text>
+  <text class="small" x="264" y="264">Operador offline → IndexedDB → reconecta →</text>
+  <text class="small" x="264" y="278">SyncManager → /admin/pos/sync ou /admin/checkin/sync</text>
+
+  <rect class="box" x="234" y="326" width="228" height="108"/>
+  <text class="title" x="250" y="352">Dashboard Admin</text>
+  <text class="body" x="250" y="378">React / Next para gestão de eventos,</text>
+  <text class="body" x="250" y="396">pedidos, relatórios e CRM.</text>
+
+  <rect class="box" x="506" y="82" width="398" height="88"/>
+  <text class="title" x="522" y="108">Bootstrap / Cross-cutting</text>
+  <text class="body" x="522" y="132">main.ts — pipes, filtros, CORS, logger</text>
+  <text class="body" x="522" y="148">app.module.ts — Config, TypeORM, Redis, Throttler, Schedule</text>
+  <text class="body" x="522" y="164">TenantMiddleware — x-org-id / body / JWT · JwtGuard + RBAC + Entitlements</text>
+
+  <line class="divider" x1="506" y1="188" x2="904" y2="188"/>
+  <text class="mono" x="522" y="204">FEATURE MODULES</text>
+
+  <rect class="box" x="506" y="218" width="188" height="92"/>
+  <text class="label" x="520" y="242">Webhooks</text>
+  <text class="small" x="520" y="262">webhooks.whatsapp.controller</text>
+  <text class="small" x="520" y="278">→ whatsapp.inbound.service</text>
+  <text class="body" x="520" y="296">Recebe mensagens inbound do usuário</text>
+
+  <rect class="box" x="716" y="218" width="188" height="92"/>
+  <text class="label" x="730" y="242">Payments</text>
+  <text class="small" x="730" y="262">payments.controller</text>
+  <text class="small" x="730" y="278">webhook.controller → DLQ</text>
+  <text class="body" x="730" y="296">Preferência MP, Bricks, confirmação webhook</text>
+
+  <rect class="box" x="506" y="326" width="188" height="92"/>
+  <text class="label" x="520" y="350">Shop</text>
+  <text class="small" x="520" y="370">shop-payments-webhook.controller</text>
+  <text class="small" x="520" y="386">→ shop.service.confirmPayment</text>
+  <text class="body" x="520" y="404">PENDING → PAID, vouchers, estoque</text>
+
+  <rect class="box" x="716" y="326" width="188" height="92"/>
+  <text class="label" x="730" y="350">Billing</text>
+  <text class="small" x="730" y="370">billing.service</text>
+  <text class="body" x="730" y="390">Assinaturas; reutiliza /payments/webhook</text>
+
+  <rect class="box" x="506" y="434" width="188" height="92"/>
+  <text class="label" x="520" y="458">Check-in / POS</text>
+  <text class="small" x="520" y="478">checkin.admin.controller</text>
+  <text class="small" x="520" y="494">pos.controller</text>
+  <text class="body" x="520" y="512">Recebe batch sync da fila offline</text>
+
+  <rect class="box" x="716" y="434" width="188" height="92"/>
+  <text class="label" x="730" y="458">Events / Admin</text>
+  <text class="small" x="730" y="478">events + admin modules</text>
+  <text class="body" x="730" y="498">Gestão de eventos e organização</text>
+
+  <rect class="box" x="506" y="542" width="188" height="92"/>
+  <text class="label" x="520" y="566">Messages</text>
+  <text class="small" x="520" y="586">whatsapp.controller</text>
+  <text class="small" x="520" y="602">broadcast.controller</text>
+  <text class="body" x="520" y="620">Outbound manual e broadcast</text>
+
+  <rect class="box" x="716" y="542" width="188" height="92"/>
+  <text class="label" x="730" y="566">CRM</text>
+  <text class="small" x="730" y="586">crm.controller</text>
+  <text class="body" x="730" y="606">Queries com filtro organizationId</text>
+
+  <rect class="box" x="506" y="650" width="188" height="74"/>
+  <text class="label" x="520" y="674">Metrics</text>
+  <text class="small" x="520" y="694">metrics.controller</text>
+  <text class="body" x="520" y="712">GET /metrics para Prometheus</text>
+
+  <rect class="note" x="716" y="650" width="188" height="74"/>
+  <text class="label" x="730" y="674">Outbox / Workers</text>
+  <text class="small" x="730" y="694">outbound-worker.service.ts</text>
+  <text class="small" x="730" y="710">plan-change-outbox.worker.ts</text>
+
+  <rect class="box" x="948" y="82" width="210" height="92"/>
+  <text class="label" x="962" y="106">WhatsApp Cloud API</text>
+  <text class="body" x="962" y="130">Recebe webhook inbound</text>
+  <text class="body" x="962" y="148">Aceita envio outbound</text>
+
+  <rect class="box" x="948" y="194" width="210" height="104"/>
+  <text class="label" x="962" y="218">Mercado Pago</text>
+  <text class="body" x="962" y="242">Cria preferência / payment</text>
+  <text class="body" x="962" y="260">Dispara webhook de confirmação</text>
+  <text class="small" x="962" y="280">Assinatura validada por MP_WEBHOOK_SECRET</text>
+
+  <rect class="box" x="948" y="330" width="210" height="110"/>
+  <text class="label" x="962" y="354">PostgreSQL</text>
+  <text class="body" x="962" y="378">Banco único</text>
+  <text class="body" x="962" y="396">Row-level multi-tenant</text>
+  <text class="small" x="962" y="416">organizationId como FK nas entidades</text>
+
+  <rect class="box" x="948" y="462" width="210" height="126"/>
+  <text class="label" x="962" y="486">Redis (ioredis)</text>
+  <text class="body" x="962" y="510">locks — lock.service</text>
+  <text class="body" x="962" y="528">throttling — throttler-storage-redis</text>
+  <text class="body" x="962" y="546">cache — reports-cache.service</text>
+  <text class="body" x="962" y="564">pubsub</text>
+
+  <rect class="box" x="948" y="610" width="210" height="74"/>
+  <text class="label" x="962" y="634">Prometheus</text>
+  <text class="body" x="962" y="658">Coleta /metrics</text>
+  <text class="small" x="962" y="674">monitoring/prometheus.yml</text>
+
+  <path class="flow" d="M190 118H948"/>
+  <text class="accent" x="380" y="108">1. Venda via WhatsApp</text>
+  <path class="flow" d="M1048 174V210H810"/>
+  <path class="flow" d="M716 264H694"/>
+  <path class="flow" d="M600 310V330"/>
+  <path class="flow2" d="M1053 298V340H810"/>
+  <text class="accent" x="808" y="322">2. Confirmação de pagamento → DLQ → processor</text>
+
+  <path class="flow2" d="M190 212H234"/>
+  <path class="flow2" d="M462 252H506"/>
+  <path class="flow2" d="M600 418V434"/>
+  <text class="accent" x="246" y="236">3. Sync offline — IndexedDB / SyncManager</text>
+
+  <path class="flow3" d="M190 306H506"/>
+  <path class="flow3" d="M506 126H948"/>
+  <text class="accent" x="290" y="296">4. Multi-tenant — request → TenantMiddleware → organizationId</text>
+
+  <path class="flow" d="M694 588H948"/>
+  <path class="flow" d="M694 686H948"/>
+  <path class="flow" d="M1048 610V584"/>
+  <path class="flow" d="M600 724H1048V684"/>
+
+  <path class="flow2" d="M462 380H716"/>
+  <path class="flow2" d="M810 526H948"/>
+  <path class="flow2" d="M1048 440V462"/>
+
+  <rect class="note" x="506" y="748" width="652" height="66"/>
+  <text class="accent" x="522" y="772">Docker Compose local</text>
+  <text class="body" x="522" y="792">Backend NestJS multi-tenant + PostgreSQL + Redis + Prometheus. PWA usa IndexedDB/syncQueue para operar sem conectividade.</text>
+</svg>

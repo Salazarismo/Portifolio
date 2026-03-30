@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../components/BaseLayout.astro";
 import ProjectCaseRedesign from "../../components/ProjectCaseRedesign.astro";
+import nexusArchitecture from "../../assets/nexus-architecture.svg";
 
 export const prerender = false;
 
@@ -26,6 +27,11 @@ const data = {
     { label: "Ver Evidências", href: "#evidence" },
     { label: "Código (NDA)", href: "#code" }
   ],
+  preTldrFigure: {
+    src: nexusArchitecture,
+    alt: "Diagrama de arquitetura da Plataforma Nexus: PWA offline-first, backend NestJS multi-tenant, WhatsApp Cloud API, Mercado Pago e infra com Redis e Prometheus",
+    caption: "Arquitetura do sistema — fluxos principais e camadas de infra."
+  },
   tldrTitle: "TL;DR — 1 minuto",
   tldrCards: [
     { key: "Problema", value: "Venda e check-in dependentes de <strong>canais fragmentados</strong> e de rede estável na portaria em uma operação crítica." },

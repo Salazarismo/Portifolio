@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../../components/BaseLayout.astro";
 import ProjectCaseRedesign from "../../../components/ProjectCaseRedesign.astro";
+import nexusArchitecture from "../../../assets/nexus-architecture.svg";
 
 export const prerender = false;
 
@@ -26,6 +27,11 @@ const data = {
     { label: "View Evidence", href: "#evidence" },
     { label: "Private code (NDA)", href: "#code" }
   ],
+  preTldrFigure: {
+    src: nexusArchitecture,
+    alt: "Architecture diagram of the Nexus Platform: offline-first PWA, multi-tenant NestJS backend, WhatsApp Cloud API, Mercado Pago, and infrastructure with Redis and Prometheus",
+    caption: "System architecture — main flows and infrastructure layers."
+  },
   tldrTitle: "TL;DR — 1 minute",
   tldrCards: [
     { key: "Problem", value: "Sales and check-in depended on <strong>fragmented channels</strong> and stable internet at the gate during a critical operation." },

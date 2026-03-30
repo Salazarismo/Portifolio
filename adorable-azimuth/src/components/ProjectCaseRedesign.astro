@@ -22,6 +22,12 @@ type CodeBlock = {
   html: string;
 };
 
+type DiagramFigure = {
+  src: string;
+  alt: string;
+  caption: string;
+};
+
 type Props = {
   langPT: string;
   langEN: string;
@@ -35,6 +41,7 @@ type Props = {
   heroFilter: string;
   heroStats: KeyValue[];
   heroActions: LinkAction[];
+  preTldrFigure?: DiagramFigure;
   tldrTitle: string;
   tldrCards: KeyValue[];
   noticeTitle: string;
@@ -300,6 +307,28 @@ const props = Astro.props as Props;
   .btn-ghost:hover { border-color: var(--text-muted); color: var(--text); }
 
   .case-redesign-main { max-width: 900px; margin: 0 auto; padding: 0 40px 120px; }
+  .arch-diagram {
+    margin: 2.5rem 0;
+    border: 1px solid rgba(200, 146, 42, 0.18);
+    border-radius: 4px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.015);
+  }
+  .arch-diagram img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .arch-diagram figcaption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #7a7570;
+    padding: 0.6rem 1rem;
+    border-top: 1px solid rgba(200, 146, 42, 0.1);
+    background: rgba(255,255,255,0.015);
+  }
 
   .s-head {
     display: flex; align-items: baseline; gap: 20px;
@@ -768,6 +797,17 @@ const props = Astro.props as Props;
 </section>
 
 <main class="case-redesign-main">
+  {props.preTldrFigure && (
+    <figure class="arch-diagram reveal">
+      <img
+        src={props.preTldrFigure.src}
+        alt={props.preTldrFigure.alt}
+        width="1200"
+        loading="lazy"
+      />
+      <figcaption>{props.preTldrFigure.caption}</figcaption>
+    </figure>
+  )}
   <section class="tldr reveal">
     <div class="s-head">
       <span class="s-num">01</span>

@@ -1,106 +1,50 @@
 ---
 import BaseLayout from "../components/BaseLayout.astro";
-import HomeLandingRedesign from "../components/HomeLandingRedesign.astro";
+import HomeHybridLanding from "../components/HomeHybridLanding.astro";
 
 const data = {
-  projectsId: "projects",
-  aboutId: "sobre",
-  contactId: "contato",
-  heroEyebrow: "Engenheiro de Software",
-  heroNameTop: "Victor de<br/>Alcântara",
-  heroNameEm: "Bueno",
-  heroRole: "Disponível para projetos em 2026",
-  heroTagline: "Construo produtos web e mobile com foco em performance, clareza de arquitetura e entrega previsível.",
-  heroPrimaryCta: "Ver projetos ↓",
-  heroSecondaryCta: "↗ Email",
-  heroTertiaryCta: "WhatsApp",
-  heroBar: [
-    { label: "Foco", value: "Performance + UX" },
-    { label: "Plataformas", value: "Web · Mobile · API" },
-    { label: "Projetos", value: "Privados + Open-source" },
-    { label: "Disponibilidade", value: "Aberto a propostas" }
-  ],
-  scrollCue: "Projetos selecionados",
-  stackItems: ["Astro", "React", "Next.js", "TypeScript", "Flutter", "NestJS", "FastAPI", "PostgreSQL", "Redis", "Mercado Pago", "Prometheus", "Docker", "go_router", "IndexedDB", "Playwright"],
-  projectsTitle: "Projetos selecionados",
-  projects: [
-    {
-      href: "/projects/p7/",
-      image: "https://victor-alcantara.vercel.app/images/3f015622-01e5-46c9-a13c-c655373c819a.png",
-      alt: "Plataforma Nexus — painel admin",
-      year: "2024",
-      badge: "Risco",
-      titleHtml: "Plataforma Nexus",
-      kpi: "100% check‑in offline na portaria — PWA + fila local + sync em lote.",
-      tags: ["Full-stack", "Offline 100%"],
-      cta: "Ver case"
-    },
-    {
-      href: "/projects/p3/",
-      image: "https://victor-alcantara.vercel.app/images/analytics-code.svg",
-      alt: "Habit Analyzer — analytics",
-      year: "2023",
-      badge: "Custo",
-      titleHtml: "Habit Analyzer",
-      kpi: "−40% custo de leitura de analytics em janelas grandes.",
-      tags: ["Arquitetura", "Full-stack", "Latência −40%"],
-      cta: "Ver case"
-    },
-    {
-      href: "/projects/p5/",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fm=jpg&w=800&q=80",
-      alt: "Relatorium — Quick Activity Button",
-      year: "2023",
-      badge: "Tempo",
-      titleHtml: "Relatorium<br/><em style='font-style:italic;color:var(--text-dim);font-family:var(--serif);font-weight:300'>Quick Activity Button</em>",
-      kpi: "45s → 20–25s no registro — −40–55% de cliques no fluxo.",
-      tags: ["Mobile + UX", "Tempo 45–60%"],
-      cta: "Ver case"
-    }
-  ],
-  aboutTitle: "Sobre",
-  aboutTextHtml: "Trabalho com <strong>front-end, back-end e mobile</strong>, com prioridade em clareza de arquitetura, acessibilidade e métricas de produto. Já atuei em projetos privados em produção e em iniciativas open-source, sempre buscando <strong>reduzir fricção</strong> e aumentar <strong>previsibilidade de entrega</strong>.",
-  aboutTechLabel: "Tecnologias frequentes",
-  aboutFindMeLabel: "Encontre-me em",
-  aboutLinks: [
-    { label: "LinkedIn ↗", href: "https://www.linkedin.com/in/victor-de-alcantara/" },
-    { label: "GitHub ↗", href: "https://github.com/Salazarismo" }
-  ],
-  contactTitle: "Contato",
-  contactHeadlineHtml: "Quer tirar sua ideia do papel com <em>engenharia bem feita?</em>",
-  contactBody: "Me conte contexto, restrições e objetivo. Eu retorno com perguntas técnicas e um caminho de execução.",
-  contactPrimaryCta: "WhatsApp ↗",
-  contactSecondaryCta: "LinkedIn ↗",
-  backTop: "Voltar ao topo ↑"
+  logoHref: "/",
+  ptHref: "/",
+  enHref: "/en/",
+  isEN: false,
+  eyebrow: "Engenheiro de Software",
+  title: "Full-Stack · Offline-First · Integrações Críticas",
+  description: "Construo produtos web e mobile com foco em confiabilidade operacional, experiência consistente em campo e integrações que não falham sob pressão.",
+  recruiterTag: "→ Recrutadores & Gestores",
+  recruiterHeadline: "Estou em busca de uma vaga",
+  recruiterSub: "Currículo, cases técnicos e perfil profissional completo.",
+  recruiterArrow: "Ver perfil profissional →",
+  recruiterHref: "/recruiter",
+  clientTag: "→ Clientes & Projetos",
+  clientHeadline: "Tenho um projeto em mente",
+  clientSub: "Cases, stack, abordagem e contato direto para escopo.",
+  clientArrow: "Ver projetos →",
+  clientHref: "/projects/p7/",
+  footerEmailLabel: "Email",
+  footerCopy: "© 2026 Victor de Alcântara Bueno"
 };
 ---
-<BaseLayout title="Victor de Alcântara Bueno — Engenheiro de Software" description="Construo produtos web e mobile com foco em performance, clareza de arquitetura e entrega previsível.">
+<BaseLayout
+  title="Victor de Alcântara Bueno — Engenheiro de Software"
+  description="Engenheiro de Software especializado em produtos offline-first, integrações críticas e UX operacional."
+>
   <Fragment slot="nav">
-    <a href="/" class="nav-logo">Victor<sup>®</sup></a>
-    <div class="nav-center">
-      <a href={`#${data.projectsId}`}>Projetos</a>
-      <a href={`#${data.aboutId}`}>Sobre</a>
-      <a href={`#${data.contactId}`}>Contato</a>
-    </div>
-    <div class="nav-right">
-      <span class="avail-dot">Disponível 2026</span>
-      <a href="/" class="lang-active">PT</a>
-      <a href="/en/">EN</a>
-      <a href="mailto:victor.de.alcantara.bueno@gmail.com">↗ Email</a>
+    <a class="nav-logo" href={data.logoHref}>Victor<span>®</span></a>
+    <div class="nav-lang">
+      <a href={data.ptHref} class="active">PT</a>
+      <span>/</span>
+      <a href={data.enHref}>EN</a>
     </div>
   </Fragment>
-  <div id="top"></div>
-  <HomeLandingRedesign {...data} />
+
+  <HomeHybridLanding {...data} />
+
   <Fragment slot="footer">
-    <div class="footer-id">
-      <span class="footer-name">Victor de Alcântara Bueno</span>
-      <span class="footer-role">Engenheiro de Software</span>
-    </div>
     <div class="footer-links">
-      <a href="https://www.linkedin.com/in/victor-de-alcantara/">LinkedIn</a>
-      <a href="https://github.com/Salazarismo">GitHub</a>
-      <a href="https://wa.me/5548984586949">WhatsApp</a>
+      <a href="https://linkedin.com/in/victor-de-alcantara/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Salazarismo" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:victor.de.alcantara.bueno@gmail.com">{data.footerEmailLabel}</a>
     </div>
-    <span class="footer-copy">© 2026 Victor</span>
+    <span class="footer-copy">{data.footerCopy}</span>
   </Fragment>
 </BaseLayout>
