@@ -24,3 +24,13 @@ adorable-azimuth/playwright-report/
 
 .vercel
 .env*.local
+
+# Planning and Implementation Guides
+trae-prompt-*.md
+gemini-portfolio-prompt.md
+i18n-plan.md
+landing-*.html
+p*.html
+recruiter.html
+New Landing/
+Currículo*.pdf

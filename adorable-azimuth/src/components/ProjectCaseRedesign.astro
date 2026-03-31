@@ -308,16 +308,21 @@ const props = Astro.props as Props;
 
   .case-redesign-main { max-width: 900px; margin: 0 auto; padding: 0 40px 120px; }
   .arch-diagram {
-    margin: 2.5rem 0;
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     border: 1px solid rgba(200, 146, 42, 0.18);
     border-radius: 4px;
     overflow: hidden;
-    background: rgba(255,255,255,0.015);
+    background: #1a1a1a;
   }
   .arch-diagram img {
     width: 100%;
     height: auto;
     display: block;
+    max-width: none;
   }
   .arch-diagram figcaption {
     font-family: 'JetBrains Mono', monospace;
@@ -327,7 +332,7 @@ const props = Astro.props as Props;
     color: #7a7570;
     padding: 0.6rem 1rem;
     border-top: 1px solid rgba(200, 146, 42, 0.1);
-    background: rgba(255,255,255,0.015);
+    background: rgba(255, 255, 255, 0.015);
   }
 
   .s-head {
@@ -750,6 +755,7 @@ const props = Astro.props as Props;
     .hero-meta { flex-direction: column; gap: 0; padding: 24px; }
     .hero-stat { border-right: none; border-bottom: 1px solid var(--border-dim); padding: 16px 0; }
     .case-redesign-main { padding: 0 24px 80px; }
+    .arch-diagram { width: calc(100% + 48px); margin-left: -24px; margin-right: -24px; }
     .tldr-grid { grid-template-columns: 1fr; }
     .reliability-intro { grid-template-columns: 1fr; }
     .snap-table { grid-template-columns: 1fr; }
