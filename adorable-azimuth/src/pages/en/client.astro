@@ -118,18 +118,18 @@ import BaseLayout from "../../components/BaseLayout.astro";
   <div class="c-section-divider"><hr /></div>
 
   <!-- ABOUT -->
-  <section class="c-sobre" id="about">
-    <div class="c-sobre-left">
+  <section class="c-about" id="about">
+    <div class="c-about-left">
       <p class="c-section-label">About</p>
     </div>
-    <div class="c-sobre-right">
-      <p class="c-sobre-text">
+    <div class="c-about-right">
+      <p class="c-about-text">
         I work with front-end, back-end and mobile, with priority on architectural clarity, accessibility and product metrics. I've worked on private production projects and open-source initiatives, always aiming to reduce friction and increase delivery predictability.
       </p>
-      <p class="c-sobre-text">
+      <p class="c-about-text">
         If you have a project and want to talk about scope, risks and next steps — I'll come back with technical questions and an execution path.
       </p>
-      <div class="c-sobre-stack">
+      <div class="c-about-stack">
         <span class="c-stack-tag">Astro / React</span>
         <span class="c-stack-tag">TypeScript</span>
         <span class="c-stack-tag">NestJS</span>
@@ -147,25 +147,25 @@ import BaseLayout from "../../components/BaseLayout.astro";
   <div class="c-section-divider"><hr /></div>
 
   <!-- CONTACT -->
-  <section class="c-contato" id="contact">
-    <div class="c-contato-inner">
+  <section class="c-contact" id="contact">
+    <div class="c-contact-inner">
       <div>
-        <h2 class="c-contato-headline">
+        <h2 class="c-contact-headline">
           Want to bring your idea<br />to life with<br /><em>solid engineering?</em>
         </h2>
-        <p class="c-contato-sub">
+        <p class="c-contact-sub">
           Tell me the context, constraints and goal.<br />
           I'll come back with technical questions and an execution path.
         </p>
       </div>
-      <div class="c-contato-actions">
-        <a class="c-contato-btn c-contato-btn--primary" href="https://wa.me/5548984586949" target="_blank" rel="noopener">
+      <div class="c-contact-actions">
+        <a class="c-contact-btn c-contact-btn--primary" href="https://wa.me/5548984586949" target="_blank" rel="noopener">
           <span class="c-btn-icon">💬</span> WhatsApp
         </a>
-        <a class="c-contato-btn" href="mailto:victor.de.alcantara.bueno@gmail.com">
+        <a class="c-contact-btn" href="mailto:victor.de.alcantara.bueno@gmail.com">
           <span class="c-btn-icon">✉</span> victor.de.alcantara.bueno@gmail.com
         </a>
-        <a class="c-contato-btn" href="https://linkedin.com/in/victor-de-alcantara/" target="_blank" rel="noopener">
+        <a class="c-contact-btn" href="https://linkedin.com/in/victor-de-alcantara/" target="_blank" rel="noopener">
           <span class="c-btn-icon">↗</span> LinkedIn
         </a>
       </div>
@@ -536,7 +536,7 @@ import BaseLayout from "../../components/BaseLayout.astro";
   }
 
   /* ABOUT */
-  .c-sobre {
+  .c-about {
     position: relative;
     z-index: 1;
     max-width: 1100px;
@@ -548,7 +548,7 @@ import BaseLayout from "../../components/BaseLayout.astro";
     align-items: start;
   }
 
-  .c-sobre-text {
+  .c-about-text {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(1.05rem, 1.7vw, 1.22rem);
     font-weight: 300;
@@ -557,7 +557,7 @@ import BaseLayout from "../../components/BaseLayout.astro";
     margin-bottom: 1.6rem;
   }
 
-  .c-sobre-stack {
+  .c-about-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -574,7 +574,7 @@ import BaseLayout from "../../components/BaseLayout.astro";
   }
 
   /* CONTACT */
-  .c-contato {
+  .c-contact {
     position: relative;
     z-index: 1;
     max-width: 1100px;
@@ -582,7 +582,7 @@ import BaseLayout from "../../components/BaseLayout.astro";
     padding: 6rem 2.5rem 10rem;
   }
 
-  .c-contato-inner {
+  .c-contact-inner {
     border: 1px solid var(--c-border-dim);
     padding: 3.5rem 4rem;
     background: rgba(255,255,255,0.015);
@@ -592,7 +592,7 @@ import BaseLayout from "../../components/BaseLayout.astro";
     align-items: center;
   }
 
-  .c-contato-headline {
+  .c-contact-headline {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     font-weight: 300;
@@ -600,12 +600,12 @@ import BaseLayout from "../../components/BaseLayout.astro";
     color: var(--c-off-white);
     margin-bottom: 1rem;
   }
-  .c-contato-headline em {
+  .c-contact-headline em {
     font-style: italic;
     color: var(--c-amber-light);
   }
 
-  .c-contato-sub {
+  .c-contact-sub {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.05rem;
     font-weight: 300;
@@ -613,13 +613,13 @@ import BaseLayout from "../../components/BaseLayout.astro";
     color: rgba(240,236,228,0.55);
   }
 
-  .c-contato-actions {
+  .c-contact-actions {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 
-  .c-contato-btn {
+  .c-contact-btn {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -634,17 +634,17 @@ import BaseLayout from "../../components/BaseLayout.astro";
     background: transparent;
     transition: border-color 0.2s, background 0.2s, transform 0.2s;
   }
-  .c-contato-btn:hover {
+  .c-contact-btn:hover {
     border-color: rgba(200,146,42,0.4);
     background: rgba(200,146,42,0.06);
     transform: translateX(4px);
   }
-  .c-contato-btn--primary {
+  .c-contact-btn--primary {
     border-color: var(--c-amber);
     color: var(--c-charcoal);
     background: var(--c-amber);
   }
-  .c-contato-btn--primary:hover {
+  .c-contact-btn--primary:hover {
     background: var(--c-amber-light);
     border-color: var(--c-amber-light);
     transform: translateX(4px);
