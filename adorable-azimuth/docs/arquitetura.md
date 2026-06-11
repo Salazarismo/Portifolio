@@ -1,8 +1,12 @@
-# M2 — Arquitetura de Componentes (Islands Hygiene)
+# Movido
 
-- `.astro` = apresentação estática (sem lógica interativa ou efeitos)
-- `.tsx` = somente em `src/islands/` e usado via directives `client:` nas páginas `.astro`
-- `src/components/` contém componentes estáticos `.astro` reutilizáveis
-- Proibido `.tsx` fora de `src/islands/` (checado por `pnpm run islands:gate`)
-- Build roda gates antes de compilar (`prebuild` executa tokens e islands gate)
+O conteúdo deste documento (M2 — Islands Hygiene) foi absorvido pela
+documentação viva:
 
+- Visão macro e decisões M2/M4: [ARQUITETURA.md](../../ARQUITETURA.md) (raiz do repositório)
+- Regras de islands no dia a dia: [docs/modulos/interatividade/REGRA.md](modulos/interatividade/REGRA.md)
+- Mapa de módulos: [docs/modulos/INDEX.md](modulos/INDEX.md)
+
+Nota: a versão antiga afirmava que o `prebuild` rodava os gates de tokens e
+islands; o `package.json` atual roda clean + checks de i18n no `prebuild`, e os
+demais gates rodam no CI.

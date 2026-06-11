@@ -18,6 +18,7 @@
     "projects:gate": "node scripts/projects-gate.cjs",
     "budget:gate": "node scripts/js-budget.cjs",
     "components:gate": "node scripts/components-standard-gate.cjs",
+    "docs:gate": "node scripts/docs-gate.cjs",
     "test:e2e": "playwright test"
   },
   "dependencies": {
