@@ -962,7 +962,7 @@ const props = Astro.props as Props;
   );
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  const heroBg = document.querySelector('.hero-bg');
+  const heroBg = document.querySelector<HTMLElement>('.hero-bg');
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
     if (heroBg) heroBg.style.transform = `scale(1.04) translateY(${y * 0.15}px)`;

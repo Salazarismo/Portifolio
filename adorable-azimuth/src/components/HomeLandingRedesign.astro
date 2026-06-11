@@ -820,12 +820,12 @@ const props = Astro.props as Props;
   );
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  const navLinks = document.querySelectorAll('.nav-center a');
+  const navLinks = document.querySelectorAll<HTMLElement>('.nav-center a');
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         navLinks.forEach(l => l.style.color = '');
-        const active = document.querySelector(`.nav-center a[href="#${e.target.id}"]`);
+        const active = document.querySelector<HTMLElement>(`.nav-center a[href="#${e.target.id}"]`);
         if (active) active.style.color = 'var(--text)';
       }
     });
