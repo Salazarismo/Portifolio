@@ -30,6 +30,9 @@ function run() {
     }
   }
   walk(dist);
+  if (files.length === 0) {
+    failures.push('nenhum .html encontrado em dist/ — gate sem amostra (build prerender ausente?)');
+  }
   files.forEach(checkFile);
 }
 

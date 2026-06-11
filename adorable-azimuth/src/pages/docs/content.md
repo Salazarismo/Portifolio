@@ -186,44 +186,6 @@ import Hero from '../components/Hero.astro';
 - Layout responsivo com picture element
 - Acessibilidade com `aria-labelledby`
 
-## 7. ProjectCard (Componente Astro)
-
-**Descrição:** Card de projeto com descrição, métricas e código.
-
-### Props
-| Prop | Tipo | Padrão | Descrição |
-|------|------|--------|-----------|
-| `title` | `string` | obrigatório | Título do projeto |
-| `problem` | `string` | obrigatório | Descrição do problema resolvido |
-| `decision` | `string` | obrigatório | Decisão técnica tomada |
-| `metricLabel` | `string` | obrigatório | Label da métrica de sucesso |
-| `metricValue` | `string` | obrigatório | Valor da métrica |
-| `codeSnippet` | `string` | `''` | Código de exemplo (opcional) |
-
-### Exemplo de Uso
-```astro
----
-import ProjectCard from '../components/ProjectCard.astro';
----
-
-<ProjectCard
-  title="Otimização de Performance"
-  problem="Aplicação com tempo de carregamento de 8 segundos"
-  decision="Implementação de lazy loading e code splitting"
-  metricLabel="Redução no tempo de carregamento"
-  metricValue="75%"
-  codeSnippet={`const lazyLoad = () => import('./heavy-component.js');`}
-/>
-```
-
-### Estrutura
-- Header com título do projeto
-- Seção "Problema" com descrição
-- Seção "Decisão técnica" com solução
-- Seção "Resultado mensurável" com métrica
-- Seção opcional "Snippet" com código formatado
-- Acessibilidade com `aria-live="polite"` para métricas
-
 ## Diretrizes Gerais
 
 ### Acessibilidade

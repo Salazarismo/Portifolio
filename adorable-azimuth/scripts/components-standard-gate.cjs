@@ -12,7 +12,10 @@ function walk(dir) {
   }
 }
 
+let htmlCount = 0;
+
 function checkHtml(file) {
+  htmlCount++;
   const html = fs.readFileSync(file, 'utf8');
   const rel = path.relative(path.resolve(__dirname, '..'), file).replace(/\\/g, '/');
   const sections = [...html.matchAll(/<section[^>]*data-section[^>]*>/gi)];
@@ -32,6 +35,10 @@ function checkHtml(file) {
 }
 
 walk(dist);
+
+if (htmlCount === 0) {
+  failures.push('nenhum .html encontrado em dist/ — gate sem amostra (build prerender ausente?)');
+}
 
 if (failures.length) {
   console.error('Components Standard Gate falhou:');

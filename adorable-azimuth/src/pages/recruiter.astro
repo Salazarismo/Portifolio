@@ -1,5 +1,5 @@
 ---
-export const prerender = false;
+export const prerender = true;
 ---
 <html lang="pt-BR">
 <head>
@@ -540,14 +540,15 @@ export const prerender = false;
 <body>
   <header class="topbar">
     <div class="wrapper">
-      <div class="topbar-inner">
+      <nav aria-label="Principal" class="topbar-inner">
         <a href="/" class="topbar-logo">Victor<span>®</span></a>
         <span class="topbar-badge">Para Recrutadores</span>
-      </div>
+      </nav>
     </div>
     <hr class="rule" />
   </header>
 
+  <main id="main">
   <section class="hero">
     <div class="wrapper">
       <div class="fade-up">
@@ -740,6 +741,7 @@ export const prerender = false;
       </div>
     </div>
   </section>
+  </main>
 
   <footer>
     <div class="wrapper">

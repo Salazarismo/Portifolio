@@ -2,7 +2,11 @@ const fs = require('fs');
 const path = require('path');
 
 const dir = path.resolve(__dirname, '..', 'dist', 'client', '_astro');
-const files = fs.existsSync(dir) ? fs.readdirSync(dir) : [];
+if (!fs.existsSync(dir)) {
+  console.error('JS Budget falhou: dist/client/_astro não existe — rode o build antes do gate');
+  process.exit(1);
+}
+const files = fs.readdirSync(dir);
 let total = 0;
 for (const f of files) {
   if (f.endsWith('.js')) {
