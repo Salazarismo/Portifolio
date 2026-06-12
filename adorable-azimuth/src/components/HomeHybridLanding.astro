@@ -140,20 +140,36 @@ const props = Astro.props as Props;
 
   body.page-home .hero-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.8rem, 7vw, 5.2rem);
+    font-size: clamp(3rem, 8vw, 5.8rem);
     font-weight: 300;
     line-height: 1.05;
     letter-spacing: -0.01em;
     color: var(--off-white);
     margin-bottom: 0.3rem;
-    opacity: 0;
-    animation: homeFadeUp 0.7s ease forwards 0.2s;
   }
 
   body.page-home .hero-name em {
     font-style: italic;
     color: var(--amber-light);
   }
+
+  body.page-home .hn-word {
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.14em 0.08em;
+    margin: -0.14em -0.08em;
+    vertical-align: top;
+  }
+
+  body.page-home .hn-inner {
+    display: inline-block;
+    transform: translateY(115%);
+    animation: homeWordRise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  body.page-home .hn-word:nth-child(1) .hn-inner { animation-delay: 0.2s; }
+  body.page-home .hn-word:nth-child(2) .hn-inner { animation-delay: 0.32s; }
+  body.page-home .hn-word:nth-child(3) .hn-inner { animation-delay: 0.44s; }
 
   body.page-home .hero-title {
     font-family: 'Syne', sans-serif;
@@ -228,13 +244,30 @@ const props = Astro.props as Props;
     background: linear-gradient(135deg, rgba(255,255,255,0.04), transparent 60%);
   }
 
+  body.page-home .cta-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: radial-gradient(180px circle at var(--mx, 50%) var(--my, 50%), rgba(224,168,58,0.85), transparent 70%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+
   body.page-home .cta-card:hover {
     border-color: rgba(200,146,42,0.45);
     background: rgba(255,255,255,0.04);
     transform: translateY(-2px);
+    box-shadow: 0 12px 40px -16px rgba(200,146,42,0.25);
   }
 
   body.page-home .cta-card:hover::before { opacity: 1; }
+  body.page-home .cta-card:hover::after { opacity: 1; }
 
   body.page-home .cta-tag {
     font-family: 'JetBrains Mono', monospace;
@@ -316,6 +349,18 @@ const props = Astro.props as Props;
     color: rgba(122,117,112,0.5);
   }
 
+  body.page-home .cursor-spotlight {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    background: radial-gradient(480px circle at var(--spot-x, 50%) var(--spot-y, 35%), rgba(200,146,42,0.08), transparent 65%);
+  }
+
+  body.page-home .cursor-spotlight.is-on { opacity: 1; }
+
   @keyframes homeFadeUp {
     from { opacity: 0; transform: translateY(18px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -324,6 +369,26 @@ const props = Astro.props as Props;
   @keyframes homeFadeIn {
     from { opacity: 0; }
     to   { opacity: 1; }
+  }
+
+  @keyframes homeWordRise {
+    to { transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body.page-home .hero-eyebrow,
+    body.page-home .hero-title,
+    body.page-home .hero-divider,
+    body.page-home .hero-description,
+    body.page-home .cta-grid {
+      animation: none;
+      opacity: 1;
+    }
+    body.page-home .hn-inner {
+      animation: none;
+      transform: none;
+    }
+    body.page-home .cursor-spotlight { display: none; }
   }
 
   @media (max-width: 600px) {
@@ -344,7 +409,9 @@ const props = Astro.props as Props;
 <div class="hero">
   <p class="hero-eyebrow">{props.eyebrow}</p>
   <h1 class="hero-name">
-    Victor <em>de Alcântara</em>
+    <span class="hn-word"><span class="hn-inner">Victor</span></span>
+    <span class="hn-word"><span class="hn-inner"><em>de</em></span></span>
+    <span class="hn-word"><span class="hn-inner"><em>Alcântara</em></span></span>
   </h1>
   <p class="hero-title">{props.title}</p>
   <div class="hero-divider"></div>
@@ -365,3 +432,73 @@ const props = Astro.props as Props;
     </a>
   </div>
 </div>
+
+<script>
+  const finePointer = window.matchMedia('(pointer: fine)').matches;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scramble do eyebrow: caracteres aleatórios resolvem no texto final
+  const eyebrow = document.querySelector<HTMLElement>('.hero-eyebrow');
+  if (eyebrow && !reducedMotion) {
+    const finalText = eyebrow.textContent ?? '';
+    const glyphs = '!<>-_\\/[]{}=+*^?#';
+    const totalFrames = Math.max(1, Math.round(finalText.length * 2.2));
+    let frame = 0;
+    const tick = () => {
+      frame++;
+      const settled = Math.floor((frame / totalFrames) * finalText.length);
+      let out = '';
+      for (let i = 0; i < finalText.length; i++) {
+        const c = finalText[i];
+        out = out + (i < settled || c === ' ' ? c : glyphs[Math.floor(Math.random() * glyphs.length)]);
+      }
+      eyebrow.textContent = out;
+      if (settled < finalText.length) requestAnimationFrame(tick);
+      else eyebrow.textContent = finalText;
+    };
+    setTimeout(() => requestAnimationFrame(tick), 150);
+  }
+
+  if (finePointer && !reducedMotion) {
+    // Spotlight âmbar que segue o cursor com suavização
+    const spot = document.createElement('div');
+    spot.className = 'cursor-spotlight';
+    spot.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(spot);
+
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight * 0.35;
+    let x = targetX;
+    let y = targetY;
+    let raf = 0;
+
+    const step = () => {
+      x += (targetX - x) * 0.1;
+      y += (targetY - y) * 0.1;
+      spot.style.setProperty('--spot-x', `${x}px`);
+      spot.style.setProperty('--spot-y', `${y}px`);
+      if (Math.abs(targetX - x) > 0.5 || Math.abs(targetY - y) > 0.5) {
+        raf = requestAnimationFrame(step);
+      } else {
+        raf = 0;
+      }
+    };
+
+    window.addEventListener('pointermove', (e) => {
+      targetX = e.clientX;
+      targetY = e.clientY;
+      spot.classList.add('is-on');
+      if (!raf) raf = requestAnimationFrame(step);
+    }, { passive: true });
+
+    // Glow border dos cards acompanha a posição do cursor
+    const cards = document.querySelectorAll<HTMLElement>('.cta-card');
+    for (const card of cards) {
+      card.addEventListener('pointermove', (e) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+        card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+      }, { passive: true });
+    }
+  }
+</script>
