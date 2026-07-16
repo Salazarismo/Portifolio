@@ -94,3 +94,48 @@
   --elevation-2: var(--shadow-md);
   --elevation-3: var(--shadow-lg);
 }
+
+/*
+ * === Nova Home (manifesto) — ambiente, fontes e escala de display ===
+ * Vive em tokens.css de propósito: o token-gate exclui este arquivo,
+ * então clamp(rem) e o hex do fundo ficam centralizados aqui e o
+ * home.css referencia só var(). Valores finais: plano-reconstrucao-home/08.
+ */
+:root {
+  /* Ambiente: o manifesto é escuro + coral. O âmbar/charcoal da home
+     antiga morreu com o HomeHybridLanding (plano 08, Seção 8).
+     Hex novo só no fundo (mesmo valor de --color-primary-foreground,
+     mas com nome honesto); as demais tintas são alias/color-mix. */
+  --home-bg: #0b1220;                      /* navy quase-preto */
+  --home-ink: var(--color-text);           /* off-white */
+  --home-ink-dim: var(--color-secondary);  /* sussurro */
+  --home-accent: var(--color-primary);     /* coral — "o campo" */
+
+  /* tintas derivadas (zero hex novo) */
+  --home-muted: color-mix(in srgb, var(--color-text) 52%, transparent);
+  --home-surface: rgba(255, 255, 255, 0.03);
+  --home-border: color-mix(in srgb, var(--home-accent) 24%, transparent);
+  --home-border-dim: rgba(255, 255, 255, 0.07);
+  --home-nav-bg: color-mix(in srgb, var(--home-bg) 85%, transparent);
+  --home-accent-bright: color-mix(in srgb, var(--home-accent) 78%, var(--home-ink));
+
+  /* Fontes (BaseLayout já carrega Cormorant/Syne/JetBrains Mono p/ a home) */
+  --home-font-display: "Cormorant Garamond", serif; /* H1, número da cicatriz */
+  --home-font-body: "Syne", sans-serif;             /* subhead, CTA, em-campo */
+  --home-font-mono: "JetBrains Mono", monospace;    /* eyebrow, tagline, labels */
+
+  /* Escala de display fluida. INVARIANTE: hero >= scar em TODO viewport
+     (cada parâmetro do hero domina o do scar: min, slope-vw e max).
+     Prova no plano 08, Seção 8. NÃO afrouxar sem refazer a prova. */
+  --home-hero-size: clamp(2.5rem, 7vw, 5.5rem);    /* o MAIOR tipo da página (H1 tese) */
+  --home-scar-size: clamp(2rem, 5.5vw, 4.25rem);   /* número da cicatriz: grande, < hero */
+  --home-tension-size: clamp(1.5rem, 4vw, 2.75rem);/* tipo médio */
+  --home-subhead-size: clamp(1.05rem, 2vw, 1.3rem);/* sussurro logo abaixo do H1 */
+  --home-text-sm: 0.85rem;
+  --home-text-xs: 0.7rem;
+  --home-text-2xs: 0.65rem;
+
+  /* Ambiente decorativo */
+  --home-glow-size: clamp(18rem, 60vw, 46rem); /* diâmetro do glow coral atrás do hero */
+  --home-reveal-step: 90ms;                    /* passo do stagger do [data-reveal] */
+}

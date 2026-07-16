@@ -147,7 +147,7 @@ import Textarea from '../components/ui/Textarea.astro';
 Não recebe props - componente estático.
 
 ### Estrutura
-- Logo/Marca "Victor®" (link para home)
+- Logo/Marca "Victor" (link para home)
 - Texto de disponibilidade no centro (ex.: “Disponível para projetos em 2026”)
 - Navegação: Projetos, Sobre, Contato (âncoras)
 - Email como link sublinhado

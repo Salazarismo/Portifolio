@@ -1,0 +1,559 @@
+/*
+ * Home-manifesto — stylesheet temático da home (PT e EN).
+ * Escopo: body.page-home. Prefixo de classe: .hm-* (.hero-* grandfathered no hero).
+ * Tokens: só var(--home-*) e tokens globais — valores crus moram em tokens.css.
+ *
+ * Contrato de modo (índice-mãe §4.3): #home-root[data-mode="recruiter"|"client"].
+ * Ambas as variações viajam no SSR; o island ModeToggle só troca o atributo.
+ * Sem JS, o modo recrutador (default) aparece completo e clicável.
+ */
+
+/* ---- base da página (fundo, nav e footer vivem nos slots do BaseLayout) ---- */
+
+body.page-home {
+  --header-h: var(--space-8); /* nav mínima — o global.css só define p/ :not(.page-home) */
+  background: var(--home-bg);
+  color: var(--home-ink);
+  font-family: var(--home-font-body);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  scroll-padding-top: var(--header-h); /* âncora #em-campo não some sob a nav fixa */
+}
+
+/* ruído de filme sobre o charcoal — textura, não decoração */
+body.page-home::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+body.page-home nav[aria-label="Principal"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--border-width-1) solid var(--home-border-dim);
+  background: var(--home-nav-bg);
+  backdrop-filter: blur(var(--space-3));
+}
+
+body.page-home .nav-logo {
+  font-family: var(--home-font-display);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.06em;
+  color: var(--home-ink);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+body.page-home .nav-lang {
+  display: flex;
+  gap: var(--space-3);
+  font-family: var(--home-font-mono);
+  font-size: var(--home-text-xs);
+  letter-spacing: 0.12em;
+}
+body.page-home .nav-lang a {
+  color: var(--home-muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+body.page-home .nav-lang a:hover,
+body.page-home .nav-lang a.active { color: var(--home-accent); }
+body.page-home .nav-lang span { color: var(--home-border); }
+
+/* a home antiga centrava uma dobra única; a nova é uma coluna de seções */
+body.page-home main#main {
+  flex: 1;
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding-top: var(--space-9);
+}
+
+/* glow coral atrás do hero — reaproveitado do HomeHybridLanding (era âmbar),
+   recolorido p/ o accent e dimensionado por token. color-mix evita rgba
+   hardcoded. Estático (não anima): seguro em reduced-motion. */
+body.page-home main#main::after {
+  content: '';
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  width: var(--home-glow-size);
+  height: var(--home-glow-size);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--home-accent) 8%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.page-home footer[role="contentinfo"] {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-5) var(--space-6);
+  border-top: var(--border-width-1) solid var(--home-border-dim);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* rodapé = assinatura: o nome saiu do palco e virou nota de rodapé (autópsia §6) */
+body.page-home .hm-footer-sign {
+  font-family: var(--home-font-mono);
+  font-size: var(--home-text-2xs);
+  letter-spacing: 0.12em;
+  color: var(--home-muted);
+}
+body.page-home .hm-footer-copy {
+  font-family: var(--home-font-mono);
+  font-size: var(--home-text-2xs);
+  letter-spacing: 0.1em;
+  color: var(--home-muted);
+  opacity: 0.6;
+}
+
+/* ---- layout vertical das 5 seções ---- */
+
+#home-root {
+  display: flex;
+  flex-direction: column;
+}
+
+#home-root section {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-block: var(--space-9);
+  padding-inline: var(--space-7);
+}
+
+/* ---- hierarquia: a TESE é o maior tipo da página ---- */
+
+/* manifesto à esquerda, não cumprimento centralizado */
+.hm-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+  text-align: left;
+}
+
+.hero-thesis {
+  font-family: var(--home-font-display);
+  font-size: var(--home-hero-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  max-width: 18ch; /* força ~3 linhas: densidade de manifesto */
+  margin: 0;
+}
+
+/* rise por palavra: recorte no .hn-word, deslocamento no .hn-inner */
+.hero-thesis .hn-word {
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.12em 0.04em;
+  margin: -0.12em -0.04em;
+  vertical-align: top;
+}
+.hero-thesis .hn-inner {
+  display: inline-block;
+  transform: translateY(115%);
+  animation: homeWordRise 0.9s var(--ease-standard) forwards;
+  /* animation-delay vem inline por palavra (frontmatter do componente) */
+}
+
+.hm-subhead {
+  font-family: var(--home-font-display);
+  font-size: var(--home-subhead-size);
+  line-height: var(--line-height-relaxed);
+  color: var(--home-ink-dim);
+  max-width: 36em;
+  margin: 0;
+  opacity: 0;
+  animation: homeFadeUp 0.7s var(--ease-standard) forwards 0.6s;
+}
+
+.hm-tagline {
+  font-family: var(--home-font-mono);
+  font-size: var(--home-text-xs);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--home-accent);
+  margin: 0;
+  opacity: 0;
+  animation: homeFadeUp 0.7s var(--ease-standard) forwards 0.75s;
+}
+
+/* UM CTA, médio: pill com borda — destaque sem competir com o CTA final */
+.hm-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border: var(--border-width-1) solid var(--home-border);
+  border-radius: var(--radius-full);
+  font-family: var(--home-font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--home-text-sm);
+  letter-spacing: 0.05em;
+  color: var(--home-ink);
+  text-decoration: none;
+  opacity: 0;
+  animation: homeFadeUp 0.8s var(--ease-standard) forwards 0.9s;
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    background var(--duration-fast) var(--ease-standard),
+    gap var(--duration-fast) var(--ease-standard);
+}
+.hm-hero-cta:hover {
+  border-color: var(--home-accent);
+  background: var(--home-surface);
+  gap: var(--space-3);
+}
+.hm-hero-cta:focus-visible {
+  outline: var(--border-width-1) solid var(--home-accent);
+  outline-offset: var(--space-1);
+}
+.hm-hero-cta__arrow {
+  color: var(--home-accent);
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+.hm-hero-cta:hover .hm-hero-cta__arrow {
+  transform: translateX(var(--space-1));
+}
+
+/* eyebrow compartilhado (cicatriz, em-campo) */
+.hm-eyebrow {
+  font-family: var(--home-font-mono);
+  font-size: var(--home-text-xs);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--home-accent);
+  margin-bottom: var(--space-4);
+}
+
+/* ---- cicatriz: o NÚMERO é o maior tipo do bloco (h2, nunca h1) ---- */
+
+.hm-scar { text-align: center; }
+
+.hm-scar-figure {
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-tight);
+}
+.hm-scar-value {
+  display: block;
+  font-family: var(--home-font-display);
+  font-size: var(--home-scar-size);
+  color: var(--home-ink);
+}
+.hm-scar-unit {
+  display: block;
+  font-family: var(--home-font-mono);
+  font-size: var(--home-text-sm);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--home-muted);
+  margin-top: var(--space-2);
+}
+.hm-scar-caption {
+  font-family: var(--home-font-display);
+  font-size: var(--home-subhead-size);
+  line-height: var(--line-height-relaxed);
+  color: var(--home-ink-dim);
+  max-width: 34em;
+  margin: var(--space-5) auto 0;
+}
+
+/* placeholder LOUD: enquanto o número real não chega, o [___] grita em accent
+   e a seção estampa um lembrete dashed. A home deve PARECER inacabada até a
+   métrica real entrar — shippar sem ela é pior. Some sozinho ao preencher
+   home.json (data-pending é derivado da copy, não de flag manual). */
+.hm-scar[data-pending="true"] .hm-scar-value { color: var(--accent-1); }
+.hm-scar[data-pending="true"]::after {
+  content: "preencher: carga? tempo? o que nao quebrou?";
+  display: inline-block;
+  margin-top: var(--space-5);
+  font-family: var(--home-font-mono);
+  font-size: var(--home-text-xs);
+  letter-spacing: 0.08em;
+  color: var(--accent-1);
+  border: var(--border-width-1) dashed var(--accent-1);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-3);
+}
+
+/* ---- tensão: happy path × campo. O que grita é o contraste, não o tamanho ---- */
+
+.hm-tension {
+  scroll-margin-top: var(--space-8);
+}
+
+.hm-tension-title {
+  font-family: var(--home-font-display);
+  font-size: var(--home-tension-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-tight);
+  text-wrap: balance;
+}
+/* a promessa: viva */
+.hm-tension-title .hm-tension-field {
+  display: block;
+  color: var(--home-ink);
+}
+/* o inimigo: apagado e riscado no acento da marca */
+.hm-tension-title .hm-tension-demo {
+  display: block;
+  color: var(--home-muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--home-accent);
+}
+.hm-tension-lead {
+  font-family: var(--home-font-display);
+  font-size: var(--home-subhead-size);
+  line-height: var(--line-height-relaxed);
+  max-width: 36em;
+  margin-top: var(--space-5);
+}
+/* mundo da demo: dimmed, recua */
+.hm-tension-lead-demo {
+  display: block;
+  color: var(--home-muted);
+}
+/* mundo do campo: brilha, avança com barra de acento */
+.hm-tension-lead-field {
+  display: block;
+  margin-top: var(--space-4);
+  padding-left: var(--space-4);
+  border-left: var(--border-width-1) solid var(--home-accent);
+  color: var(--home-ink);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ---- em campo: 3 provas + toggle discreto ---- */
+
+.hm-field-title {
+  font-family: var(--home-font-display);
+  font-size: var(--home-tension-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-tight);
+}
+
+.hm-proofs {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-7) 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+.hm-proofs li {
+  border-top: var(--border-width-1) solid var(--home-border);
+  padding-top: var(--space-4);
+}
+.hm-proof-title {
+  font-family: var(--home-font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  color: var(--home-ink);
+  margin-bottom: var(--space-2);
+}
+.hm-proofs li p:not(.hm-proof-title) {
+  font-size: var(--home-text-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--home-ink-dim);
+}
+
+.hm-mode {
+  margin-top: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+.hm-mode-seg {
+  background: var(--home-surface);
+  border: var(--border-width-1) solid var(--home-border-dim);
+}
+.hm-mode-support {
+  font-family: var(--home-font-mono);
+  font-size: var(--home-text-xs);
+  letter-spacing: 0.08em;
+  color: var(--home-muted);
+}
+
+.hm-field-variation {
+  font-family: var(--home-font-display);
+  font-size: var(--home-subhead-size);
+  line-height: var(--line-height-relaxed);
+  color: var(--home-ink-dim);
+  max-width: 36em;
+  margin-top: var(--space-5);
+}
+
+/* ---- cta final: texto e destino mudam por modo ---- */
+
+.hm-cta { text-align: center; }
+
+.hm-cta-title {
+  font-family: var(--home-font-display);
+  font-size: var(--home-tension-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-tight);
+}
+.hm-cta-lead {
+  font-family: var(--home-font-display);
+  font-size: var(--home-subhead-size);
+  line-height: var(--line-height-relaxed);
+  color: var(--home-ink-dim);
+  margin-top: var(--space-4);
+}
+.hm-cta-btn {
+  display: inline-block;
+  margin-top: var(--space-6);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--home-font-mono);
+  font-size: var(--home-text-sm);
+  letter-spacing: 0.05em;
+  color: var(--home-bg);
+  background: var(--home-accent);
+  text-decoration: none;
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+.hm-cta-btn:hover { background: var(--home-accent-bright); }
+.hm-cta-btn:focus-visible {
+  outline: var(--border-width-1) solid var(--home-accent);
+  outline-offset: var(--space-1);
+}
+
+/* contato colado ao pedido — persistente nos dois modos */
+.hm-contact {
+  list-style: none;
+  margin: 0;
+  padding: var(--space-7) 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3) var(--space-5);
+}
+.hm-contact-link {
+  font-family: var(--home-font-mono);
+  font-size: var(--home-text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--home-muted);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+.hm-contact-link:hover { color: var(--home-accent); }
+.hm-contact-link:focus-visible {
+  outline: var(--border-width-1) solid var(--home-accent);
+  outline-offset: var(--space-1);
+}
+
+/* ---- CONTRATO do toggle: default recrutador; cliente só com data-mode ---- */
+
+#home-root .hm-when-client { display: none; }
+#home-root[data-mode="client"] .hm-when-recruiter { display: none; }
+#home-root[data-mode="client"] .hm-when-client { display: block; }
+
+/* ---- keyframes da home: definidos UMA vez, compartilhados entre blocos ---- */
+
+@keyframes homeWordRise {
+  to { transform: translateY(0); }
+}
+@keyframes homeFadeUp {
+  from { opacity: 0; transform: translateY(1em); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes homeFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* reveal da home: entra no load, escalona por --reveal-index. NÃO é
+   scroll-triggered (plano 08, Seção 8) — é o mais simples que resolve sem
+   adicionar JS ao bundle apertado de 150KB. O scroll-reveal global ([data-sr])
+   já exclui .page-home no global.css; este é o substituto local. */
+body.page-home [data-reveal] {
+  opacity: 0;
+  animation: homeFadeUp var(--duration-slow) var(--ease-standard) both;
+  animation-delay: calc(var(--reveal-index, 0) * var(--home-reveal-step));
+}
+
+/* spotlight ambiente que segue o cursor (pointer: fine) — reaproveitado do
+   HomeHybridLanding, recolorido p/ o accent. O <script is:inline> que o move
+   vive no shell (index.astro); sem o script, este CSS fica inerte. */
+body.page-home .cursor-spotlight {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--duration-slow) var(--ease-standard);
+  background: radial-gradient(
+    var(--home-glow-size) circle at var(--spot-x, 50%) var(--spot-y, 35%),
+    color-mix(in srgb, var(--home-accent) 8%, transparent),
+    transparent 65%
+  );
+}
+body.page-home .cursor-spotlight.is-on { opacity: 1; }
+
+/* acessibilidade: bloco mestre — sem movimento, TUDO aparece estático.
+   Os primitivos daqui (word-rise, fades, reveal, spotlight) cobrem os
+   blocos 02–06; nenhum filho precisa repetir reduced-motion. O ruído
+   (::before) e o glow (::after) não são animados — textura permanece. */
+@media (prefers-reduced-motion: reduce) {
+  body.page-home .nav-lang a,
+  .hm-contact-link,
+  .hm-hero-cta,
+  .hm-cta-btn { transition: none; }
+
+  .hm-subhead,
+  .hm-tagline,
+  .hm-hero-cta {
+    animation: none;
+    opacity: 1;
+  }
+  .hero-thesis .hn-inner {
+    animation: none;
+    transform: none;
+  }
+
+  body.page-home [data-reveal] {
+    animation: none;
+    opacity: 1;
+  }
+  body.page-home .cursor-spotlight { display: none; }
+
+  /* garantia extra: a cicatriz nunca fica invisível */
+  .hm-scar { opacity: 1; }
+}
+
+@media (max-width: 48em) {
+  body.page-home nav[aria-label="Principal"] { padding: var(--space-4) var(--space-5); }
+  #home-root section {
+    padding-block: var(--space-8);
+    padding-inline: var(--space-5);
+  }
+  .hm-proofs { grid-template-columns: 1fr; }
+  body.page-home footer[role="contentinfo"] {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-5);
+  }
+}

@@ -1,0 +1,17 @@
+---
+// Bloco 4 — o inimigo nomeado: happy path × campo.
+interface Props {
+  t: (key: string) => string;
+}
+const { t } = Astro.props;
+---
+<section id="tensao" class="hm-tension" aria-labelledby="hm-tension-title">
+  <h2 id="hm-tension-title" class="hm-tension-title">
+    <span class="hm-tension-field">{t("home.tension.title_field")}</span>
+    <span class="hm-tension-demo">{t("home.tension.title_demo")}</span>
+  </h2>
+  <p class="hm-tension-lead">
+    <span class="hm-tension-lead-demo">{t("home.tension.lead_demo")}</span>
+    <span class="hm-tension-lead-field">{t("home.tension.lead_field")}</span>
+  </p>
+</section>

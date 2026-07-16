@@ -32,6 +32,9 @@ const t = createT(messages, { locale: "pt-br", namespace: "home" });
 - JSON plano `string → string` (sem aninhamento, sem interpolação).
 - Namespaces atuais (sempre em par pt-br/en): `common`, `home`, `cards`,
   `projects`, `project_p3`, `project_p5`, `project_p7`.
+- `home` alimenta a home real (`/` e `/en/`): toda a copy dos blocos de
+  `src/components/home/` vem dele — deixou de ser o namespace órfão do antigo
+  MorphingText. Ver "Páginas — Home" na `ARQUITETURA.md` (raiz).
 
 ---
-Última revisão: 2026-06-11 — 588ffd1
+Última revisão: 2026-07-16 — c68b19a

@@ -1,0 +1,32 @@
+---
+// Bloco 6 — conversão. Texto e destino mudam por modo (contrato .hm-when-*);
+// os deep-links /recruiter e /client seguem de pé como destinos.
+// O contato vive aqui, colado ao pedido; o rodapé guarda só a assinatura.
+import { profile } from "@/data/profile";
+
+interface Props {
+  t: (key: string) => string;
+  recruiterHref: string; // "/recruiter" nos DOIS locales: /en/recruiter não existe (rollout 09)
+  clientHref: string; // "/client"    | "/en/client"
+}
+const { t, recruiterHref, clientHref } = Astro.props;
+---
+<section id="cta" class="hm-cta" aria-labelledby="hm-cta-title">
+  <h2 id="hm-cta-title" class="hm-cta-title">{t("home.cta.title")}</h2>
+  <div class="hm-when-recruiter">
+    <p class="hm-cta-lead">{t("home.cta.recruiter_lead")}</p>
+    <a class="hm-cta-btn" href={recruiterHref}>{t("home.cta.recruiter_button")} →</a>
+  </div>
+  <div class="hm-when-client">
+    <p class="hm-cta-lead">{t("home.cta.client_lead")}</p>
+    <a class="hm-cta-btn" href={clientHref}>{t("home.cta.client_button")} →</a>
+  </div>
+
+  {/* rótulos são literais de marca (iguais nos dois idiomas) — sem chave i18n */}
+  <ul class="hm-contact" aria-label={t("home.section.contact")}>
+    <li><a class="hm-contact-link" href={`mailto:${profile.email}`}>Email</a></li>
+    <li><a class="hm-contact-link" href={profile.links.whatsapp} target="_blank" rel="noopener">WhatsApp</a></li>
+    <li><a class="hm-contact-link" href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a class="hm-contact-link" href={profile.links.github} target="_blank" rel="noopener">GitHub</a></li>
+  </ul>
+</section>

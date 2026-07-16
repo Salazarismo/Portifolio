@@ -1,52 +1,63 @@
 ---
 import BaseLayout from "../../components/BaseLayout.astro";
-import HomeHybridLanding from "../../components/HomeHybridLanding.astro";
+import HeroAfirmacao from "../../components/home/HeroAfirmacao.astro";
+import Cicatriz from "../../components/home/Cicatriz.astro";
+import TensionSection from "../../components/home/TensionSection.astro";
+import EmCampo from "../../components/home/EmCampo.astro";
+import CtaContato from "../../components/home/CtaContato.astro";
+import { loadMessages, createT } from "../../i18n";
+import { profile } from "../../data/profile";
 
 export const prerender = true;
 
-const data = {
-  logoHref: "/en/",
-  ptHref: "/",
-  enHref: "/en/",
-  isEN: true,
-  eyebrow: "Software Engineer",
-  title: "Full-Stack · Offline-First · Critical Integrations",
-  description: "I build web and mobile products focused on operational reliability, consistent field experience, and integrations that don't fail under pressure.",
-  recruiterTag: "→ Recruiters & Hiring Managers",
-  recruiterHeadline: "I'm looking for a role",
-  recruiterSub: "Resume, technical case studies, and full professional profile.",
-  recruiterArrow: "View professional profile →",
-  recruiterHref: "/en/recruiter",
-  clientTag: "→ Clients & Projects",
-  clientHeadline: "I have a project in mind",
-  clientSub: "Case studies, stack, approach, and direct contact for scoping.",
-  clientArrow: "View projects →",
-  clientHref: "/en/client",
-  footerEmailLabel: "Email",
-  footerCopy: "© 2026 Victor de Alcântara Bueno"
-};
+const locale = "en" as const;
+const t = createT(loadMessages(locale, "home"), { locale, namespace: "home" });
 ---
-<BaseLayout
-  title="Victor de Alcântara Bueno — Software Engineer"
-  description="Software Engineer specialized in offline-first products, critical integrations, and operational UX."
->
+<BaseLayout title={t("home.meta.title")} description={t("home.meta.description")}>
   <Fragment slot="nav">
-    <a class="nav-logo" href={data.logoHref}>Victor<span>®</span></a>
+    <a class="nav-logo" href="/en/">{profile.brand}</a>
     <div class="nav-lang">
-      <a href={data.ptHref}>PT</a>
+      <a href="/">PT</a>
       <span>/</span>
-      <a href={data.enHref} class="active">EN</a>
+      <a href="/en/" class="active">EN</a>
     </div>
   </Fragment>
 
-  <HomeHybridLanding {...data} />
+  <div id="home-root" data-mode="recruiter">
+    <HeroAfirmacao t={t} />
+    <Cicatriz t={t} />
+    <TensionSection t={t} />
+    <EmCampo t={t} />
+    {/* /en/recruiter não existe — o CTA EN cai na versão PT até nascer a página (rollout 09 §4.5-B) */}
+    <CtaContato t={t} recruiterHref="/recruiter" clientHref="/en/client" />
+  </div>
+
+  <!-- ambient cursor spotlight (plan 08): is:inline keeps it out of the js budget -->
+  <script is:inline>
+    (function () {
+      var fine = window.matchMedia('(pointer: fine)').matches;
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!fine || reduced) return;
+      var spot = document.createElement('div');
+      spot.className = 'cursor-spotlight';
+      spot.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(spot);
+      var tx = window.innerWidth / 2, ty = window.innerHeight * 0.35, x = tx, y = ty, raf = 0;
+      function step() {
+        x += (tx - x) * 0.1; y += (ty - y) * 0.1;
+        spot.style.setProperty('--spot-x', x + 'px');
+        spot.style.setProperty('--spot-y', y + 'px');
+        raf = (Math.abs(tx - x) > 0.5 || Math.abs(ty - y) > 0.5) ? requestAnimationFrame(step) : 0;
+      }
+      window.addEventListener('pointermove', function (e) {
+        tx = e.clientX; ty = e.clientY; spot.classList.add('is-on');
+        if (!raf) raf = requestAnimationFrame(step);
+      }, { passive: true });
+    })();
+  </script>
 
   <Fragment slot="footer">
-    <div class="footer-links">
-      <a href="https://linkedin.com/in/victor-de-alcantara/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/Salazarismo" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:victor.de.alcantara.bueno@gmail.com">{data.footerEmailLabel}</a>
-    </div>
-    <span class="footer-copy">{data.footerCopy}</span>
+    <span class="hm-footer-sign">{profile.fullName}</span>
+    <span class="hm-footer-copy">© {new Date().getFullYear()}</span>
   </Fragment>
 </BaseLayout>

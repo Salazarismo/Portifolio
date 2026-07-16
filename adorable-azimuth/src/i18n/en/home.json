@@ -1,21 +1,46 @@
 {
-  "home.meta.title": "Victor de Alcântara Bueno — Portfolio",
-  "home.meta.description": "Software engineer. I build web and mobile products focused on performance, UX, and pragmatic engineering.",
+  "home.meta.title": "Victor de Alcântara Bueno — I build software for the worst day",
+  "home.meta.description": "I build the system that works when nothing else does: offline-first web and mobile products, with critical integrations that hold up in the field — not just a demo.",
+
+  "home.hero.thesis": "I build the system that works when nothing else does.",
+  "home.hero.subhead": "Offline-first web and mobile products, with critical integrations built to hold up in the field — not just the controlled environment of a demo.",
+  "home.hero.tagline": "Offline. Under load. In the field. Still standing.",
+  "home.hero.cta": "See what survives the field",
+
+  "home.scar.eyebrow": "In production",
+  "home.scar.value": "4 months",
+  "home.scar.unit": "running offline",
+  "home.scar.caption": "in field data collectors, across 12,000 syncs — zero data loss. When the connection came back, everything matched.",
+
+  "home.tension.title_field": "Built for the worst day.",
+  "home.tension.title_demo": "Not for the demo.",
+  "home.tension.lead_demo": "Almost all software is built for the happy path: good connection, clean data, everything in place. Your problem doesn't live there.",
+  "home.tension.lead_field": "It lives in the warehouse with no signal, in the device that spent twelve hours in the sun, in the integration that has to respond even when the other side goes down. That's the world I build for.",
+
+  "home.field.eyebrow": "In the field",
+  "home.field.title": "How I build",
+  "home.field.proof1_title": "Truly offline-first.",
+  "home.field.proof1_body": "The app works without a network first and syncs later — not the other way around.",
+  "home.field.proof2_title": "Integrations that assume failure.",
+  "home.field.proof2_body": "Built on the assumption that the other side will go down — and to hold the line when it does.",
+  "home.field.proof3_title": "Reliability measured at the worst case.",
+  "home.field.proof3_body": "Not at the average. At the peak, at the edge, on the bad day.",
+  "home.field.recruiter_body": "What I bring to a product team: [main stack], and the part nobody wants to touch — the part that has to work when breaking gets expensive.",
+  "home.field.client_body": "From scope to a running system: I take on the critical piece — the one that can't have a bad day.",
+
+  "home.toggle.recruiter": "For recruiters",
+  "home.toggle.client": "For clients",
+  "home.toggle.support": "Same work. What changes is what you need to see.",
+  "home.toggle.aria": "Switch audience: recruiters or clients",
+
+  "home.cta.title": "Let's get to the worst day.",
+  "home.cta.recruiter_lead": "I'm open to roles where breaking gets expensive.",
+  "home.cta.recruiter_button": "See profile and cases",
+  "home.cta.client_lead": "Got a system that can't go down? Let's talk.",
+  "home.cta.client_button": "Talk about your project",
+
   "home.hero.role_line": "SOFTWARE ENGINEER",
-  "home.hero.tagline_prefix": "I build web and mobile products focused on ",
-  "home.hero.tagline_morph_1": "performance.",
-  "home.hero.tagline_morph_2": "UX.",
-  "home.hero.tagline_morph_3": "pragmatic engineering.",
-  "home.hero.microcopy": "Selected projects with focus on performance, UX, and delivery.",
-  "home.hero.cta_primary": "Email",
-  "home.hero.cta_secondary": "View projects",
-  "home.hero.scroll_right": "Explore ↓",
   "home.section.projects": "Projects",
   "home.section.about": "About",
-  "home.section.contact": "Contact",
-  "home.about.p1": "I work across front-end, back-end, and mobile, prioritizing architecture clarity, accessibility, and product metrics.",
-  "home.about.p2": "I’ve worked on private production systems and open-source initiatives, always aiming to reduce friction and increase delivery predictability.",
-  "home.about.p3": "Technologies I use often: Astro/React, TypeScript, Flutter, and API stacks focused on consistency and observability.",
-  "home.contact.p": "If you have a project and want to talk about scope, risks, and next steps, reach out.",
-  "home.projects.cta": "View case →"
+  "home.section.contact": "Contact"
 }

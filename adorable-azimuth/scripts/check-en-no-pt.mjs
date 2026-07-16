@@ -6,7 +6,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const projectRoot = path.resolve(__dirname, "..");
-const enRoot = path.join(projectRoot, "src", "pages", "en");
+const enRoots = [
+  path.join(projectRoot, "src", "pages", "en"),
+  path.join(projectRoot, "src", "i18n", "en"),
+];
 
 const PT_WORDS = [
   "portaria",
@@ -34,7 +37,8 @@ async function walk(dir, files = []) {
 
 async function main() {
   let hasErrors = false;
-  const files = await walk(enRoot);
+  let files = [];
+  for (const root of enRoots) files = await walk(root, files);
   for (const file of files) {
     const content = await readFile(file, "utf8");
     for (const w of PT_WORDS) {

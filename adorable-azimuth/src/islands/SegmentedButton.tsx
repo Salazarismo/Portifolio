@@ -80,6 +80,37 @@ export function SegmentedButton({
     onChange?.(buttonId);
   };
 
+  // Contrato de radiogroup (WAI-ARIA): com tabIndex rotativo, só a opção ativa
+  // é tabulável — sem as setas o teclado ficaria preso nela. Mover seleciona.
+  const moveTo = (rawIndex: number) => {
+    const i = (rawIndex + buttons.length) % buttons.length;
+    buttonRefs.current[i]?.focus();
+    handleButtonClick(buttons[i].id);
+  };
+
+  const handleKeyDown = (e: KeyboardEvent, index: number) => {
+    switch (e.key) {
+      case "ArrowRight":
+      case "ArrowDown":
+        e.preventDefault();
+        moveTo(index + 1);
+        break;
+      case "ArrowLeft":
+      case "ArrowUp":
+        e.preventDefault();
+        moveTo(index - 1);
+        break;
+      case "Home":
+        e.preventDefault();
+        moveTo(0);
+        break;
+      case "End":
+        e.preventDefault();
+        moveTo(buttons.length - 1);
+        break;
+    }
+  };
+
   return (
     <div
       ref={containerRef}
@@ -107,6 +138,7 @@ export function SegmentedButton({
           }}
           type="button"
           onClick={() => handleButtonClick(button.id)}
+          onKeyDown={(e) => handleKeyDown(e, index)}
           onMouseEnter={() => setHoveredIndex(index)}
           className="nl-seg-btn relative z-10 flex items-center justify-center gap-2 rounded-full px-2 py-1 transition-colors"
           role="radio"

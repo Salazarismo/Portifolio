@@ -1,0 +1,43 @@
+---
+// Bloco 5 — 3 provas compartilhadas + a triagem de público, agora
+// subordinada ao gancho. As provas são <p>, não headings: não inflam a árvore.
+// Ambas as variações viajam no SSR; o CSS mostra/esconde via .hm-when-*.
+import ModeToggle from "@/islands/ModeToggle";
+
+interface Props {
+  t: (key: string) => string;
+}
+const { t } = Astro.props;
+---
+<section id="em-campo" class="hm-field" aria-labelledby="hm-field-title">
+  <p class="hm-eyebrow">{t("home.field.eyebrow")}</p>
+  <h2 id="hm-field-title" class="hm-field-title">{t("home.field.title")}</h2>
+
+  <ul class="hm-proofs">
+    <li>
+      <p class="hm-proof-title">{t("home.field.proof1_title")}</p>
+      <p>{t("home.field.proof1_body")}</p>
+    </li>
+    <li>
+      <p class="hm-proof-title">{t("home.field.proof2_title")}</p>
+      <p>{t("home.field.proof2_body")}</p>
+    </li>
+    <li>
+      <p class="hm-proof-title">{t("home.field.proof3_title")}</p>
+      <p>{t("home.field.proof3_body")}</p>
+    </li>
+  </ul>
+
+  <div class="hm-mode">
+    <ModeToggle
+      client:visible
+      recruiterLabel={t("home.toggle.recruiter")}
+      clientLabel={t("home.toggle.client")}
+      ariaLabel={t("home.toggle.aria")}
+    />
+    <p class="hm-mode-support">{t("home.toggle.support")}</p>
+  </div>
+
+  <p class="hm-field-variation hm-when-recruiter">{t("home.field.recruiter_body")}</p>
+  <p class="hm-field-variation hm-when-client">{t("home.field.client_body")}</p>
+</section>

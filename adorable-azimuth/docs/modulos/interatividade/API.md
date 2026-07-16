@@ -6,7 +6,9 @@
 | --- | --- |
 | `ContactForm.island.tsx` | formulário de contato: validação, estados idle/submitting/success/error, honeypot, POST `/api/contact` |
 | `GsapInit.island.tsx` | inicialização global do GSAP + reveals on-scroll |
-| `HeaderNavSegmented.tsx` / `SegmentedButton.tsx` | toggle de idioma pt↔en no header, com transição |
+| `HeaderNavSegmented.tsx` | nav de seções do header (scroll-spy + scroll suave), sobre o `SegmentedButton` |
+| `SegmentedButton.tsx` | radiogroup base compartilhado (indicador animado + roving de teclado: setas/Home/End) |
+| `ModeToggle.tsx` | toggle recrutador/cliente da home: escreve `#home-root[data-mode]`; o conteúdo troca por CSS (`.hm-when-*`), sem persistência |
 | `MorphingText.island.tsx` | animação de texto do hero (timeline GSAP) |
 | `NavTransitions.island.tsx` | transições entre rotas |
 | `PortfolioGrid.island.tsx` | grade interativa de projetos (consome `featuredProjects`) |
@@ -21,4 +23,4 @@ Ao adicionar, remover ou mudar a responsabilidade de uma island, atualize a
 tabela acima.
 
 ---
-Última revisão: 2026-06-11 — 588ffd1
+Última revisão: 2026-07-16 — c68b19a

@@ -1,52 +1,62 @@
 ---
 import BaseLayout from "../components/BaseLayout.astro";
-import HomeHybridLanding from "../components/HomeHybridLanding.astro";
+import HeroAfirmacao from "../components/home/HeroAfirmacao.astro";
+import Cicatriz from "../components/home/Cicatriz.astro";
+import TensionSection from "../components/home/TensionSection.astro";
+import EmCampo from "../components/home/EmCampo.astro";
+import CtaContato from "../components/home/CtaContato.astro";
+import { loadMessages, createT } from "../i18n";
+import { profile } from "../data/profile";
 
 export const prerender = true;
 
-const data = {
-  logoHref: "/",
-  ptHref: "/",
-  enHref: "/en/",
-  isEN: false,
-  eyebrow: "Engenheiro de Software",
-  title: "Full-Stack · Offline-First · Integrações Críticas",
-  description: "Construo produtos web e mobile com foco em confiabilidade operacional, experiência consistente em campo e integrações que não falham sob pressão.",
-  recruiterTag: "→ Recrutadores & Gestores",
-  recruiterHeadline: "Estou em busca de uma vaga",
-  recruiterSub: "Currículo, cases técnicos e perfil profissional completo.",
-  recruiterArrow: "Ver perfil profissional →",
-  recruiterHref: "/recruiter",
-  clientTag: "→ Clientes & Projetos",
-  clientHeadline: "Tenho um projeto em mente",
-  clientSub: "Cases, stack, abordagem e contato direto para escopo.",
-  clientArrow: "Ver projetos →",
-  clientHref: "/client",
-  footerEmailLabel: "Email",
-  footerCopy: "© 2026 Victor de Alcântara Bueno"
-};
+const locale = "pt-br" as const;
+const t = createT(loadMessages(locale, "home"), { locale, namespace: "home" });
 ---
-<BaseLayout
-  title="Victor de Alcântara Bueno — Engenheiro de Software"
-  description="Engenheiro de Software especializado em produtos offline-first, integrações críticas e UX operacional."
->
+<BaseLayout title={t("home.meta.title")} description={t("home.meta.description")}>
   <Fragment slot="nav">
-    <a class="nav-logo" href={data.logoHref}>Victor<span>®</span></a>
+    <a class="nav-logo" href="/">{profile.brand}</a>
     <div class="nav-lang">
-      <a href={data.ptHref} class="active">PT</a>
+      <a href="/" class="active">PT</a>
       <span>/</span>
-      <a href={data.enHref}>EN</a>
+      <a href="/en/">EN</a>
     </div>
   </Fragment>
 
-  <HomeHybridLanding {...data} />
+  <div id="home-root" data-mode="recruiter">
+    <HeroAfirmacao t={t} />
+    <Cicatriz t={t} />
+    <TensionSection t={t} />
+    <EmCampo t={t} />
+    <CtaContato t={t} recruiterHref="/recruiter" clientHref="/client" />
+  </div>
+
+  <!-- spotlight ambiente (plano 08): is:inline => fica na HTML, fora do js-budget -->
+  <script is:inline>
+    (function () {
+      var fine = window.matchMedia('(pointer: fine)').matches;
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!fine || reduced) return;
+      var spot = document.createElement('div');
+      spot.className = 'cursor-spotlight';
+      spot.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(spot);
+      var tx = window.innerWidth / 2, ty = window.innerHeight * 0.35, x = tx, y = ty, raf = 0;
+      function step() {
+        x += (tx - x) * 0.1; y += (ty - y) * 0.1;
+        spot.style.setProperty('--spot-x', x + 'px');
+        spot.style.setProperty('--spot-y', y + 'px');
+        raf = (Math.abs(tx - x) > 0.5 || Math.abs(ty - y) > 0.5) ? requestAnimationFrame(step) : 0;
+      }
+      window.addEventListener('pointermove', function (e) {
+        tx = e.clientX; ty = e.clientY; spot.classList.add('is-on');
+        if (!raf) raf = requestAnimationFrame(step);
+      }, { passive: true });
+    })();
+  </script>
 
   <Fragment slot="footer">
-    <div class="footer-links">
-      <a href="https://linkedin.com/in/victor-de-alcantara/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/Salazarismo" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:victor.de.alcantara.bueno@gmail.com">{data.footerEmailLabel}</a>
-    </div>
-    <span class="footer-copy">{data.footerCopy}</span>
+    <span class="hm-footer-sign">{profile.fullName}</span>
+    <span class="hm-footer-copy">© {new Date().getFullYear()}</span>
   </Fragment>
 </BaseLayout>

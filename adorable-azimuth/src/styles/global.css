@@ -1,6 +1,7 @@
 @import "./tokens.css";
 @import "tailwindcss";
 @import "./new-landing.css";
+@import "./home.css";
 @import "./layout.css";
 @import "./forms.css";
 @import "./z.css";

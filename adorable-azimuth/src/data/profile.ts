@@ -1,7 +1,7 @@
 export const profile = {
   fullName: "Victor de Alcântara Bueno",
   displayName: "Victor",
-  brand: "Victor®",
+  brand: "Victor",
   roleLine: "ENGENHEIRO DE SOFTWARE",
   tagline:
     "Construo produtos web e mobile com foco em performance, UX e engenharia pragmática.",

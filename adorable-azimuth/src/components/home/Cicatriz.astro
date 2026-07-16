@@ -1,0 +1,28 @@
+---
+// Bloco 3 — a prova. O número é o maior tipo DESTE bloco (h2 estilizado,
+// nunca h1). Os [___] são urgência de conteúdo humano, não detalhe:
+// enquanto value/caption carregarem "[___]", o bloco entra em
+// data-pending="true" — placeholder LOUD, não silencioso. Preencher o
+// número real em home.json (PT e EN) desarma tudo sem tocar markup/CSS.
+interface Props {
+  t: (key: string) => string;
+}
+const { t } = Astro.props;
+const value = t("home.scar.value");
+const caption = t("home.scar.caption");
+const pending = value.includes("[___]") || caption.includes("[___]");
+---
+<section
+  id="cicatriz"
+  class="hm-scar"
+  aria-labelledby="hm-scar-figure"
+  data-reveal
+  data-pending={pending ? "true" : undefined}
+>
+  <p class="hm-eyebrow">{t("home.scar.eyebrow")}</p>
+  <h2 id="hm-scar-figure" class="hm-scar-figure">
+    <span class="hm-scar-value">{value}</span>
+    <span class="hm-scar-unit">{t("home.scar.unit")}</span>
+  </h2>
+  <p class="hm-scar-caption">{caption}</p>
+</section>

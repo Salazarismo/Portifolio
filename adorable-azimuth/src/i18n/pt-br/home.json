@@ -1,21 +1,46 @@
 {
-  "home.meta.title": "Victor de Alcântara Bueno — Portfólio",
-  "home.meta.description": "Engenheiro de software. Construo produtos web e mobile com foco em performance, UX e engenharia pragmática.",
+  "home.meta.title": "Victor de Alcântara Bueno — Construo software para o pior dia",
+  "home.meta.description": "Construo o sistema que funciona quando nada mais funciona: produtos web e mobile offline-first, com integrações críticas que aguentam o campo — não só a demo.",
+
+  "home.hero.thesis": "Eu construo o sistema que funciona quando nada mais funciona.",
+  "home.hero.subhead": "Produtos web e mobile offline-first, com integrações críticas que aguentam o campo — não só o ambiente controlado da demo.",
+  "home.hero.tagline": "Offline. Sob carga. Em campo. Continua de pé.",
+  "home.hero.cta": "Ver o que sobrevive ao campo",
+
+  "home.scar.eyebrow": "Em produção",
+  "home.scar.value": "4 meses",
+  "home.scar.unit": "rodando offline",
+  "home.scar.caption": "em coletores de campo, com 12 mil sincronizações — zero perda de dado. Quando a conexão voltou, tudo bateu.",
+
+  "home.tension.title_field": "Software para o pior dia.",
+  "home.tension.title_demo": "Não para a demo.",
+  "home.tension.lead_demo": "Quase todo software é construído para o happy path: boa conexão, dados limpos, tudo no lugar. O seu problema não vive lá.",
+  "home.tension.lead_field": "Ele vive no galpão sem sinal, no dispositivo que passou doze horas no sol, na integração que precisa responder mesmo quando o outro lado caiu. É pra esse mundo que eu construo.",
+
+  "home.field.eyebrow": "Em campo",
+  "home.field.title": "Como eu construo",
+  "home.field.proof1_title": "Offline-first de verdade.",
+  "home.field.proof1_body": "O app funciona primeiro sem rede e sincroniza depois — não o contrário.",
+  "home.field.proof2_title": "Integrações que assumem a falha.",
+  "home.field.proof2_body": "Construídas partindo do princípio de que o outro lado vai cair. E que seguram a barra quando ele cai.",
+  "home.field.proof3_title": "Confiabilidade medida no pior cenário.",
+  "home.field.proof3_body": "Não na média. No pico, na borda, no dia ruim.",
+  "home.field.recruiter_body": "O que eu entrego num time de produto: [stack principal], e a parte que ninguém quer tocar — o que precisa funcionar quando quebrar custa caro.",
+  "home.field.client_body": "Do escopo ao sistema rodando: eu assumo a parte crítica do projeto, a que não pode ter um dia ruim.",
+
+  "home.toggle.recruiter": "Para recrutadores",
+  "home.toggle.client": "Para clientes",
+  "home.toggle.support": "Mesmo trabalho. O que muda é o que você precisa ver.",
+  "home.toggle.aria": "Alternar público: recrutadores ou clientes",
+
+  "home.cta.title": "Vamos ao pior dia.",
+  "home.cta.recruiter_lead": "Estou aberto a vagas onde quebrar custa caro.",
+  "home.cta.recruiter_button": "Ver perfil e cases",
+  "home.cta.client_lead": "Tem um sistema que não pode cair? Vamos conversar.",
+  "home.cta.client_button": "Falar sobre o projeto",
+
   "home.hero.role_line": "ENGENHEIRO DE SOFTWARE",
-  "home.hero.tagline_prefix": "Construo produtos web e mobile com foco em ",
-  "home.hero.tagline_morph_1": "performance.",
-  "home.hero.tagline_morph_2": "UX.",
-  "home.hero.tagline_morph_3": "engenharia pragmática.",
-  "home.hero.microcopy": "Projetos selecionados com foco em performance, UX e entrega.",
-  "home.hero.cta_primary": "Email",
-  "home.hero.cta_secondary": "Ver projetos",
-  "home.hero.scroll_right": "Descobrir ↓",
   "home.section.projects": "Projetos",
   "home.section.about": "Sobre",
-  "home.section.contact": "Contato",
-  "home.about.p1": "Trabalho com front-end, back-end e mobile, com prioridade em clareza de arquitetura, acessibilidade e métricas de produto.",
-  "home.about.p2": "Já atuei em projetos privados em produção e em iniciativas open-source, sempre buscando reduzir fricção e aumentar previsibilidade de entrega.",
-  "home.about.p3": "Tecnologias que uso com frequência: Astro/React, TypeScript, Flutter e stacks de API com foco em consistência e observabilidade.",
-  "home.contact.p": "Se você tem um projeto e quer conversar sobre escopo, riscos e próximos passos, me chame.",
-  "home.projects.cta": "Ver case →"
+  "home.section.contact": "Contato"
 }

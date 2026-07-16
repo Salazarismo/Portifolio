@@ -55,7 +55,7 @@ Isso mantém o JS enviado ao navegador mínimo e auditável (`js-budget.cjs`).
 └── adorable-azimuth/
     ├── src/
     │   ├── pages/        # rotas (pt na raiz, en/ espelhado, api/contact.ts)
-    │   ├── components/   # .astro estáticos (cards/, typography/, ui/, data/, ux/)
+    │   ├── components/   # .astro estáticos (home/, cards/, typography/, ui/, data/, ux/)
     │   ├── islands/      # .tsx interativos — único lugar permitido
     │   ├── data/         # fonte da verdade: profile.ts, projects.ts
     │   ├── i18n/         # loader + JSON por locale/namespace
@@ -65,6 +65,39 @@ Isso mantém o JS enviado ao navegador mínimo e auditável (`js-budget.cjs`).
     ├── tests/            # Playwright
     └── docs/modulos/     # documentação viva por módulo (Camada 2)
 ```
+
+## Páginas — Home
+
+A home (`/` em pt-br, `/en/` em inglês) é `prerender = true` e composta por
+seções `.astro` estáticas em `src/components/home/`; nenhuma copy é hardcoded —
+tudo vem do namespace i18n `home` (`src/i18n/{locale}/home.json`), resolvido na
+página com `loadMessages` + `createT`. O estilo temático vive em
+`src/styles/home.css` (prefixo `.hm-*`).
+
+Ordem dos blocos (a página afirma antes de pedir):
+
+1. **Hero** (`HeroAfirmacao`) — a tese, o **único `<h1>` da página**
+   (`#hero-thesis`) e o maior tipo dela; o CTA ancora em `#em-campo`.
+2. **Cicatriz** (`Cicatriz`) — um número concreto em corpo grande (a prova
+   antes do argumento); enquanto a copy carregar `[___]`, o bloco entra em
+   `data-pending="true"` — placeholder visível, nunca silencioso.
+3. **Tensão** (`TensionSection`) — o contraste happy path vs. campo.
+4. **Em campo + toggle** (`EmCampo`) — três provas compartilhadas e um
+   segmented control discreto recrutador/cliente.
+5. **CTA final + contato** (`CtaContato`) — um pedido que muda só de ênfase
+   pelo modo. Deep-links: `/recruiter` e `/client` (`/en/client` em EN; o CTA
+   recrutador EN aponta para `/recruiter` — não existe `/en/recruiter`).
+
+O toggle não refaz a página: uma island (`ModeToggle`, em `src/islands/`)
+escreve `data-mode ∈ {recruiter, client}` no wrapper único `#home-root`. Os
+consumidores (bloco "em campo" e CTA final) leem o atributo por CSS via o
+contrato `.hm-when-recruiter`/`.hm-when-client` — ambas as variantes vão no
+HTML prerenderizado, então a home funciona sem JS e o modo padrão (recruiter)
+é visível no primeiro paint. Não há reload, não há segundo island.
+
+Estrutura semântica base (`<nav>`, `<main id="main">`, `<footer>`, `<title>`,
+`<meta description>`) vem do `BaseLayout.astro`; a página só fornece o conteúdo
+do `<main>` e os slots `nav`/`footer`.
 
 ## Deploy (Vercel)
 
@@ -82,4 +115,4 @@ de JS e documentação. Detalhes no módulo
 [qualidade](adorable-azimuth/docs/modulos/qualidade/REGRA.md).
 
 ---
-Última revisão: 2026-06-11 — 588ffd1
+Última revisão: 2026-07-16 — c68b19a
