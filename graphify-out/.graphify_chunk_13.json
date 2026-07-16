@@ -1,0 +1,208 @@
+{
+  "nodes": [
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao",
+      "label": "Home 1024px Tension Section Evidence Screenshot",
+      "file_type": "image",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_tension_headline",
+      "label": "Tension Headline: 'Software para o pior dia. Não para a demo.'",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_cicatriz_stat",
+      "label": "Cicatriz Stat Block: '4 meses rodando offline, 12 mil sincronizações, zero perda de dado'",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_strikethrough_device",
+      "label": "Strikethrough Rhetorical Device on 'Não para a demo.'",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_dark_coral_theme",
+      "label": "Dark Navy Theme with Coral/Red Accent (highlight block, strikethrough, quote border)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_pt_en_switcher",
+      "label": "PT/EN Language Switcher in Header ('Victor' brand)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_offline_first_narrative",
+      "label": "Offline-First / Worst-Day Software Narrative (anti happy path positioning)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_tensionsection",
+      "label": "TensionSection.astro Component",
+      "file_type": "code",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_cicatriz",
+      "label": "Cicatriz.astro Component",
+      "file_type": "code",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_tension_headline",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_cicatriz_stat",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_strikethrough_device",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_dark_coral_theme",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_pt_en_switcher",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_tension_headline",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_offline_first_narrative",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_cicatriz_stat",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_offline_first_narrative",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_strikethrough_device",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_tension_headline",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao",
+      "target": "adorable_azimuth_src_components_home_tensionsection",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_tensao_cicatriz_stat",
+      "target": "adorable_azimuth_src_components_home_cicatriz",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

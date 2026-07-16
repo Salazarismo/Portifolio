@@ -1,0 +1,206 @@
+{
+  "nodes": [
+    {
+      "id": "adorable_azimuth_public_images_event_checkin",
+      "label": "Event Operation and Offline Check-in Architecture Diagram",
+      "file_type": "image",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_event_checkin_whatsapp_business",
+      "label": "WhatsApp Business (Messages / Payment Links)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 20-24",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_event_checkin_admin_spa",
+      "label": "Admin SPA (Events, Guests, Reports)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 26-30",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_event_checkin_backend_nestjs",
+      "label": "Backend NestJS (Payments, Messaging, Admin)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 32-35",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_event_checkin_pwa_portaria",
+      "label": "PWA Portaria (Offline Check-in with Local Queue and Periodic Sync)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 41-48",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_event_checkin_postgres_sqlite",
+      "label": "Postgres / SQLite Storage",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 50-52",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_event_checkin_redis",
+      "label": "Redis (Locks / Rate-limit)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 53-54",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "adorable_azimuth_public_images_event_checkin",
+      "target": "adorable_azimuth_public_images_event_checkin_whatsapp_business",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 20-24",
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_event_checkin",
+      "target": "adorable_azimuth_public_images_event_checkin_admin_spa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 26-30",
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_event_checkin",
+      "target": "adorable_azimuth_public_images_event_checkin_backend_nestjs",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 32-35",
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_event_checkin",
+      "target": "adorable_azimuth_public_images_event_checkin_pwa_portaria",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 41-48",
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_event_checkin",
+      "target": "adorable_azimuth_public_images_event_checkin_postgres_sqlite",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 50-52",
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_event_checkin",
+      "target": "adorable_azimuth_public_images_event_checkin_redis",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 53-54",
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_event_checkin_whatsapp_business",
+      "target": "adorable_azimuth_public_images_event_checkin_admin_spa",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "line 38",
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_event_checkin_admin_spa",
+      "target": "adorable_azimuth_public_images_event_checkin_backend_nestjs",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "line 39",
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_event_checkin_pwa_portaria",
+      "target": "adorable_azimuth_public_images_event_checkin_backend_nestjs",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "line 48",
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_event_checkin_pwa_portaria",
+      "target": "adorable_azimuth_public_images_event_checkin_postgres_sqlite",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "line 56",
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_event_checkin_postgres_sqlite",
+      "target": "adorable_azimuth_public_images_event_checkin_redis",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "line 57",
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_event_checkin_backend_nestjs",
+      "target": "adorable_azimuth_public_images_event_checkin_redis",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\event-checkin.svg",
+      "source_location": "lines 33-35, 53-54",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

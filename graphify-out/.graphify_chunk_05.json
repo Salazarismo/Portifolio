@@ -1,0 +1,114 @@
+{
+  "nodes": [
+    {
+      "id": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_logo",
+      "label": "N Planet Logo with Signal Icon",
+      "file_type": "image",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\3f015622-01e5-46c9-a13c-c655373c819a.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_letter_n_monogram",
+      "label": "Letter N Monogram",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\3f015622-01e5-46c9-a13c-c655373c819a.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_planet_orbit_motif",
+      "label": "Planet with Orbital Ring Motif",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\3f015622-01e5-46c9-a13c-c655373c819a.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_wireless_signal_icon",
+      "label": "Wireless Signal Icon",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\3f015622-01e5-46c9-a13c-c655373c819a.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_connectivity_branding",
+      "label": "Internet/Telecom Connectivity Branding",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\3f015622-01e5-46c9-a13c-c655373c819a.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_logo",
+      "target": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_letter_n_monogram",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\3f015622-01e5-46c9-a13c-c655373c819a.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_logo",
+      "target": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_planet_orbit_motif",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\3f015622-01e5-46c9-a13c-c655373c819a.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_logo",
+      "target": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_wireless_signal_icon",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\3f015622-01e5-46c9-a13c-c655373c819a.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_logo",
+      "target": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_connectivity_branding",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\3f015622-01e5-46c9-a13c-c655373c819a.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_wireless_signal_icon",
+      "target": "adorable_azimuth_public_images_3f015622_01e5_46c9_a13c_c655373c819a_connectivity_branding",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\3f015622-01e5-46c9-a13c-c655373c819a.png",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

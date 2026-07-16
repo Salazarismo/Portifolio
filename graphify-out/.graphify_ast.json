@@ -1,0 +1,5163 @@
+{
+  "nodes": [
+    {
+      "id": "adorable_azimuth_astro_config",
+      "label": "astro.config.mjs",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/astro.config.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package",
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_type",
+      "label": "type",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_version",
+      "label": "version",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_packagemanager",
+      "label": "packageManager",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts",
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_dev",
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_prebuild",
+      "label": "prebuild",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_build",
+      "label": "build",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_preview",
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_astro",
+      "label": "astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_check",
+      "label": "check",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_typecheck",
+      "label": "typecheck",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_check_i18n",
+      "label": "check:i18n",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_tokens_gate",
+      "label": "tokens:gate",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_islands_gate",
+      "label": "islands:gate",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L16",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_semantics_gate",
+      "label": "semantics:gate",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_projects_gate",
+      "label": "projects:gate",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_budget_gate",
+      "label": "budget:gate",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_components_gate",
+      "label": "components:gate",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_docs_gate",
+      "label": "docs:gate",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L21",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_scripts_test_e2e",
+      "label": "test:e2e",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_dependencies",
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L24",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_dependencies_astrojs_check",
+      "label": "@astrojs/check",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L25",
+      "_origin": "ast"
+    },
+    {
+      "id": "astrojs_check",
+      "label": "@astrojs/check",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L25",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_dependencies_astrojs_preact",
+      "label": "@astrojs/preact",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "astrojs_preact",
+      "label": "@astrojs/preact",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_dependencies_astrojs_vercel",
+      "label": "@astrojs/vercel",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "astrojs_vercel",
+      "label": "@astrojs/vercel",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_dependencies_tailwindcss_vite",
+      "label": "@tailwindcss/vite",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "tailwindcss_vite",
+      "label": "@tailwindcss/vite",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_dependencies_astro",
+      "label": "astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "astro",
+      "label": "astro",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_dependencies_gsap",
+      "label": "gsap",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L30",
+      "_origin": "ast"
+    },
+    {
+      "id": "gsap",
+      "label": "gsap",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L30",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_dependencies_preact",
+      "label": "preact",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "preact",
+      "label": "preact",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_dependencies_tailwindcss",
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L32",
+      "_origin": "ast"
+    },
+    {
+      "id": "tailwindcss",
+      "label": "tailwindcss",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L32",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_dependencies_typescript",
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "typescript",
+      "label": "typescript",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_dependencies_zod",
+      "label": "zod",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "zod",
+      "label": "zod",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_devdependencies",
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L36",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_package_devdependencies_playwright_test",
+      "label": "@playwright/test",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L37",
+      "_origin": "ast"
+    },
+    {
+      "id": "playwright_test",
+      "label": "@playwright/test",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L37",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_playwright_config",
+      "label": "playwright.config.ts",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/playwright.config.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_playwright_local_config",
+      "label": "playwright.local.config.ts",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/playwright.local.config.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_en_no_pt",
+      "label": "check-en-no-pt.mjs",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_en_no_pt_filename",
+      "label": "__filename",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_en_no_pt_dirname",
+      "label": "__dirname",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_en_no_pt_projectroot",
+      "label": "projectRoot",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_en_no_pt_enroots",
+      "label": "enRoots",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_en_no_pt_pt_words",
+      "label": "PT_WORDS",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_en_no_pt_walk",
+      "label": "walk()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_en_no_pt_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_i18n",
+      "label": "check-i18n.mjs",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_i18n_filename",
+      "label": "__filename",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_i18n_dirname",
+      "label": "__dirname",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_i18n_projectroot",
+      "label": "projectRoot",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_i18n_i18nroot",
+      "label": "i18nRoot",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_i18n_readjson",
+      "label": "readJson()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_i18n_sortedkeys",
+      "label": "sortedKeys()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_i18n_diffkeys",
+      "label": "diffKeys()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_check_i18n_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_scripts_clean_vercel_output",
+      "label": "clean-vercel-output.mjs",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/scripts/clean-vercel-output.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_animatedmeshbackground",
+      "label": "AnimatedMeshBackground.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/AnimatedMeshBackground.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout_locales",
+      "label": "locales",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout_localeroot",
+      "label": "localeRoot",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout_canonical",
+      "label": "canonical",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout_alternatehrefs",
+      "label": "alternateHrefs",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout_alternates",
+      "label": "alternates",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L16",
+      "_origin": "ast"
+    },
+    {
+      "id": "astro_i18n",
+      "label": "astro:i18n",
+      "file_type": "code",
+      "source_file": "astro:i18n",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_styles_global_css",
+      "label": "../styles/global.css",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/styles/global.css",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_islands_gsapinit_island",
+      "label": "../islands/GsapInit.island",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/GsapInit.island",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_islands_navtransitions_island",
+      "label": "../islands/NavTransitions.island",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/NavTransitions.island",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_animatedmeshbackground",
+      "label": "@/components/AnimatedMeshBackground.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/AnimatedMeshBackground.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_footer",
+      "label": "Footer.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/Footer.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_data_profile",
+      "label": "../data/profile",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/data/profile",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_i18n_index",
+      "label": "@/i18n",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_header",
+      "label": "Header.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_data_profile",
+      "label": "../data/profile",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/data/profile",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_headernavsegmented",
+      "label": "@/islands/HeaderNavSegmented",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "astro_i18n",
+      "label": "astro:i18n",
+      "file_type": "code",
+      "source_file": "astro:i18n",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_i18n_index",
+      "label": "@/i18n",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_hero",
+      "label": "Hero.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/Hero.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_hero_titlelines",
+      "label": "titleLines",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/Hero.astro",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_islands_morphingtext_island",
+      "label": "../islands/MorphingText.island",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/MorphingText.island",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_icontooltips",
+      "label": "./ui/IconTooltips.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/IconTooltips.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_projectcaseredesign",
+      "label": "ProjectCaseRedesign.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ProjectCaseRedesign.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_cards_cardaction",
+      "label": "CardAction.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/cards/CardAction.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_button",
+      "label": "../ui/Button.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Button.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_cards_cardinfo",
+      "label": "CardInfo.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/cards/CardInfo.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_cards_cardinteractive",
+      "label": "CardInteractive.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/cards/CardInteractive.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_cards_cardpreview",
+      "label": "CardPreview.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/cards/CardPreview.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_cards_cardstat",
+      "label": "CardStat.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/cards/CardStat.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_data_filterablelist",
+      "label": "FilterableList.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/data/FilterableList.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_data_listsimple",
+      "label": "ListSimple.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/data/ListSimple.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_data_tablebasic",
+      "label": "TableBasic.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/data/TableBasic.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_cicatriz",
+      "label": "Cicatriz.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/Cicatriz.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_ctacontato",
+      "label": "CtaContato.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/CtaContato.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_data_profile",
+      "label": "@/data/profile",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/data/profile.ts",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_emcampo",
+      "label": "EmCampo.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/EmCampo.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_modetoggle",
+      "label": "@/islands/ModeToggle",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/ModeToggle.tsx",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_heroafirmacao",
+      "label": "HeroAfirmacao.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/HeroAfirmacao.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_tensionsection",
+      "label": "TensionSection.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/TensionSection.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_typography_h1",
+      "label": "H1.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/typography/H1.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_typography_h2",
+      "label": "H2.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/typography/H2.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_typography_h3",
+      "label": "H3.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/typography/H3.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_typography_h4",
+      "label": "H4.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/typography/H4.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_typography_h5",
+      "label": "H5.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/typography/H5.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_typography_h6",
+      "label": "H6.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/typography/H6.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_typography_highlight",
+      "label": "Highlight.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/typography/Highlight.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_typography_list",
+      "label": "List.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/typography/List.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_typography_p",
+      "label": "P.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/typography/P.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_appstatebar",
+      "label": "AppStateBar.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/AppStateBar.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_badge",
+      "label": "Badge.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Badge.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_button",
+      "label": "Button.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Button.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_carousel",
+      "label": "Carousel.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Carousel.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_checkbox",
+      "label": "Checkbox.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Checkbox.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_divider",
+      "label": "Divider.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Divider.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_emptystate",
+      "label": "EmptyState.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/EmptyState.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_icon",
+      "label": "Icon.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Icon.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_icontooltips",
+      "label": "IconTooltips.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/IconTooltips.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_input",
+      "label": "Input.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Input.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_loading",
+      "label": "Loading.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Loading.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_select",
+      "label": "Select.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Select.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_skeletonblock",
+      "label": "SkeletonBlock.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/SkeletonBlock.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_skeletoncontactform",
+      "label": "SkeletonContactForm.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/SkeletonContactForm.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_skeletontext",
+      "label": "SkeletonText.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/SkeletonText.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_skeletontext_items",
+      "label": "items",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/SkeletonText.astro",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_statebanner",
+      "label": "StateBanner.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/StateBanner.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_textarea",
+      "label": "Textarea.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Textarea.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ui_toggle",
+      "label": "Toggle.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ui/Toggle.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_ux_proofstrip",
+      "label": "ProofStrip.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ux/ProofStrip.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_data_profile",
+      "label": "profile.ts",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/data/profile.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_data_profile_profile",
+      "label": "profile",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/data/profile.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_data_projects",
+      "label": "projects.ts",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/data/projects.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_data_projects_featuredproject",
+      "label": "FeaturedProject",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/data/projects.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_data_projects_featuredprojects",
+      "label": "featuredProjects",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/data/projects.ts",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_env_d",
+      "label": "env.d.ts",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/env.d.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_i18n_index",
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_i18n_index_locale",
+      "label": "Locale",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_i18n_index_messages",
+      "label": "Messages",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_i18n_index_modules",
+      "label": "modules",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_i18n_index_loadmessages",
+      "label": "loadMessages()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_i18n_index_createt",
+      "label": "createT()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_aspectratioimage",
+      "label": "AspectRatioImage.tsx",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/AspectRatioImage.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_aspectratioimage_props",
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/AspectRatioImage.tsx",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_aspectratioimage_aspectratioimage",
+      "label": "AspectRatioImage()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/AspectRatioImage.tsx",
+      "source_location": "L16",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_contactform_island",
+      "label": "ContactForm.island.tsx",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/ContactForm.island.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_contactform_island_formstate",
+      "label": "FormState",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/ContactForm.island.tsx",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_contactform_island_contactform",
+      "label": "ContactForm()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/ContactForm.island.tsx",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_gsapinit_island",
+      "label": "GsapInit.island.tsx",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/GsapInit.island.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_gsapinit_island_gsapinit",
+      "label": "GsapInit()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/GsapInit.island.tsx",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_headernavsegmented",
+      "label": "HeaderNavSegmented.tsx",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_headernavsegmented_items",
+      "label": "ITEMS",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_headernavsegmented_scrolltoid",
+      "label": "scrollToId()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_headernavsegmented_props",
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_headernavsegmented_headernavsegmented",
+      "label": "HeaderNavSegmented()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L25",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_modetoggle",
+      "label": "ModeToggle.tsx",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/ModeToggle.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_modetoggle_mode",
+      "label": "Mode",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/ModeToggle.tsx",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_modetoggle_props",
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/ModeToggle.tsx",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_modetoggle_modetoggle",
+      "label": "ModeToggle()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/ModeToggle.tsx",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_morphingtext_island",
+      "label": "MorphingText.island.tsx",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/MorphingText.island.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_morphingtext_island_morphingtextprops",
+      "label": "MorphingTextProps",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/MorphingText.island.tsx",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_morphingtext_island_useprefersreducedmotion",
+      "label": "usePrefersReducedMotion()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/MorphingText.island.tsx",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_morphingtext_island_morphingtext",
+      "label": "MorphingText()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/MorphingText.island.tsx",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_navtransitions_island",
+      "label": "NavTransitions.island.tsx",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/NavTransitions.island.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_navtransitions_island_easeinoutcubic",
+      "label": "easeInOutCubic()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/NavTransitions.island.tsx",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_navtransitions_island_navtransitions",
+      "label": "NavTransitions()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/NavTransitions.island.tsx",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_portfoliogrid_island",
+      "label": "PortfolioGrid.island.tsx",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/PortfolioGrid.island.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_portfoliogrid_island_portfolioitem",
+      "label": "PortfolioItem",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/PortfolioGrid.island.tsx",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_portfoliogrid_island_props",
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/PortfolioGrid.island.tsx",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_portfoliogrid_island_toformat",
+      "label": "toFormat()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/PortfolioGrid.island.tsx",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_portfoliogrid_island_portfoliogrid",
+      "label": "PortfolioGrid()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/PortfolioGrid.island.tsx",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_segmentedbutton",
+      "label": "SegmentedButton.tsx",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/SegmentedButton.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_segmentedbutton_segmentedbuttonitem",
+      "label": "SegmentedButtonItem",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/SegmentedButton.tsx",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_segmentedbutton_segmentedbuttonprops",
+      "label": "SegmentedButtonProps",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/SegmentedButton.tsx",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_segmentedbutton_segmentedbutton",
+      "label": "SegmentedButton()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/SegmentedButton.tsx",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_aspect_ratio",
+      "label": "aspect-ratio.tsx",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/aspect-ratio.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_aspect_ratio_props",
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/aspect-ratio.tsx",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_islands_aspect_ratio_aspectratio",
+      "label": "AspectRatio()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/islands/aspect-ratio.tsx",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_lib_gsap_reveal",
+      "label": "gsap-reveal.ts",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/lib/gsap-reveal.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_lib_gsap_reveal_inithomechoreography",
+      "label": "initHomeChoreography()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/lib/gsap-reveal.ts",
+      "source_location": "L24",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_lib_gsap_reveal_initgsapreveal",
+      "label": "initGsapReveal()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/lib/gsap-reveal.ts",
+      "source_location": "L75",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_api_contact",
+      "label": "contact.ts",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/api/contact.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_api_contact_schema",
+      "label": "Schema",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/api/contact.ts",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_api_contact_post",
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/api/contact.ts",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_client",
+      "label": "client.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/client.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "../components/BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_docs_index",
+      "label": "index.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/docs/index.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_styles_global_css",
+      "label": "../../styles/global.css",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/styles/global.css",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "../../components/BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_header",
+      "label": "../../components/Header.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_footer",
+      "label": "../../components/Footer.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/Footer.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_pages_docs_content_md",
+      "label": "./content.md",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/docs/content.md",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_en_client",
+      "label": "client.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/en/client.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "../../components/BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_en_index",
+      "label": "index.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_en_index_t",
+      "label": "t",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "../../components/BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_heroafirmacao",
+      "label": "../../components/home/HeroAfirmacao.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/HeroAfirmacao.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_cicatriz",
+      "label": "../../components/home/Cicatriz.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/Cicatriz.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_tensionsection",
+      "label": "../../components/home/TensionSection.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/TensionSection.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_emcampo",
+      "label": "../../components/home/EmCampo.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/EmCampo.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_ctacontato",
+      "label": "../../components/home/CtaContato.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/CtaContato.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_i18n",
+      "label": "../../i18n",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/i18n",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_data_profile",
+      "label": "../../data/profile",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/data/profile",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_en_projects_p3",
+      "label": "p3.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p3.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_en_projects_p3_data",
+      "label": "data",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p3.astro",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "../../../components/BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_projectcaseredesign",
+      "label": "../../../components/ProjectCaseRedesign.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ProjectCaseRedesign.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_en_projects_p5",
+      "label": "p5.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p5.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_en_projects_p5_data",
+      "label": "data",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p5.astro",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "../../../components/BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_projectcaseredesign",
+      "label": "../../../components/ProjectCaseRedesign.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ProjectCaseRedesign.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_en_projects_p7",
+      "label": "p7.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p7.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_en_projects_p7_data",
+      "label": "data",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p7.astro",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "../../../components/BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_projectcaseredesign",
+      "label": "../../../components/ProjectCaseRedesign.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ProjectCaseRedesign.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_assets_nexus_architecture_svg",
+      "label": "../../../assets/nexus-architecture.svg",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/assets/nexus-architecture.svg",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_index",
+      "label": "index.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_index_t",
+      "label": "t",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "../components/BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_heroafirmacao",
+      "label": "../components/home/HeroAfirmacao.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/HeroAfirmacao.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_cicatriz",
+      "label": "../components/home/Cicatriz.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/Cicatriz.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_tensionsection",
+      "label": "../components/home/TensionSection.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/TensionSection.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_emcampo",
+      "label": "../components/home/EmCampo.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/EmCampo.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_home_ctacontato",
+      "label": "../components/home/CtaContato.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/home/CtaContato.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_i18n",
+      "label": "../i18n",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/i18n",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_data_profile",
+      "label": "../data/profile",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/data/profile",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_projects_p3",
+      "label": "p3.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/projects/p3.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_projects_p3_data",
+      "label": "data",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/projects/p3.astro",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "../../components/BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_projectcaseredesign",
+      "label": "../../components/ProjectCaseRedesign.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ProjectCaseRedesign.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_projects_p5",
+      "label": "p5.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/projects/p5.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_projects_p5_data",
+      "label": "data",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/projects/p5.astro",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "../../components/BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_projectcaseredesign",
+      "label": "../../components/ProjectCaseRedesign.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ProjectCaseRedesign.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_projects_p7",
+      "label": "p7.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/projects/p7.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_projects_p7_data",
+      "label": "data",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/projects/p7.astro",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_baselayout",
+      "label": "../../components/BaseLayout.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_components_projectcaseredesign",
+      "label": "../../components/ProjectCaseRedesign.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/components/ProjectCaseRedesign.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_assets_nexus_architecture_svg",
+      "label": "../../assets/nexus-architecture.svg",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/assets/nexus-architecture.svg",
+      "confidence": "EXTRACTED",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_src_pages_recruiter",
+      "label": "recruiter.astro",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/src/pages/recruiter.astro",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_tests_i18n_spec",
+      "label": "i18n.spec.ts",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/tests/i18n.spec.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_tsconfig",
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_tsconfig_extends",
+      "label": "extends",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "ref_astro_tsconfigs_strict",
+      "label": "astro/tsconfigs/strict",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_tsconfig_compileroptions_jsx",
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_tsconfig_compileroptions_jsximportsource",
+      "label": "jsxImportSource",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_tsconfig_compileroptions_paths",
+      "label": "paths",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_tsconfig_include",
+      "label": "include",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "ref_astro_types_d_ts",
+      "label": ".astro/types.d.ts",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "ref",
+      "label": "**/*",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_tsconfig_exclude",
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "ref_dist",
+      "label": "dist",
+      "file_type": "concept",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_vercel",
+      "label": "vercel.json",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/vercel.json",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_vercel_framework",
+      "label": "framework",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/vercel.json",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_vercel_buildcommand",
+      "label": "buildCommand",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/vercel.json",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "adorable_azimuth_vercel_outputdirectory",
+      "label": "outputDirectory",
+      "file_type": "code",
+      "source_file": "adorable-azimuth/vercel.json",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "package",
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_private",
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_packagemanager",
+      "label": "packageManager",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_dev",
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_build",
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_preview",
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_copy_vercel_output",
+      "label": "copy-vercel-output.mjs",
+      "file_type": "code",
+      "source_file": "scripts/copy-vercel-output.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "vercel",
+      "label": "vercel.json",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "vercel_buildcommand",
+      "label": "buildCommand",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "vercel_outputdirectory",
+      "label": "outputDirectory",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L3",
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "adorable_azimuth_astro_config",
+      "target": "ref_astro_config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/astro.config.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_astro_config",
+      "target": "ref_astrojs_vercel",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/astro.config.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_astro_config",
+      "target": "ref_astrojs_preact",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/astro.config.mjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_astro_config",
+      "target": "ref_node_url",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/astro.config.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_astro_config",
+      "target": "ref_tailwindcss_vite",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/astro.config.mjs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package",
+      "target": "adorable_azimuth_package_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package",
+      "target": "adorable_azimuth_package_type",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package",
+      "target": "adorable_azimuth_package_version",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package",
+      "target": "adorable_azimuth_package_packagemanager",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package",
+      "target": "adorable_azimuth_package_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_dev",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_prebuild",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_build",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_preview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_astro",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_typecheck",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_check_i18n",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_tokens_gate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_islands_gate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_semantics_gate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_projects_gate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_budget_gate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_components_gate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_docs_gate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_scripts",
+      "target": "adorable_azimuth_package_scripts_test_e2e",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package",
+      "target": "adorable_azimuth_package_dependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies",
+      "target": "adorable_azimuth_package_dependencies_astrojs_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies_astrojs_check",
+      "target": "astrojs_check",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies",
+      "target": "adorable_azimuth_package_dependencies_astrojs_preact",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies_astrojs_preact",
+      "target": "astrojs_preact",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies",
+      "target": "adorable_azimuth_package_dependencies_astrojs_vercel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies_astrojs_vercel",
+      "target": "astrojs_vercel",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies",
+      "target": "adorable_azimuth_package_dependencies_tailwindcss_vite",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies_tailwindcss_vite",
+      "target": "tailwindcss_vite",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies",
+      "target": "adorable_azimuth_package_dependencies_astro",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies_astro",
+      "target": "astro",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies",
+      "target": "adorable_azimuth_package_dependencies_gsap",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies_gsap",
+      "target": "gsap",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies",
+      "target": "adorable_azimuth_package_dependencies_preact",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies_preact",
+      "target": "preact",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies",
+      "target": "adorable_azimuth_package_dependencies_tailwindcss",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies_tailwindcss",
+      "target": "tailwindcss",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies",
+      "target": "adorable_azimuth_package_dependencies_typescript",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies_typescript",
+      "target": "typescript",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies",
+      "target": "adorable_azimuth_package_dependencies_zod",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_dependencies_zod",
+      "target": "zod",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package",
+      "target": "adorable_azimuth_package_devdependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_devdependencies",
+      "target": "adorable_azimuth_package_devdependencies_playwright_test",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_package_devdependencies_playwright_test",
+      "target": "playwright_test",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/package.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_playwright_config",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/playwright.config.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_playwright_local_config",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/playwright.local.config.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_playwright_local_config",
+      "target": "adorable_azimuth_playwright_config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/playwright.local.config.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_en_no_pt",
+      "target": "ref_node_fs_promises",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_en_no_pt",
+      "target": "ref_node_path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_en_no_pt",
+      "target": "ref_node_url",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_en_no_pt",
+      "target": "adorable_azimuth_scripts_check_en_no_pt_filename",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_en_no_pt",
+      "target": "adorable_azimuth_scripts_check_en_no_pt_dirname",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_en_no_pt",
+      "target": "adorable_azimuth_scripts_check_en_no_pt_projectroot",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_en_no_pt",
+      "target": "adorable_azimuth_scripts_check_en_no_pt_enroots",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_en_no_pt",
+      "target": "adorable_azimuth_scripts_check_en_no_pt_pt_words",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_en_no_pt",
+      "target": "adorable_azimuth_scripts_check_en_no_pt_walk",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_en_no_pt",
+      "target": "adorable_azimuth_scripts_check_en_no_pt_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_en_no_pt_main",
+      "target": "adorable_azimuth_scripts_check_en_no_pt_walk",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-en-no-pt.mjs",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n",
+      "target": "ref_node_fs_promises",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n",
+      "target": "ref_node_path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n",
+      "target": "ref_node_url",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n",
+      "target": "adorable_azimuth_scripts_check_i18n_filename",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n",
+      "target": "adorable_azimuth_scripts_check_i18n_dirname",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n",
+      "target": "adorable_azimuth_scripts_check_i18n_projectroot",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n",
+      "target": "adorable_azimuth_scripts_check_i18n_i18nroot",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n",
+      "target": "adorable_azimuth_scripts_check_i18n_readjson",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n",
+      "target": "adorable_azimuth_scripts_check_i18n_sortedkeys",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n",
+      "target": "adorable_azimuth_scripts_check_i18n_diffkeys",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n",
+      "target": "adorable_azimuth_scripts_check_i18n_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n_main",
+      "target": "adorable_azimuth_scripts_check_i18n_readjson",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n_main",
+      "target": "adorable_azimuth_scripts_check_i18n_sortedkeys",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_check_i18n_main",
+      "target": "adorable_azimuth_scripts_check_i18n_diffkeys",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/check-i18n.mjs",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_scripts_clean_vercel_output",
+      "target": "ref_node_fs_promises",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/scripts/clean-vercel-output.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "adorable_azimuth_src_components_baselayout_locales",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "adorable_azimuth_src_components_baselayout_localeroot",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "adorable_azimuth_src_components_baselayout_canonical",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "adorable_azimuth_src_components_baselayout_alternatehrefs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "adorable_azimuth_src_components_baselayout_alternates",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_styles_global_css",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "adorable_azimuth_src_islands_gsapinit_island",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "adorable_azimuth_src_islands_navtransitions_island",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "adorable_azimuth_src_components_animatedmeshbackground",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "astro_i18n",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_styles_global_css",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_islands_gsapinit_island",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_islands_navtransitions_island",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_baselayout",
+      "target": "adorable_azimuth_src_components_animatedmeshbackground",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/BaseLayout.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_footer",
+      "target": "adorable_azimuth_src_data_profile",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Footer.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_footer",
+      "target": "adorable_azimuth_src_data_profile_profile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Footer.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_footer",
+      "target": "adorable_azimuth_src_i18n_index",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Footer.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_footer",
+      "target": "adorable_azimuth_src_i18n_index_createt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Footer.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_footer",
+      "target": "adorable_azimuth_src_i18n_index_loadmessages",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Footer.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_footer",
+      "target": "adorable_azimuth_src_i18n_index_locale",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Footer.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_footer",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_data_profile",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Footer.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_footer",
+      "target": "adorable_azimuth_src_i18n_index",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Footer.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_header",
+      "target": "adorable_azimuth_src_islands_headernavsegmented",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_header",
+      "target": "ref_astro_i18n",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_header",
+      "target": "adorable_azimuth_src_i18n_index",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_header",
+      "target": "adorable_azimuth_src_i18n_index_createt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_header",
+      "target": "adorable_azimuth_src_i18n_index_loadmessages",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_header",
+      "target": "adorable_azimuth_src_i18n_index_locale",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_header",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_data_profile",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_header",
+      "target": "adorable_azimuth_src_islands_headernavsegmented",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_header",
+      "target": "astro_i18n",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_header",
+      "target": "adorable_azimuth_src_i18n_index",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Header.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_hero",
+      "target": "adorable_azimuth_src_components_ui_icontooltips",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Hero.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_hero",
+      "target": "adorable_azimuth_src_components_hero_titlelines",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Hero.astro",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_hero",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_islands_morphingtext_island",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Hero.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_hero",
+      "target": "adorable_azimuth_src_components_ui_icontooltips",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/Hero.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_cards_cardaction",
+      "target": "adorable_azimuth_src_components_ui_button",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/cards/CardAction.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_home_ctacontato",
+      "target": "adorable_azimuth_src_data_profile",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/home/CtaContato.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_home_emcampo",
+      "target": "adorable_azimuth_src_islands_modetoggle",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/home/EmCampo.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_components_ui_skeletontext",
+      "target": "adorable_azimuth_src_components_ui_skeletontext_items",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/components/ui/SkeletonText.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_data_profile",
+      "target": "adorable_azimuth_src_data_profile_profile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/data/profile.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_data_projects",
+      "target": "adorable_azimuth_src_data_projects_featuredproject",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/data/projects.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_data_projects",
+      "target": "adorable_azimuth_src_data_projects_featuredprojects",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/data/projects.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_i18n_index",
+      "target": "adorable_azimuth_src_i18n_index_locale",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_i18n_index",
+      "target": "adorable_azimuth_src_i18n_index_messages",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_i18n_index",
+      "target": "adorable_azimuth_src_i18n_index_modules",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_i18n_index",
+      "target": "adorable_azimuth_src_i18n_index_loadmessages",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_i18n_index",
+      "target": "adorable_azimuth_src_i18n_index_createt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/i18n/index.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_aspectratioimage",
+      "target": "ref_preact_jsx_runtime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/AspectRatioImage.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_aspectratioimage",
+      "target": "adorable_azimuth_src_islands_aspect_ratio",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/AspectRatioImage.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_aspectratioimage",
+      "target": "adorable_azimuth_src_islands_aspect_ratio_aspectratio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/AspectRatioImage.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_aspectratioimage",
+      "target": "adorable_azimuth_src_islands_aspectratioimage_props",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/AspectRatioImage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_aspectratioimage",
+      "target": "adorable_azimuth_src_islands_aspectratioimage_aspectratioimage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/AspectRatioImage.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_contactform_island",
+      "target": "ref_preact_hooks",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/ContactForm.island.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_contactform_island",
+      "target": "adorable_azimuth_src_islands_contactform_island_formstate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/ContactForm.island.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_contactform_island",
+      "target": "adorable_azimuth_src_islands_contactform_island_contactform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/ContactForm.island.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_gsapinit_island",
+      "target": "ref_preact_hooks",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/GsapInit.island.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_gsapinit_island",
+      "target": "adorable_azimuth_src_lib_gsap_reveal",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/GsapInit.island.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_gsapinit_island",
+      "target": "adorable_azimuth_src_lib_gsap_reveal_inithomechoreography",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/GsapInit.island.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_gsapinit_island",
+      "target": "adorable_azimuth_src_islands_gsapinit_island_gsapinit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/GsapInit.island.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_headernavsegmented",
+      "target": "ref_preact_hooks",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_headernavsegmented",
+      "target": "adorable_azimuth_src_islands_segmentedbutton",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_headernavsegmented",
+      "target": "adorable_azimuth_src_islands_segmentedbutton_segmentedbutton",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_headernavsegmented",
+      "target": "adorable_azimuth_src_islands_headernavsegmented_items",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_headernavsegmented",
+      "target": "adorable_azimuth_src_islands_headernavsegmented_scrolltoid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_headernavsegmented",
+      "target": "adorable_azimuth_src_islands_headernavsegmented_props",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_headernavsegmented",
+      "target": "adorable_azimuth_src_islands_headernavsegmented_headernavsegmented",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_headernavsegmented_headernavsegmented",
+      "target": "adorable_azimuth_src_islands_headernavsegmented_scrolltoid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/HeaderNavSegmented.tsx",
+      "source_location": "L110",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_modetoggle",
+      "target": "ref_preact_hooks",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/ModeToggle.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_modetoggle",
+      "target": "adorable_azimuth_src_islands_segmentedbutton",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/ModeToggle.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_modetoggle",
+      "target": "adorable_azimuth_src_islands_segmentedbutton_segmentedbutton",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/ModeToggle.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_modetoggle",
+      "target": "adorable_azimuth_src_islands_modetoggle_mode",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/ModeToggle.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_modetoggle",
+      "target": "adorable_azimuth_src_islands_modetoggle_props",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/ModeToggle.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_modetoggle",
+      "target": "adorable_azimuth_src_islands_modetoggle_modetoggle",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/ModeToggle.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_morphingtext_island",
+      "target": "ref_preact_hooks",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/MorphingText.island.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_morphingtext_island",
+      "target": "adorable_azimuth_src_islands_morphingtext_island_morphingtextprops",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/MorphingText.island.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_morphingtext_island",
+      "target": "adorable_azimuth_src_islands_morphingtext_island_useprefersreducedmotion",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/MorphingText.island.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_morphingtext_island",
+      "target": "adorable_azimuth_src_islands_morphingtext_island_morphingtext",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/MorphingText.island.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_morphingtext_island_morphingtext",
+      "target": "adorable_azimuth_src_islands_morphingtext_island_useprefersreducedmotion",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/MorphingText.island.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_navtransitions_island",
+      "target": "ref_preact_hooks",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/NavTransitions.island.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_navtransitions_island",
+      "target": "adorable_azimuth_src_islands_navtransitions_island_easeinoutcubic",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/NavTransitions.island.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_navtransitions_island",
+      "target": "adorable_azimuth_src_islands_navtransitions_island_navtransitions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/NavTransitions.island.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_navtransitions_island_navtransitions",
+      "target": "adorable_azimuth_src_islands_navtransitions_island_easeinoutcubic",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/NavTransitions.island.tsx",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_portfoliogrid_island",
+      "target": "ref_preact_hooks",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/PortfolioGrid.island.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_portfoliogrid_island",
+      "target": "adorable_azimuth_src_islands_portfoliogrid_island_portfolioitem",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/PortfolioGrid.island.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_portfoliogrid_island",
+      "target": "adorable_azimuth_src_islands_portfoliogrid_island_props",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/PortfolioGrid.island.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_portfoliogrid_island",
+      "target": "adorable_azimuth_src_islands_portfoliogrid_island_toformat",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/PortfolioGrid.island.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_portfoliogrid_island",
+      "target": "adorable_azimuth_src_islands_portfoliogrid_island_portfoliogrid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/PortfolioGrid.island.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_portfoliogrid_island_portfoliogrid",
+      "target": "adorable_azimuth_src_islands_portfoliogrid_island_toformat",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/PortfolioGrid.island.tsx",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_segmentedbutton",
+      "target": "ref_preact_hooks",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/SegmentedButton.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_segmentedbutton",
+      "target": "adorable_azimuth_src_islands_segmentedbutton_segmentedbuttonitem",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/SegmentedButton.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_segmentedbutton",
+      "target": "adorable_azimuth_src_islands_segmentedbutton_segmentedbuttonprops",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/SegmentedButton.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_segmentedbutton",
+      "target": "adorable_azimuth_src_islands_segmentedbutton_segmentedbutton",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/SegmentedButton.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_aspect_ratio",
+      "target": "ref_preact",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/aspect-ratio.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_aspect_ratio",
+      "target": "ref_preact_jsx_runtime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/aspect-ratio.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_aspect_ratio",
+      "target": "adorable_azimuth_src_islands_aspect_ratio_props",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/aspect-ratio.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_aspect_ratio",
+      "target": "adorable_azimuth_src_islands_aspect_ratio_aspectratio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/aspect-ratio.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_lib_gsap_reveal",
+      "target": "adorable_azimuth_src_lib_gsap_reveal_inithomechoreography",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/lib/gsap-reveal.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_lib_gsap_reveal",
+      "target": "adorable_azimuth_src_lib_gsap_reveal_initgsapreveal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/lib/gsap-reveal.ts",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_lib_gsap_reveal_inithomechoreography",
+      "target": "ref_gsap",
+      "relation": "imports_from",
+      "context": "import",
+      "deferred": true,
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/lib/gsap-reveal.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_lib_gsap_reveal_inithomechoreography",
+      "target": "ref_gsap_scrolltrigger",
+      "relation": "imports_from",
+      "context": "import",
+      "deferred": true,
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/lib/gsap-reveal.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_lib_gsap_reveal_initgsapreveal",
+      "target": "ref_gsap",
+      "relation": "imports_from",
+      "context": "import",
+      "deferred": true,
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/lib/gsap-reveal.ts",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_lib_gsap_reveal_initgsapreveal",
+      "target": "ref_gsap_scrolltrigger",
+      "relation": "imports_from",
+      "context": "import",
+      "deferred": true,
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/lib/gsap-reveal.ts",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_api_contact",
+      "target": "ref_astro",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/api/contact.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_api_contact",
+      "target": "ref_zod",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/api/contact.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_api_contact",
+      "target": "adorable_azimuth_src_pages_api_contact_schema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/api/contact.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_api_contact",
+      "target": "adorable_azimuth_src_pages_api_contact_post",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/api/contact.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_client",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/client.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_docs_index",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/docs/index.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_docs_index",
+      "target": "adorable_azimuth_src_components_header",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/docs/index.astro",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_docs_index",
+      "target": "adorable_azimuth_src_components_footer",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/docs/index.astro",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_docs_index",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_pages_docs_content_md",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/docs/index.astro",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_docs_index",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_styles_global_css",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/docs/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_docs_index",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/docs/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_docs_index",
+      "target": "adorable_azimuth_src_components_header",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/docs/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_docs_index",
+      "target": "adorable_azimuth_src_components_footer",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/docs/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_docs_index",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_pages_docs_content_md",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/docs/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_client",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/client.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_components_home_heroafirmacao",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_components_home_cicatriz",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_components_home_tensionsection",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_components_home_emcampo",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_components_home_ctacontato",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_i18n_index",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_i18n_index_loadmessages",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_i18n_index_createt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_data_profile",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_data_profile_profile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_pages_en_index_t",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_components_home_heroafirmacao",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_components_home_cicatriz",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_components_home_tensionsection",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_components_home_emcampo",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "adorable_azimuth_src_components_home_ctacontato",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_i18n",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_index",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_data_profile",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p3",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p3.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p3",
+      "target": "adorable_azimuth_src_pages_en_projects_p3_data",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p3.astro",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p3",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p3.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p3",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p3.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p5",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p5.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p5",
+      "target": "adorable_azimuth_src_pages_en_projects_p5_data",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p5.astro",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p5",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p5.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p5",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p5.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p7",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p7.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p7",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_assets_nexus_architecture_svg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p7.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p7",
+      "target": "adorable_azimuth_src_pages_en_projects_p7_data",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p7.astro",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p7",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p7.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p7",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p7.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_en_projects_p7",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_assets_nexus_architecture_svg",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/en/projects/p7.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_components_home_heroafirmacao",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_components_home_cicatriz",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_components_home_tensionsection",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_components_home_emcampo",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_components_home_ctacontato",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_i18n_index",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_i18n_index_loadmessages",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_i18n_index_createt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_data_profile",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_data_profile_profile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_pages_index_t",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_components_home_heroafirmacao",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_components_home_cicatriz",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_components_home_tensionsection",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_components_home_emcampo",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "adorable_azimuth_src_components_home_ctacontato",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_i18n",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_index",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_data_profile",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/index.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p3",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p3.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p3",
+      "target": "adorable_azimuth_src_pages_projects_p3_data",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p3.astro",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p3",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p3.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p3",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p3.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p5",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p5.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p5",
+      "target": "adorable_azimuth_src_pages_projects_p5_data",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p5.astro",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p5",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p5.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p5",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p5.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p7",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p7.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p7",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_assets_nexus_architecture_svg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p7.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p7",
+      "target": "adorable_azimuth_src_pages_projects_p7_data",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p7.astro",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p7",
+      "target": "adorable_azimuth_src_components_baselayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p7.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p7",
+      "target": "adorable_azimuth_src_components_projectcaseredesign",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p7.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_projects_p7",
+      "target": "c_users_tonconnect_documents_portifolio_adorable_azimuth_src_assets_nexus_architecture_svg",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/pages/projects/p7.astro",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tests_i18n_spec",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tests/i18n.spec.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tsconfig",
+      "target": "adorable_azimuth_tsconfig_extends",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tsconfig",
+      "target": "ref_astro_tsconfigs_strict",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tsconfig",
+      "target": "adorable_azimuth_tsconfig_compileroptions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tsconfig_compileroptions",
+      "target": "adorable_azimuth_tsconfig_compileroptions_jsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tsconfig_compileroptions",
+      "target": "adorable_azimuth_tsconfig_compileroptions_jsximportsource",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tsconfig_compileroptions",
+      "target": "adorable_azimuth_tsconfig_compileroptions_paths",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tsconfig",
+      "target": "adorable_azimuth_tsconfig_include",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tsconfig_include",
+      "target": "ref_astro_types_d_ts",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tsconfig_include",
+      "target": "ref",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tsconfig",
+      "target": "adorable_azimuth_tsconfig_exclude",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_tsconfig_exclude",
+      "target": "ref_dist",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/tsconfig.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_vercel",
+      "target": "adorable_azimuth_vercel_framework",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/vercel.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_vercel",
+      "target": "adorable_azimuth_vercel_buildcommand",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/vercel.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_vercel",
+      "target": "adorable_azimuth_vercel_outputdirectory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/vercel.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "package",
+      "target": "package_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "package",
+      "target": "package_private",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "package",
+      "target": "package_packagemanager",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "package",
+      "target": "package_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_dev",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_build",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_preview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_copy_vercel_output",
+      "target": "ref_node_fs_promises",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/copy-vercel-output.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "vercel",
+      "target": "vercel_buildcommand",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "vercel",
+      "target": "vercel_outputdirectory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_gsapinit_island",
+      "target": "adorable_azimuth_src_lib_gsap_reveal_initgsapreveal",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "adorable-azimuth/src/islands/GsapInit.island.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_gsapinit_island_gsapinit",
+      "target": "adorable_azimuth_src_lib_gsap_reveal_inithomechoreography",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "adorable-azimuth/src/islands/GsapInit.island.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_islands_gsapinit_island_gsapinit",
+      "target": "adorable_azimuth_src_lib_gsap_reveal_initgsapreveal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "adorable-azimuth/src/islands/GsapInit.island.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "adorable_azimuth_src_pages_api_contact_post",
+      "target": "adorable_azimuth_src_pages_api_contact_schema",
+      "relation": "references",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "adorable-azimuth/src/pages/api/contact.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

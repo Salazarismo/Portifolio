@@ -1,0 +1,114 @@
+{
+  "nodes": [
+    {
+      "id": "adorable_azimuth_public_images_analytics_code",
+      "label": "Analytics Code Editor Mockup (SVG)",
+      "file_type": "image",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\analytics-code.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_analytics_code_get_habit_summary",
+      "label": "get_habit_summary (depicted Python method)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\analytics-code.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_analytics_code_analytics_services_py",
+      "label": "analytics/services.py (depicted source file)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\analytics-code.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_analytics_code_versioned_cache_key",
+      "label": "Versioned Cache Key Pattern",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\analytics-code.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "adorable_azimuth_public_images_analytics_code_habit_analytics_service",
+      "label": "Habit Analytics Service (portfolio case study subject)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\analytics-code.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "adorable_azimuth_public_images_analytics_code",
+      "target": "adorable_azimuth_public_images_analytics_code_get_habit_summary",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\analytics-code.svg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_analytics_code",
+      "target": "adorable_azimuth_public_images_analytics_code_analytics_services_py",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\analytics-code.svg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_analytics_code",
+      "target": "adorable_azimuth_public_images_analytics_code_versioned_cache_key",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\analytics-code.svg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_analytics_code_get_habit_summary",
+      "target": "adorable_azimuth_public_images_analytics_code_habit_analytics_service",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\analytics-code.svg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "adorable_azimuth_public_images_analytics_code_versioned_cache_key",
+      "target": "adorable_azimuth_public_images_analytics_code_habit_analytics_service",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\adorable-azimuth\\public\\images\\analytics-code.svg",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

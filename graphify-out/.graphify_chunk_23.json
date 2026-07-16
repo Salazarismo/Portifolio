@@ -1,0 +1,207 @@
+{
+  "nodes": [
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top",
+      "label": "Home 768px Top Evidence Screenshot (plano-00)",
+      "file_type": "image",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_hero_afirmacao",
+      "label": "Hero Affirmation Section (Eu construo o sistema que funciona quando nada mais funciona)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_cicatriz_section",
+      "label": "Cicatriz Proof Section (EM PRODUCAO / 4 meses RODANDO OFFLINE)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_offline_first_positioning",
+      "label": "Offline-First Field-Resilience Positioning (OFFLINE. SOB CARGA. EM CAMPO. CONTINUA DE PE.)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_cta_sobrevive_campo",
+      "label": "Primary CTA (Ver o que sobrevive ao campo) with Rotating Scroll Badge",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_pt_en_switcher",
+      "label": "PT/EN Language Switcher in Header (Victor wordmark)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_dark_editorial_theme",
+      "label": "Dark Editorial Visual Language (serif headline, red accent underline and highlight, monospace labels)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_tablet_768_viewport",
+      "label": "768px Tablet Viewport Capture",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_hero_afirmacao",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_cicatriz_section",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_offline_first_positioning",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_cta_sobrevive_campo",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_pt_en_switcher",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_dark_editorial_theme",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_tablet_768_viewport",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_hero_afirmacao",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_offline_first_positioning",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_cicatriz_section",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_offline_first_positioning",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_cta_sobrevive_campo",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_cicatriz_section",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_hero_afirmacao",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_768_top_dark_editorial_theme",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-768-top.png",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -1,0 +1,177 @@
+{
+  "nodes": [
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_screenshot",
+      "label": "Home Tension Section Screenshot (Reduced Motion)",
+      "file_type": "image",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_tension_section",
+      "label": "Tension Section: 'Software para o pior dia. Nao para a demo.'",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_strikethrough_headline",
+      "label": "Strikethrough Headline Device ('Nao para a demo.' crossed out)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_cicatriz_section",
+      "label": "Cicatriz Section Copy (12 mil sincronizacoes, zero perda de dado)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_como_eu_construo_section",
+      "label": "Como Eu Construo Section (EM CAMPO eyebrow label)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_language_toggle",
+      "label": "PT/EN Language Toggle in Header",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_prefers_reduced_motion",
+      "label": "prefers-reduced-motion Accessibility State",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_plano_00_evidence",
+      "label": "Plano-00 Evidence Baseline (home-motion)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_tension_section",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_cicatriz_section",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_como_eu_construo_section",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_language_toggle",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_tension_section",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_strikethrough_headline",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_prefers_reduced_motion",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_plano_00_evidence",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_tension_section",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_reduced_tensao_cicatriz_section",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-reduced-tensao.png",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -1,3 +1,77 @@
+/**
+ * Coreografia da home-manifesto (plano home-motion 01) — reativa o GSAP que
+ * já é baixado em toda página e estava inerte na home.
+ *
+ * CONTRATO DE DATA-ATTRIBUTES (copiar p/ docs/modulos/interatividade/API.md
+ * no Plano 04):
+ * - [data-home-stage]          a dobra pinada (a <section> do hero). O pin usa
+ *                              pinSpacing:false — a altura do documento NÃO
+ *                              muda; a âncora #em-campo e o smooth-scroll do
+ *                              NavTransitions ficam intactos.
+ * - [data-home-actor="thesis"] quem cede o palco: sai em scale/y/autoAlpha.
+ *                              Hoje é o mesmo elemento do stage; o contrato
+ *                              permite separar no futuro.
+ * - [data-home-actor="scar"]   quem assume o palco: a colagem da cicatriz
+ *                              (plano 00) cresce de coadjuvante a protagonista.
+ *                              O trigger da timeline é a <section> mais próxima
+ *                              do ator (closest).
+ *
+ * Guardas (gsap.matchMedia): só roda com prefers-reduced-motion: no-preference
+ * E viewport ≥48em. Fora disso, zero ScrollTrigger — o layout estático e o
+ * reveal CSS de load (home.css) permanecem como estão. Decisão mobile (<48em):
+ * sem pin; o reveal de load atual já resolve.
+ */
+export async function initHomeChoreography() {
+  const stage = document.querySelector('[data-home-stage]');
+  const thesis = document.querySelector('[data-home-actor="thesis"]');
+  const scar = document.querySelector('[data-home-actor="scar"]');
+  if (
+    !(stage instanceof HTMLElement) ||
+    !(thesis instanceof HTMLElement) ||
+    !(scar instanceof HTMLElement)
+  ) {
+    return;
+  }
+  const scarSection = scar.closest('section') ?? scar;
+  const { gsap } = await import('gsap');
+  const mod = await import('gsap/ScrollTrigger');
+  const ScrollTrigger = (mod as any).ScrollTrigger ?? (mod as any).default;
+  gsap.registerPlugin(ScrollTrigger);
+  // Cormorant/Syne chegam depois da hidratação e mudam a altura do hero —
+  // sem o refresh, start/end do pin ficam medidos com a fonte fallback.
+  void document.fonts?.ready.then(() => ScrollTrigger.refresh());
+  gsap.matchMedia().add(
+    '(prefers-reduced-motion: no-preference) and (min-width: 48em)',
+    () => {
+      // Um único trigger dirige pin e timeline: a cicatriz viaja do rodapé ao
+      // topo do viewport (~100vh de scroll) enquanto o hero segura o palco.
+      // clamp() evita a timeline nascer "no meio" quando a cicatriz já está
+      // perto da dobra no load.
+      const tl = gsap.timeline({
+        defaults: { ease: 'none' },
+        scrollTrigger: {
+          trigger: scarSection,
+          start: 'clamp(top bottom)',
+          end: 'clamp(top top)',
+          scrub: 0.8,
+          pin: stage,
+          pinSpacing: false
+        }
+      });
+      // A tese sai cedo (0→0.45) para a cicatriz não cruzar texto com texto;
+      // a colagem atinge identidade (scale 1 / y 0) ANTES do fim do pin, então
+      // o unpin nunca produz salto visual.
+      tl.to(thesis, { autoAlpha: 0, scale: 0.94, yPercent: -10, duration: 0.45 }, 0)
+        .fromTo(
+          scar,
+          { scale: 0.85, yPercent: 12 },
+          { scale: 1, yPercent: 0, duration: 0.55 },
+          0.25
+        );
+    }
+  );
+}
+
 export default async function initGsapReveal() {
   const { gsap } = await import('gsap');
   const mod = await import('gsap/ScrollTrigger');

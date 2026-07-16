@@ -1,0 +1,228 @@
+{
+  "nodes": [
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_screenshot",
+      "label": "Home 1024px Cicatriz Evidence Screenshot",
+      "file_type": "image",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_cicatriz_section",
+      "label": "Cicatriz Section (Production Proof)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_hero_section",
+      "label": "Hero Section ('nada mais funciona' headline)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_stat_4_meses",
+      "label": "Stat: 4 meses rodando offline / 12 mil sincronizacoes",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_cta_button",
+      "label": "CTA Button 'Ver o que sobrevive ao campo'",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_rotating_badge",
+      "label": "Rotating Circular Badge 'Para o Pior Dia' with Down Arrow",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_language_toggle",
+      "label": "PT/EN Language Toggle in Header",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_offline_first_positioning",
+      "label": "Offline-first / Field-resilience Positioning",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_dark_editorial_design",
+      "label": "Dark Editorial Design (serif headline, red accent, mono labels)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_cicatriz_section",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_hero_section",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_cta_button",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_rotating_badge",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_language_toggle",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_screenshot",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_dark_editorial_design",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_cicatriz_section",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_stat_4_meses",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_hero_section",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_offline_first_positioning",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_cicatriz_section",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_offline_first_positioning",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_cta_button",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_cicatriz_section",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_rotating_badge",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_cta_button",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_stat_4_meses",
+      "target": "docs_planejamento_home_motion_evidencias_plano_00_home_1024_cicatriz_offline_first_positioning",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\TONCONNECT\\Documents\\Portifolio\\docs\\planejamento\\home-motion\\evidencias\\plano-00\\home-1024-cicatriz.png",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

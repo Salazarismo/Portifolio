@@ -20,9 +20,17 @@ const pending = value.includes("[___]") || caption.includes("[___]");
   data-pending={pending ? "true" : undefined}
 >
   <p class="hm-eyebrow">{t("home.scar.eyebrow")}</p>
-  <h2 id="hm-scar-figure" class="hm-scar-figure">
-    <span class="hm-scar-value">{value}</span>
-    <span class="hm-scar-unit">{t("home.scar.unit")}</span>
-  </h2>
+  <!-- colagem (plano home-motion 00): camadas decorativas ATRÁS do h2 —
+       o número vira objeto de colagem sem tocar no h2 nem no data-pending.
+       Plano 01: a colagem é o ator que assume o palco na coreografia de
+       scroll (contrato em src/lib/gsap-reveal.ts) -->
+  <div class="hm-scar-collage" data-home-actor="scar">
+    <span class="hm-scar-collage__frame" aria-hidden="true"></span>
+    <span class="hm-scar-collage__block" aria-hidden="true"></span>
+    <h2 id="hm-scar-figure" class="hm-scar-figure">
+      <span class="hm-scar-value">{value}</span>
+      <span class="hm-scar-unit">{t("home.scar.unit")}</span>
+    </h2>
+  </div>
   <p class="hm-scar-caption">{caption}</p>
 </section>

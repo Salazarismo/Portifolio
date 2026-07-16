@@ -12,7 +12,16 @@
 
 body.page-home {
   --header-h: var(--space-8); /* nav mínima — o global.css só define p/ :not(.page-home) */
-  background: var(--home-bg);
+  /* palco bicolor (plano home-motion 00): duas faixas em diagonal, ambas
+     mais claras que o cartão navy para a sombra ler. O split viaja com o
+     documento (sem background-attachment: fixed — custo de paint no mobile). */
+  background: linear-gradient(
+    160deg,
+    var(--home-stage-bg) 0%,
+    var(--home-stage-bg) 55%,
+    var(--home-stage-bg-2) 55%,
+    var(--home-stage-bg-2) 100%
+  );
   color: var(--home-ink);
   font-family: var(--home-font-body);
   min-height: 100dvh;
@@ -22,14 +31,16 @@ body.page-home {
   scroll-padding-top: var(--header-h); /* âncora #em-campo não some sob a nav fixa */
 }
 
-/* ruído de filme sobre o charcoal — textura, não decoração */
+/* ruído de filme sobre o conjunto palco+cartão — textura, não decoração.
+   z-index 2 de propósito: acima do cartão (main, z1) e abaixo da nav (z100),
+   para o grain unificar palco e cartão como um objeto só (plano 00). */
 body.page-home::before {
   content: '';
   position: fixed;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
   pointer-events: none;
-  z-index: 0;
+  z-index: 2;
   opacity: 0.5;
 }
 
@@ -75,13 +86,25 @@ body.page-home .nav-lang a:hover,
 body.page-home .nav-lang a.active { color: var(--home-accent); }
 body.page-home .nav-lang span { color: var(--home-border); }
 
-/* a home antiga centrava uma dobra única; a nova é uma coluna de seções */
+/* a home antiga centrava uma dobra única; a nova é uma coluna de seções.
+   Plano 00: o main vira o CARTÃO — objeto navy com sombra flutuando sobre o
+   palco bicolor. O respiro do topo migrou do padding-top (era --space-9)
+   para a margem do cartão (header + gap ≈ mesmo ritmo vertical do hero).
+   overflow: hidden clipa glow e colagem no raio do cartão. */
 body.page-home main#main {
   flex: 1;
   display: block;
   position: relative;
   z-index: 1;
-  padding-top: var(--space-9);
+  width: calc(100% - var(--home-card-gap) * 2);
+  max-width: var(--container-max);
+  margin-inline: auto;
+  margin-top: calc(var(--header-h) + var(--home-card-gap));
+  margin-bottom: var(--home-card-gap);
+  background: var(--home-bg);
+  border-radius: var(--home-card-radius);
+  box-shadow: var(--home-card-shadow);
+  overflow: hidden;
 }
 
 /* glow coral atrás do hero — reaproveitado do HomeHybridLanding (era âmbar),
@@ -153,6 +176,17 @@ body.page-home .hm-footer-copy {
   text-align: left;
 }
 
+/* plano home-motion 01: em ≥48em a dobra do hero preenche o primeiro
+   viewport (dentro do cartão) — é o palco do pin, e a cicatriz entra
+   exatamente do rodapé. Abaixo de 48em não há pin (decisão mobile: fica o
+   reveal de load) e a altura segue o conteúdo. */
+@media (min-width: 48em) {
+  .hm-hero {
+    min-height: calc(100svh - var(--header-h) - var(--home-card-gap) * 2);
+    justify-content: center;
+  }
+}
+
 .hero-thesis {
   font-family: var(--home-font-display);
   font-size: var(--home-hero-size);
@@ -200,8 +234,21 @@ body.page-home .hm-footer-copy {
   animation: homeFadeUp 0.7s var(--ease-standard) forwards 0.75s;
 }
 
-/* UM CTA, médio: pill com borda — destaque sem competir com o CTA final */
+/* UM CTA, médio: pill com borda — destaque sem competir com o CTA final.
+   Plano 00: o <a> virou grupo (pill + badge circular no MESMO link — o e2e
+   exige exatamente 1 a[href="#em-campo"]); os visuais do pill migraram
+   para __pill. */
 .hm-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap; /* em viewport estreito o badge cai pra linha de baixo sem estourar o cartão */
+  gap: var(--space-4);
+  color: var(--home-ink);
+  text-decoration: none;
+  opacity: 0;
+  animation: homeFadeUp 0.8s var(--ease-standard) forwards 0.9s;
+}
+.hm-hero-cta__pill {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
@@ -212,15 +259,11 @@ body.page-home .hm-footer-copy {
   font-weight: var(--font-weight-medium);
   font-size: var(--home-text-sm);
   letter-spacing: 0.05em;
-  color: var(--home-ink);
-  text-decoration: none;
-  opacity: 0;
-  animation: homeFadeUp 0.8s var(--ease-standard) forwards 0.9s;
   transition: border-color var(--duration-fast) var(--ease-standard),
     background var(--duration-fast) var(--ease-standard),
     gap var(--duration-fast) var(--ease-standard);
 }
-.hm-hero-cta:hover {
+.hm-hero-cta:hover .hm-hero-cta__pill {
   border-color: var(--home-accent);
   background: var(--home-surface);
   gap: var(--space-3);
@@ -237,6 +280,69 @@ body.page-home .hm-footer-copy {
   transform: translateX(var(--space-1));
 }
 
+/* badge circular (plano 00): o "see how it's made" do vídeo traduzido —
+   texto mono em órbita girando devagar, seta ao centro apontando pra
+   âncora. Decorativo (aria-hidden), acoplado ao único CTA. */
+.hm-hero-badge {
+  position: relative;
+  flex: none;
+  width: var(--home-badge-size);
+  height: var(--home-badge-size);
+}
+.hm-hero-badge svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  animation: homeBadgeSpin 24s linear infinite;
+}
+.hm-hero-badge__ring {
+  fill: var(--home-muted);
+  font-family: var(--home-font-mono);
+  text-transform: uppercase;
+  transition: fill var(--duration-fast) var(--ease-standard);
+}
+.hm-hero-cta:hover .hm-hero-badge__ring { fill: var(--home-accent); }
+.hm-hero-badge__center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--home-accent);
+  font-family: var(--home-font-body);
+}
+
+/* sublinhado caligráfico (plano 00): risco coral desenhado sob a palavra
+   de acento da tese, disparado logo após o rise dela (teto do stagger
+   0.9s + rise 0.9s ≈ 1.45s). pathLength=1 => dasharray normalizado. */
+.hm-hero-accent {
+  position: relative;
+  display: inline-block;
+  vertical-align: top; /* alinha com os .hn-word irmãos */
+}
+.hm-hero-underline {
+  position: absolute;
+  left: 0;
+  bottom: -0.04em;
+  width: 100%;
+  height: 0.22em;
+  overflow: visible;
+  pointer-events: none;
+}
+.hm-hero-underline path {
+  fill: none;
+  stroke: var(--home-accent);
+  /* SEM vector-effect: non-scaling-stroke — ele quebra o dash normalizado
+     por pathLength sob preserveAspectRatio=none (dash vira screen-space e
+     o padrão repete no meio do traço). O stroke escalando com a palavra é
+     o comportamento desejado no traço caligráfico. */
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: homeDrawStroke 0.7s var(--ease-standard) forwards 1.45s;
+}
+
 /* eyebrow compartilhado (cicatriz, em-campo) */
 .hm-eyebrow {
   font-family: var(--home-font-mono);
@@ -249,7 +355,14 @@ body.page-home .hm-footer-copy {
 
 /* ---- cicatriz: o NÚMERO é o maior tipo do bloco (h2, nunca h1) ---- */
 
-.hm-scar { text-align: center; }
+/* position/z-index (plano home-motion 01): durante o pin da dobra, a seção
+   desliza POR CIMA do hero fixado — precisa vencer o stacking do elemento
+   pinado. Estático é inócuo: as seções nunca se sobrepõem sem o pin. */
+.hm-scar {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
 
 .hm-scar-figure {
   font-weight: var(--font-weight-regular);
@@ -278,6 +391,47 @@ body.page-home .hm-footer-copy {
   max-width: 34em;
   margin: var(--space-5) auto 0;
 }
+
+/* colagem em camadas (plano 00): o número vira recorte físico — bloco coral
+   rotacionado atrás (camada do meio) e moldura vazada mais atrás (fundo).
+   O h2 só ganha posição/z-index; a tipografia segue a mesma. Estático:
+   nada aqui anima, seguro em reduced-motion. */
+.hm-scar-collage {
+  position: relative;
+  display: inline-block; /* abraça o tamanho do número — a seção segue centrada */
+}
+.hm-scar-collage .hm-scar-figure {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+.hm-scar-collage__block,
+.hm-scar-collage__frame {
+  position: absolute;
+  pointer-events: none;
+}
+.hm-scar-collage__block {
+  z-index: 1;
+  top: -6%;
+  right: -10%;
+  width: 56%;
+  height: 62%;
+  background: var(--home-accent);
+  opacity: 0.85;
+  transform: rotate(-3deg);
+}
+.hm-scar-collage__frame {
+  z-index: 0;
+  bottom: 4%;
+  left: -12%;
+  width: 46%;
+  height: 58%;
+  border: var(--border-width-1) solid var(--home-border);
+  transform: rotate(2deg);
+}
+/* pendente: o número fica coral (LOUD) — o bloco coral recua para não
+   engolir o placeholder */
+.hm-scar[data-pending="true"] .hm-scar-collage__block { opacity: 0.2; }
 
 /* placeholder LOUD: enquanto o número real não chega, o [___] grita em accent
    e a seção estampa um lembrete dashed. A home deve PARECER inacabada até a
@@ -315,12 +469,36 @@ body.page-home .hm-footer-copy {
   display: block;
   color: var(--home-ink);
 }
-/* o inimigo: apagado e riscado no acento da marca */
+/* o inimigo: apagado e riscado no acento da marca.
+   Plano 00: o risco virou SVG animado (stroke-dashoffset); o line-through
+   nativo permanece como fallback e sai de cena quando o SVG existe. */
 .hm-tension-title .hm-tension-demo {
   display: block;
+  width: fit-content; /* o risco abraça o texto, não a coluna inteira */
+  position: relative;
   color: var(--home-muted);
   text-decoration: line-through;
   text-decoration-color: var(--home-accent);
+}
+.hm-tension-title .hm-tension-demo:has(.hm-strike) { text-decoration: none; }
+.hm-strike {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 0.3em;
+  transform: translateY(-50%);
+  overflow: visible;
+  pointer-events: none;
+}
+.hm-strike path {
+  fill: none;
+  stroke: var(--home-accent);
+  stroke-width: 3; /* sem vector-effect — mesmo motivo do .hm-hero-underline */
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: homeDrawStroke 0.6s var(--ease-standard) forwards 1.2s;
 }
 .hm-tension-lead {
   font-family: var(--home-font-display);
@@ -484,11 +662,22 @@ body.page-home .hm-footer-copy {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+/* plano 00: giro contínuo do badge e traço caligráfico (pathLength=1) */
+@keyframes homeBadgeSpin {
+  to { transform: rotate(1turn); }
+}
+@keyframes homeDrawStroke {
+  to { stroke-dashoffset: 0; }
+}
 
 /* reveal da home: entra no load, escalona por --reveal-index. NÃO é
    scroll-triggered (plano 08, Seção 8) — é o mais simples que resolve sem
    adicionar JS ao bundle apertado de 150KB. O scroll-reveal global ([data-sr])
-   já exclui .page-home no global.css; este é o substituto local. */
+   já exclui .page-home no global.css; este é o substituto local.
+   EXCEÇÃO registrada (plano home-motion 01): a coreografia hero→cicatriz é
+   scroll-driven via GSAP já amortizado (initHomeChoreography em
+   src/lib/gsap-reveal.ts) — o pin anima seção/colagem por transform/opacity
+   e COMPÕE com este reveal de load, não o substitui. */
 body.page-home [data-reveal] {
   opacity: 0;
   animation: homeFadeUp var(--duration-slow) var(--ease-standard) both;
@@ -520,8 +709,18 @@ body.page-home .cursor-spotlight.is-on { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   body.page-home .nav-lang a,
   .hm-contact-link,
-  .hm-hero-cta,
+  .hm-hero-cta__pill,
+  .hm-hero-cta__arrow,
+  .hm-hero-badge__ring,
   .hm-cta-btn { transition: none; }
+
+  /* plano 00: badge parado; sublinhado e risco aparecem já completos */
+  .hm-hero-badge svg { animation: none; }
+  .hm-hero-underline path,
+  .hm-strike path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
 
   .hm-subhead,
   .hm-tagline,

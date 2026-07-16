@@ -13,21 +13,65 @@ const BASE = 0.15; // s antes da 1ª palavra
 const STEP = 0.06; // s entre palavras
 const MAX = 0.9; // teto do atraso
 const delayFor = (i: number) => Math.min(BASE + i * STEP, MAX).toFixed(2);
+
+// Plano home-motion 00: a palavra de acento do sublinhado caligráfico é a
+// ÚLTIMA da tese (PT "funciona." / EN "does.") — regra estável nas duas
+// línguas, sem chave i18n nova. O SVG é decorativo e fica FORA do texto
+// do #hero-thesis (aria-hidden, sem glyphs).
+const accentIndex = words.length - 1;
+
+// Badge circular (CTA secundário do vídeo): o texto repete no anel pra
+// fechar a órbita; vive DENTRO do único <a href="#em-campo"> — o e2e
+// exige exatamente 1 link pra âncora.
+const badge = t("home.hero.badge");
+const badgeRing = `${badge} • ${badge} • `;
+
+// Plano home-motion 01: a seção é o palco pinado E o ator que cede o palco
+// na coreografia de scroll (contrato em src/lib/gsap-reveal.ts). Atributos
+// ficam na section, fora do <h1> — #hero-thesis segue intocado.
 ---
-<section class="hm-hero" aria-labelledby="hero-thesis">
+<section class="hm-hero" aria-labelledby="hero-thesis" data-home-stage data-home-actor="thesis">
   <h1 id="hero-thesis" class="hero-thesis">
     {words.map((w, i) => (
       <Fragment>
-        <span class="hn-word"
-          ><span class="hn-inner" style={`animation-delay:${delayFor(i)}s`}>{w}</span></span
-        >{" "}
+        {i === accentIndex ? (
+          <span class="hm-hero-accent"
+            ><span class="hn-word"
+              ><span class="hn-inner" style={`animation-delay:${delayFor(i)}s`}>{w}</span></span
+            ><svg
+              class="hm-hero-underline"
+              viewBox="0 0 120 12"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+              focusable="false"
+              ><path d="M3 9C28 3 62 11 117 5" pathLength="1" /></svg
+            ></span
+          >
+        ) : (
+          <span class="hn-word"
+            ><span class="hn-inner" style={`animation-delay:${delayFor(i)}s`}>{w}</span></span
+          >
+        )}{" "}
       </Fragment>
     ))}
   </h1>
   <p class="hm-subhead">{t("home.hero.subhead")}</p>
   <p class="hm-tagline">{t("home.hero.tagline")}</p>
   <a class="hm-hero-cta" href="#em-campo">
-    <span>{t("home.hero.cta")}</span>
-    <span class="hm-hero-cta__arrow" aria-hidden="true">→</span>
+    <span class="hm-hero-cta__pill">
+      <span>{t("home.hero.cta")}</span>
+      <span class="hm-hero-cta__arrow" aria-hidden="true">→</span>
+    </span>
+    <span class="hm-hero-badge" aria-hidden="true">
+      <svg viewBox="0 0 100 100" focusable="false">
+        <defs>
+          <path id="hm-badge-orbit" d="M50 50m-36 0a36 36 0 1 1 72 0a36 36 0 1 1-72 0" />
+        </defs>
+        <text class="hm-hero-badge__ring" font-size="10" letter-spacing="1">
+          <textPath href="#hm-badge-orbit">{badgeRing}</textPath>
+        </text>
+      </svg>
+      <span class="hm-hero-badge__center">↓</span>
+    </span>
   </a>
 </section>

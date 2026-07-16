@@ -138,4 +138,15 @@
   /* Ambiente decorativo */
   --home-glow-size: clamp(18rem, 60vw, 46rem); /* diâmetro do glow coral atrás do hero */
   --home-reveal-step: 90ms;                    /* passo do stagger do [data-reveal] */
+
+  /* Física e textura (plano home-motion 00): a página vira um cartão navy
+     flutuando sobre um palco bicolor. Zero hex novo — as duas faixas do
+     palco são color-mix sobre tintas que já existem. O palco precisa ser
+     MAIS CLARO que o cartão para a sombra ler no tema escuro. */
+  --home-stage-bg: color-mix(in srgb, var(--home-bg) 84%, var(--home-accent)); /* faixa quente (navy + coral) */
+  --home-stage-bg-2: color-mix(in srgb, var(--home-bg) 88%, var(--home-ink));  /* faixa fria (navy + off-white) */
+  --home-card-shadow: var(--shadow-xl);
+  --home-card-radius: var(--radius-2xl);
+  --home-card-gap: clamp(0.5rem, 2.5vw, 2rem); /* respiro do cartão: ~9px em 360px, 32px no desktop */
+  --home-badge-size: clamp(4.5rem, 8vw, 6rem); /* diâmetro do badge circular do CTA */
 }
