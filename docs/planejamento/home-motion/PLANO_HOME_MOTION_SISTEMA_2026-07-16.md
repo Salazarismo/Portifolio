@@ -2,7 +2,7 @@
 
 - **Tipo:** Indice-Mae
 - **Data:** 2026-07-16
-- **Status geral:** Proximo
+- **Status geral:** Em andamento
 - **Assunto:** Elevar a experiencia da home-manifesto ao patamar do video de referencia (motion shot "hübas") sem trair a estetica navy+coral nem os gates
 - **Responsavel pela decisao:** Victor (dono do portfolio)
 - **Fonte canonica afetada:** `adorable-azimuth/docs/modulos/design-system/`, `adorable-azimuth/docs/modulos/interatividade/`
@@ -11,7 +11,13 @@
 
 O video de referencia (`original-01ba443687e9a2cf04b42856f994728a.mp4`, raiz do repo — 10s, motion shot estilo Dribbble da landing ficticia "hübas") mostra seis tecnicas que produzem a sensacao de "unico": (1) a pagina como objeto fisico (cartao com sombra sobre fundo bicolor, grain); (2) tipografia editorial gigante como protagonista e como elemento de colagem; (3) colagem em camadas com profundidade; (4) **transicao de elementos compartilhados no scroll** — as secoes se transformam uma na outra em vez de apenas passar; (5) microdetalhes coreografados (badge circular girando, sublinhado caligrafico, reveal palavra a palavra); (6) wipe organico como transicao de estado.
 
-A home-manifesto ja entrega a metade tipografica disso (Cormorant display, word-rise, grain, glow coral, spotlight). O gap e a **coreografia de scroll e a camada de profundidade fisica**. Descoberta-chave que muda o custo do plano: GSAP + ScrollTrigger ja sao baixados em toda pagina (`GsapInit.island.tsx`, `client:load` no BaseLayout) mas estao **inertes na home** — miram `[data-cell]`/`[data-anim="hero"]` que nao existem nos partials novos. O recurso mais caro ja esta pago dentro dos 142.76KB do budget.
+A home-manifesto ja entrega a metade tipografica disso (Cormorant display,
+word-rise, grain, glow coral, spotlight). O gap e a **coreografia de scroll e
+a camada de profundidade fisica**. A descoberta que mudou o custo do plano foi
+que GSAP + ScrollTrigger ja eram baixados em toda pagina
+(`GsapInit.island.tsx`, `client:load` no BaseLayout), mas estavam inertes na
+home. O Plano 01 reativou esse recurso; o Plano 02 acrescentou a camada CSS com
+delta 0KB. O bundle atual mede 143.69KB.
 
 **Diretriz central: traduzir os principios do video, nao copiar a estetica.** A home permanece navy+coral do manifesto; o "W" gigante do video vira o numero da cicatriz como objeto de colagem; a petala vira o glow/pincel coral; o card de stats persistente vira a cicatriz assumindo o palco.
 
@@ -22,9 +28,9 @@ A cascata esta concluida quando as quatro camadas tecnicas (fisica/textura, core
 | Plano | Status | Papel na cascata | Dependencias | Observacao |
 | --- | --- | --- | --- | --- |
 | [Plano 00 - Fisica e textura](./PLANO_HOME_MOTION_00_FISICA_TEXTURA_2026-07-16.md) | Concluido | Camada A: pagina-como-cartao, colagem da cicatriz, badge circular, sublinhado caligrafico (CSS puro, 0KB JS) | nenhuma | Entregue 2026-07-16: gates verdes, e2e 7/7, delta 0KB; aguarda aprovacao visual do Victor |
-| [Plano 01 - Coreografia GSAP](./PLANO_HOME_MOTION_01_COREOGRAFIA_GSAP_2026-07-16.md) | Proximo | Camada C: reativar o GSAP inerte; pin + morph hero→cicatriz (elemento compartilhado) | Plano 00 | O diferencial do video; delta JS ~1-2KB; rollout publico travado pelo P0 dos numeros ficticios |
-| [Plano 02 - Scroll-driven CSS](./PLANO_HOME_MOTION_02_SCROLL_CSS_2026-07-16.md) | Proximo | Camada B: reveals por scroll (`animation-timeline`) + parallax das camadas (0KB JS) | Plano 01 | Depois do 01 para calibrar com o pin; fallback = comportamento atual |
-| [Plano 03 - Wipe de transicao](./PLANO_HOME_MOTION_03_WIPE_TRANSICOES_2026-07-16.md) | Proximo | Camada D: wipe organico coral nas View Transitions existentes (0KB JS) | Plano 00 | So CSS sobre o `NavTransitions.island.tsx` ja entregue |
+| [Plano 01 - Coreografia GSAP](./PLANO_HOME_MOTION_01_COREOGRAFIA_GSAP_2026-07-16.md) | Concluido | Camada C: reativar o GSAP inerte; pin + morph hero→cicatriz (elemento compartilhado) | Plano 00 | Entregue 2026-07-16: +0.93KB JS, pin ≥48em com `pinSpacing:false`; rollout publico travado pelo P0 |
+| [Plano 02 - Scroll-driven CSS](./PLANO_HOME_MOTION_02_SCROLL_CSS_2026-07-16.md) | Concluido | Camada B: reveals por scroll (`animation-timeline`) + parallax das camadas (0KB JS) | Plano 01 | Entregue 2026-07-16: tensão/em-campo/CTA em `entry 0% entry 60%`; parallax `entry 0% exit 100%`; fallback load-time; aguarda aprovação visual |
+| [Plano 03 - Wipe de transicao](./PLANO_HOME_MOTION_03_WIPE_TRANSICOES_2026-07-16.md) | Concluido | Camada D: wipe organico coral nas View Transitions existentes (0KB JS) | Plano 00 | Entregue 2026-07-17: delta 0KB, e2e 7/7; elipses defasadas + faixa coral no `image-pair`; efeito colateral: TODAS as navegacoes internas com `nav-forward`/`nav-back` ganharam o wipe (registrado no filho); aguarda aprovacao visual |
 | [Plano 04 - Qualidade e rollout](./PLANO_HOME_MOTION_04_QUALIDADE_ROLLOUT_2026-07-16.md) | Proximo | Gates, e2e, auditoria reduced-motion/mobile, docs vivas, decisao de rollout | Planos 00-03 | Espelha o papel do filho 09 da cascata anterior |
 
 ## Direcionamento
@@ -49,9 +55,14 @@ Decisoes cravadas que nao devem ser reabertas sem novo registro:
 
 - **P0 humano (herdado, agora mais urgente):** os numeros da cicatriz sao FICTICIOS e `[stack principal]` segue literal na copy. O Plano 01 coloca um holofote (pin + zoom) exatamente nesse numero — dar palco a um numero inventado contradiz a tese "software para o pior dia". **O 01 pode ser implementado, mas o rollout publico da cascata fica travado ate os numeros reais entrarem no `home.json`.**
 - **Pin (ScrollTrigger) × ancora `#em-campo`:** o pin altera a altura efetiva da pagina; o smooth-scroll proprio do `NavTransitions.island.tsx` calcula destino por posicao. Testar o clique no CTA do hero com o pin ativo e obrigatorio (e2e ja cobre a existencia; a verificacao manual cobre o comportamento).
-- **Suporte parcial de CSS Scroll-Driven Animations** (Safari): tudo do Plano 02 vive dentro de `@supports`; o fallback e o comportamento atual (reveal no load). Nada pode depender do scroll-driven para ser legivel.
+- **Suporte parcial de CSS Scroll-Driven Animations:** o Plano 02 exige no
+  mesmo feature gate timeline, named ranges e duracao `auto`; navegadores sem
+  o conjunto completo ficam no reveal load-time. Nada depende do
+  scroll-driven para ser legivel.
 - **Performance em mobile:** grain + glow + parallax + pin acumulam custo de paint/composite. Premissa: so animar `transform`/`opacity`; auditoria manual em viewport 360px no Plano 04.
-- **Budget:** folga atual ~7.2KB (142.76 de 150KB). Delta previsto total ~1-2KB (config da coreografia). Se estourar, corta-se escopo do 01, nao se sobe o teto.
+- **Budget:** folga atual 6.31KB (143.69 de 150KB). O Plano 01 adicionou
+  0.93KB e o Plano 02, 0KB; as camadas CSS restantes nao justificam elevar o
+  teto. Se estourar, corta-se escopo, nao se sobe o limite.
 - **Premissa de dados:** nenhuma. Nenhuma integracao externa, schema ou RLS envolvido.
 - **Validacao humana:** direcao estetica das camadas (intensidade do parallax, forma do wipe, velocidade do badge) exige aprovacao visual do Victor antes do merge de cada filho.
 

@@ -11,7 +11,7 @@ interface Props {
 }
 const { t, recruiterHref, clientHref } = Astro.props;
 ---
-<section id="cta" class="hm-cta" aria-labelledby="hm-cta-title">
+<section id="cta" class="hm-cta" aria-labelledby="hm-cta-title" data-reveal="view">
   <h2 id="hm-cta-title" class="hm-cta-title">{t("home.cta.title")}</h2>
   <div class="hm-when-recruiter">
     <p class="hm-cta-lead">{t("home.cta.recruiter_lead")}</p>

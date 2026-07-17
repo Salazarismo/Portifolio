@@ -1,20 +1,4 @@
 /* Page transitions using View Transitions API with CSS fallback */
-@keyframes fadeSlideInLeft {
-  from { opacity: 0; transform: translateX(var(--space-2)); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes fadeSlideOutRight {
-  from { opacity: 1; transform: translateX(0); }
-  to { opacity: 0; transform: translateX(-var(--space-2)); }
-}
-@keyframes fadeSlideInRight {
-  from { opacity: 0; transform: translateX(-var(--space-2)); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes fadeSlideOutLeft {
-  from { opacity: 1; transform: translateX(0); }
-  to { opacity: 0; transform: translateX(var(--space-2)); }
-}
 
 /* Default fade */
 ::view-transition-old(root),
@@ -23,12 +7,75 @@
   animation-timing-function: var(--ease-standard);
 }
 
-/* Direction-aware slide using a class on html */
-html.nav-forward::view-transition-old(root) { animation-name: fadeSlideOutLeft; }
-html.nav-forward::view-transition-new(root) { animation-name: fadeSlideInRight; }
+/* Wipe orgânico coral (home-motion, plano 03).
+   Mecânica: old e new são recortados por elipses defasadas; a faixa coral
+   que aparece entre os dois é o background do ::view-transition-image-pair.
+   O old termina de sair em 55% e o new só começa a entrar em 45% de
+   propósito: no meio da transição a tela fica coberta de coral, que é
+   quando o browser comete a navegação real (MPA) — o corte fica mascarado.
+   Elipses simples animam melhor que blobs de polígono complexo; a forma
+   orgânica vem da frente curva da elipse, eco do glow do hero. */
+/* Ritmo: uma perna por animação, defasadas por animation-delay. O easing
+   emphasized na timeline INTEIRA de um keyframe 0–100% comprime a varredura
+   nos primeiros ~130ms (medido no protótipo); e var(--ease-emphasized)
+   dentro de keyframe não resolve no Chrome (cai em linear — medido via
+   getAnimations). Com cada perna sendo a animação inteira, o token de easing
+   aplica exato ao segmento: saída do old em 0→50% da duração, entrada do
+   new em 50%→100%, coral pleno no meio. */
+@keyframes wipeOldForward {
+  from { clip-path: ellipse(120% 140% at 0% 50%); }
+  to { clip-path: ellipse(70% 110% at -80% 50%); }
+}
+@keyframes wipeNewForward {
+  from { clip-path: ellipse(70% 110% at 180% 50%); }
+  to { clip-path: ellipse(120% 140% at 100% 50%); }
+}
+@keyframes wipeOldBack {
+  from { clip-path: ellipse(120% 140% at 100% 50%); }
+  to { clip-path: ellipse(70% 110% at 180% 50%); }
+}
+@keyframes wipeNewBack {
+  from { clip-path: ellipse(70% 110% at -80% 50%); }
+  to { clip-path: ellipse(120% 140% at 0% 50%); }
+}
 
-html.nav-back::view-transition-old(root) { animation-name: fadeSlideOutRight; }
-html.nav-back::view-transition-new(root) { animation-name: fadeSlideInLeft; }
+html.nav-forward::view-transition-old(root),
+html.nav-forward::view-transition-new(root),
+html.nav-back::view-transition-old(root),
+html.nav-back::view-transition-new(root) {
+  animation-duration: calc(var(--duration-slow) / 2);
+  animation-timing-function: var(--ease-emphasized);
+  animation-fill-mode: both; /* new nasce 100% recortado — sem piscar conteúdo */
+  mix-blend-mode: normal; /* anula o plus-lighter default, senão o coral estoura */
+}
+
+html.nav-forward::view-transition-new(root),
+html.nav-back::view-transition-new(root) {
+  animation-delay: calc(var(--duration-slow) / 2); /* entra depois da saída do old */
+}
+
+/* A cor da varredura: coral puro no rastro, coral aprofundado com navy na
+   frente da onda (leading edge), na direção da varredura. */
+html.nav-forward::view-transition-image-pair(root) {
+  background: linear-gradient(
+    to left,
+    var(--color-primary),
+    color-mix(in srgb, var(--color-primary) 72%, var(--color-primary-foreground))
+  );
+}
+html.nav-back::view-transition-image-pair(root) {
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    color-mix(in srgb, var(--color-primary) 72%, var(--color-primary-foreground))
+  );
+}
+
+html.nav-forward::view-transition-old(root) { animation-name: wipeOldForward; }
+html.nav-forward::view-transition-new(root) { animation-name: wipeNewForward; }
+
+html.nav-back::view-transition-old(root) { animation-name: wipeOldBack; }
+html.nav-back::view-transition-new(root) { animation-name: wipeNewBack; }
 
 /* Hash scroll vertical slide hint */
 @keyframes fadeSlideInUp {
@@ -51,6 +98,8 @@ html.hash-scroll::view-transition-new(root) { animation-name: fadeSlideInUp; }
 .page-transition-leave { opacity: 1; transform: translateY(0); }
 .page-transition-leave-active { opacity: 0; transform: translateY(-var(--space-2)); }
 
+/* Guarda redundante à do NavTransitions.island (defesa em profundidade):
+   sem animação, o new cobre o old imediatamente e o coral nem aparece. */
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-old(root),
   ::view-transition-new(root),
@@ -59,5 +108,9 @@ html.hash-scroll::view-transition-new(root) { animation-name: fadeSlideInUp; }
     animation: none !important;
     transition: none !important;
     transform: none !important;
+  }
+  html.nav-forward::view-transition-image-pair(root),
+  html.nav-back::view-transition-image-pair(root) {
+    background: none !important;
   }
 }

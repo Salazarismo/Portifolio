@@ -23,6 +23,11 @@ e impede divergência de estilos entre páginas.
    `src/styles/global.css` usam classes `.page-*`; estilos novos entram no
    arquivo temático correspondente (`cards.css`, `forms.css`, `layout.css`…),
    não em um CSS monolítico.
+6. **Motion é progressivo:** scroll-driven CSS vive em `@supports`, preserva
+   um fallback completo fora dele e é neutralizado no bloco mestre de
+   `prefers-reduced-motion`. Na home, a estratégia é explícita no valor de
+   `data-reveal` (`load` ou `view`); conteúdo nunca depende da animação para
+   existir ou permanecer legível.
 
 ## Impactos cruzados
 
@@ -31,4 +36,4 @@ e impede divergência de estilos entre páginas.
   nele afeta [interatividade](../interatividade/REGRA.md) e SEO.
 
 ---
-Última revisão: 2026-06-11 — 588ffd1
+Última revisão: 2026-07-16 — Plano Home Motion 02

@@ -3,7 +3,7 @@
 - **Tipo:** Plano-Filho
 - **Plano mae:** [Plano mae - Home ao nivel do video de referencia](./PLANO_HOME_MOTION_SISTEMA_2026-07-16.md)
 - **Data:** 2026-07-16
-- **Status:** Proximo
+- **Status:** Concluido (2026-07-17; aguarda aprovacao visual do Victor)
 - **Assunto:** Camada D — transicao de pagina com varredura organica coral sobre a infraestrutura de View Transitions ja existente (0KB JS)
 - **Responsavel pela decisao:** Victor (dono do portfolio)
 - **Fonte canonica afetada:** `adorable-azimuth/docs/modulos/interatividade/`
@@ -47,3 +47,35 @@ Reproduzir a tecnica de fechamento do video — o blob que varre a tela reveland
 ## Atualizacao do Indice-Mae
 
 Ao concluir: status → Concluido; registrar a forma final do `clip-path` e as rotas cobertas; anotar se alguma rota fora do fluxo principal ganhou o wipe por efeito colateral (decidir se e desejado ou se escopa-se por classe de body).
+
+## Registro de conclusao (2026-07-17)
+
+- **Forma final:** elipses simples em `clip-path`, uma perna por animacao.
+  Forward: old sai com `ellipse(120% 140% at 0% 50%)` → `ellipse(70% 110% at -80% 50%)`;
+  new entra com `ellipse(70% 110% at 180% 50%)` → `ellipse(120% 140% at 100% 50%)`.
+  Back e o espelho horizontal. A faixa coral entre as duas e o background do
+  `::view-transition-image-pair(root)`: gradiente `--color-primary` → `color-mix`
+  com `--color-primary-foreground` (frente mais escura no sentido da varredura).
+- **Ritmo (decisao tecnica):** cada perna dura `calc(var(--duration-slow)/2)` com
+  `var(--ease-emphasized)`; o new usa `animation-delay` da mesma metade com
+  `fill-mode: both`. Motivo: o easing emphasized na timeline inteira comprime a
+  varredura em ~130ms (flash), e `var()` de easing DENTRO de keyframe nao resolve
+  no Chrome (cai em linear — medido via `getAnimations()`). Com a perna sendo a
+  animacao inteira, o token aplica exato ao segmento.
+- **Descoberta de plataforma:** o Chrome ADIA a navegacao real ate a transicao
+  terminar (request do documento sai ~900ms apos o clique, medido). O wipe toca
+  inteiro no documento antigo; nao ha "piscada" de conteudo novo por construcao.
+  Custo: navegacao ganha ~800ms de latencia percebida — item para a aprovacao
+  visual do Victor (reduzir `--duration-slow` do wipe seria decisao de token).
+- **Rotas verificadas:** home→`/recruiter` e home→`/client` (`nav-forward`),
+  `/recruiter`→home (volta), `/en/`→`/recruiter` (island classifica profundidade
+  igual como `nav-back` — wipe varre no sentido de volta; comportamento herdado).
+  Reduced-motion: sem varredura (fallback instantaneo do island + guarda CSS).
+- **Efeito colateral (decisao pendente):** TODAS as navegacoes internas que
+  recebem `nav-forward`/`nav-back` (projects, docs etc.) ganharam o wipe, pois as
+  classes sao globais do island. Anotado no Indice-Mae; se o Victor preferir
+  restringir ao fluxo principal, escopar por classe no `<body>` em plano futuro.
+- **Verificacao:** gates verdes (tokens 558 = baseline, zero violacao nova;
+  budget 143.69KB, delta 0KB), e2e local 7/7. Evidencias em
+  `evidencias/plano-03/` (frames do prototipo forward/back, frente organica,
+  reduced-motion e destinos das quatro rotas).

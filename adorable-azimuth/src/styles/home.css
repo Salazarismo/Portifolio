@@ -90,7 +90,9 @@ body.page-home .nav-lang span { color: var(--home-border); }
    Plano 00: o main vira o CARTÃO — objeto navy com sombra flutuando sobre o
    palco bicolor. O respiro do topo migrou do padding-top (era --space-9)
    para a margem do cartão (header + gap ≈ mesmo ritmo vertical do hero).
-   overflow: hidden clipa glow e colagem no raio do cartão. */
+   `overflow: clip` recorta glow/colagem no raio sem transformar o cartão no
+   scroll container de `view()`; `hidden` é só fallback para browsers antigos,
+   que também ficam no reveal load-time. */
 body.page-home main#main {
   flex: 1;
   display: block;
@@ -105,6 +107,7 @@ body.page-home main#main {
   border-radius: var(--home-card-radius);
   box-shadow: var(--home-card-shadow);
   overflow: hidden;
+  overflow: clip;
 }
 
 /* glow coral atrás do hero — reaproveitado do HomeHybridLanding (era âmbar),
@@ -669,19 +672,63 @@ body.page-home .hm-footer-copy {
 @keyframes homeDrawStroke {
   to { stroke-dashoffset: 0; }
 }
+/* plano 02: as camadas percorrem a mesma timeline da seção, mas em sentidos
+   e amplitudes diferentes. `translate` compõe com o rotate das camadas e com
+   o transform GSAP da colagem-pai; animar `transform` aqui quebraria ambos. */
+@keyframes homeScarBlockParallax {
+  from { translate: 0 calc(-1 * var(--space-2)); }
+  to { translate: 0 var(--space-2); }
+}
+@keyframes homeScarFigureParallax {
+  from { translate: 0 var(--space-1); }
+  to { translate: 0 calc(-1 * var(--space-1)); }
+}
 
-/* reveal da home: entra no load, escalona por --reveal-index. NÃO é
-   scroll-triggered (plano 08, Seção 8) — é o mais simples que resolve sem
-   adicionar JS ao bundle apertado de 150KB. O scroll-reveal global ([data-sr])
-   já exclui .page-home no global.css; este é o substituto local.
-   EXCEÇÃO registrada (plano home-motion 01): a coreografia hero→cicatriz é
-   scroll-driven via GSAP já amortizado (initHomeChoreography em
-   src/lib/gsap-reveal.ts) — o pin anima seção/colagem por transform/opacity
-   e COMPÕE com este reveal de load, não o substitui. */
+/* reveal da home: a regra-base é o fallback load-time, escalonado por
+   --reveal-index. `data-reveal="load"` marca o território do pin (cicatriz);
+   `data-reveal="view"` só troca de timeline no @supports abaixo. Assim um
+   navegador sem Scroll-Driven Animations recebe a experiência anterior
+   inteira, sem conteúdo depender de suporte parcial ou de JS.
+   EXCEÇÃO registrada (planos home-motion 01–02): hero→cicatriz é scroll-driven
+   via GSAP já amortizado; tensão, em-campo e CTA usam view timeline em CSS.
+   O scroll-reveal global ([data-sr]) segue excluindo .page-home. */
 body.page-home [data-reveal] {
   opacity: 0;
   animation: homeFadeUp var(--duration-slow) var(--ease-standard) both;
   animation-delay: calc(var(--reveal-index, 0) * var(--home-reveal-step));
+}
+
+/* progressive enhancement puro: hero e cicatriz ficam fora do view reveal.
+   A timeline nomeada da cicatriz dirige apenas o parallax dos filhos; a seção
+   não é pinada — quem recebe o pin do Plano 01 é o hero anterior. */
+@supports (
+  (animation-timeline: view()) and
+  (animation-range: entry 0% entry 60%) and
+  (animation-duration: auto)
+) {
+  body.page-home [data-reveal="view"] {
+    animation-duration: auto;
+    animation-delay: 0s;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+
+  .hm-scar {
+    view-timeline-name: --home-scar-progress;
+    view-timeline-axis: block;
+  }
+
+  .hm-scar-collage__block {
+    animation: auto linear homeScarBlockParallax both;
+    animation-timeline: --home-scar-progress;
+    animation-range: entry 0% exit 100%;
+  }
+
+  .hm-scar-figure {
+    animation: auto linear homeScarFigureParallax both;
+    animation-timeline: --home-scar-progress;
+    animation-range: entry 0% exit 100%;
+  }
 }
 
 /* spotlight ambiente que segue o cursor (pointer: fine) — reaproveitado do
@@ -736,6 +783,11 @@ body.page-home .cursor-spotlight.is-on { opacity: 1; }
   body.page-home [data-reveal] {
     animation: none;
     opacity: 1;
+  }
+  .hm-scar-collage__block,
+  .hm-scar-figure {
+    animation: none;
+    translate: none;
   }
   body.page-home .cursor-spotlight { display: none; }
 
