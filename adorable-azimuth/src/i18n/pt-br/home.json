@@ -26,7 +26,7 @@
   "home.field.proof2_body": "Construídas partindo do princípio de que o outro lado vai cair. E que seguram a barra quando ele cai.",
   "home.field.proof3_title": "Confiabilidade medida no pior cenário.",
   "home.field.proof3_body": "Não na média. No pico, na borda, no dia ruim.",
-  "home.field.recruiter_body": "O que eu entrego num time de produto: [stack principal], e a parte que ninguém quer tocar — o que precisa funcionar quando quebrar custa caro.",
+  "home.field.recruiter_body": "O que eu entrego num time de produto: TypeScript, React/Next.js, NestJS, Python/FastAPI, Supabase/PostgreSQL, e a parte que ninguém quer tocar — o que precisa funcionar quando quebrar custa caro.",
   "home.field.client_body": "Do escopo ao sistema rodando: eu assumo a parte crítica do projeto, a que não pode ter um dia ruim.",
 
   "home.toggle.recruiter": "Para recrutadores",

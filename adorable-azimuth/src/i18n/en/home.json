@@ -26,7 +26,7 @@
   "home.field.proof2_body": "Built on the assumption that the other side will go down — and to hold the line when it does.",
   "home.field.proof3_title": "Reliability measured at the worst case.",
   "home.field.proof3_body": "Not at the average. At the peak, at the edge, on the bad day.",
-  "home.field.recruiter_body": "What I bring to a product team: [main stack], and the part nobody wants to touch — the part that has to work when breaking gets expensive.",
+  "home.field.recruiter_body": "What I bring to a product team: TypeScript, React/Next.js, NestJS, Python/FastAPI, Supabase/PostgreSQL, and the part nobody wants to touch — the part that has to work when breaking gets expensive.",
   "home.field.client_body": "From scope to a running system: I take on the critical piece — the one that can't have a bad day.",
 
   "home.toggle.recruiter": "For recruiters",
